@@ -64,6 +64,7 @@ Sessionx.vim
 *~
 # Auto-generated tag files
 tags
+!templates/tags
 # Persistent undo
 [._]*.un~
 
