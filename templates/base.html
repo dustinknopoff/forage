@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dustin Knopoff</title>
+        <link rel="stylesheet" type="text/css" href={{ get_url(path="reset.css", trailing_slash=false)}} />
+        <link rel="stylesheet" type="text/css" href={{ get_url(path="styles.css", trailing_slash=false)}} />
+        <meta charset="utf-8" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link>
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link>
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link>
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png"></link>
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png"></link>
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png"></link>
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png"></link>
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png"></link>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png"></link>
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png"></link>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
+        <link rel="manifest" href="/manifest.json"></link>
+        <meta name="msapplication-TileColor" content="#ffffff"></meta>
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"></meta>
+        <meta name="theme-color" content="#ffffff"></meta>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer-when-downgrade">
+        {% if config.generate_feed %}
+        <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+      {% endif %}
+    </head>
+    <body>
+        <div class="buffer"></div>
+        <div id="sidebar">
+            <div class="tagline">
+                <ul>
+                    <li>
+                        <a href="{{ get_url(path="/categories/dev", trailing_slash=false) }}">
+                            <span>dev</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ get_url(path="/categories/design", trailing_slash=false) }}">
+                            <span>design</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ get_url(path="/tags", trailing_slash=false) }}">
+                            <span>tags</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href={{ get_url(path="@/posts/about.md")}}>rustacean, cook, and martial arts enthusiast</a>
+                <div></div>
+            </div>
+            <a class="logo" href={{ config.base_url }}>
+                <img src="/DK Logo.png"></img>
+            </a>
+        </div>
+        <div id="main">
+            <main>
+                {% block content %} {% endblock %}
+            </main>
+            <footer>
+                <span>Copyright {{ now() | date(format="%Y") }}</span>
+                <div class="links">
+                    <a onClick="
+                            javascript:window.location.href=atob('bWFpbHRvOndlYi1jb250YWN0QGtub3BvZmYuZGV2')">
+                        <img src="/mail.svg"></img>
+                    </a>
+                    <a href="https://github.com/dustinknopoff" rel="noopener noreferrer nofollow" target="_blank">
+                        <img src="/github.svg"></img>
+                    </a>
+                    <a href="https://linkedin.com/in/dustinknopoff">
+                        <img src="/linkedin.svg"></img>
+                    </a>
+                    <a href="/feed.xml">
+                        <img src="/rss.svg"></img>
+                    </a>
+                </div>
+                <div></div>
+            </footer>
+        </div>
+    </body>
+</html>
