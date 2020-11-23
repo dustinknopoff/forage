@@ -54,6 +54,9 @@
                             <span>tags</span>
                         </a>
                     </li>
+                    <li>
+                        <img class="search-img" src="/search.svg"  height="16"/>
+                    </li>
                 </ul>
                 <a class="description" href={{ get_url(path="@/posts/about.md")}}>rustacean, cook, and martial arts enthusiast</a>
                 <div></div>
@@ -62,6 +65,9 @@
                 <img src="/DK Logo.png"></img>
             </a>
         </div>
+        <span class="search-info">
+            Press s to search
+        </span>
         <div id="main">
             <main>
                 {% block content %} {% endblock %}
