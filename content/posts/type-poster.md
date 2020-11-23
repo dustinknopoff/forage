@@ -3,6 +3,7 @@ title = "Typography Poster"
 date = 2018-04-18
 [extra]
 link = "https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1535335229/portfolio/poster-split.pdf"
+linkText = "Download"
 [taxonomies]
 categories = ["design"]
 tags = []

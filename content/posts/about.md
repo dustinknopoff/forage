@@ -3,6 +3,7 @@ date = 2019-03-23
 title= "About Me"
 [extra]
 link = "https://dustinknopoff.dev"
+linkText = "Learn More"
 +++
 
 Hi! I'm Dustin, a computer science and design student at Northeastern University. I have a passion for computer science, cooking, and taekwondo.

@@ -5,7 +5,7 @@
 <div class="article-info">
     <a href="{{ get_url(path="/tags") }}">ALL TAGS</a>
     {% for page in term.pages %}
-{{ page_macros::page_listing(page=page) }}
-{% endfor %}
+        {{ page_macros::page_listing(page=page) }}
+    {% endfor %}
 </div> 
 {% endblock content %}

@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Dustin Knopoff</title>
+        <title>{%block title %}Dustin Knopoff{%endblock title%}</title>
         <link rel="stylesheet" type="text/css" href={{ get_url(path="reset.css", trailing_slash=false)}} />
         <link rel="stylesheet" type="text/css" href={{ get_url(path="styles.css", trailing_slash=false)}} />
+        <link rel="stylesheet" type="text/css" href={{ get_url(path="modal.css", trailing_slash=false)}} />
         <meta charset="utf-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+        <meta name="author" content="{{ config.extra.author }}">
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link>
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link>
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link>
@@ -50,7 +55,7 @@
                         </a>
                     </li>
                 </ul>
-                <a href={{ get_url(path="@/posts/about.md")}}>rustacean, cook, and martial arts enthusiast</a>
+                <a class="description" href={{ get_url(path="@/posts/about.md")}}>rustacean, cook, and martial arts enthusiast</a>
                 <div></div>
             </div>
             <a class="logo" href={{ config.base_url }}>
@@ -81,5 +86,18 @@
                 <div></div>
             </footer>
         </div>
+        <div class="body-blackout" />
+        <div class="popup-modal shadow" >
+  <h1 class="font-weight-bold">
+    Search Posts
+  </h1>
+  <input type="search" id="search" placeholder="rust" />
+  <ul class="search-results">
+    <div class="search-results__items"></div>
+  </ul>
+  </div>
     </body>
+    <script async type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") }}"></script>
+    <script async type="text/javascript" src="{{ get_url(path="search_index.en.js") }}"></script>
+    <script async type="text/javascript" src="{{ get_url(path="search.js") }}"></script>
 </html>

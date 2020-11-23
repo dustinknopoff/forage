@@ -186,7 +186,7 @@ main blockquote {
 
 @media only screen and (max-device-width: 480px) {
   :root {
-    --base-font-size: 20px;
+    --base-font-size: 18px;
   }
 
   body {
@@ -221,7 +221,11 @@ main blockquote {
     background: white;
     margin: 0;
     grid-template-rows: 100vh 10vh;
+  }
+
+  .description {
     font-size: 2em;
+    margin-bottom: 5px;
   }
 
   .logo {
@@ -245,6 +249,22 @@ main blockquote {
   #main {
     overflow: auto;
     margin: 0 5vw 0 5vw;
-    font-size: 2em;
+    font-size: 1em;
+  }
+
+  .card {
+    height: 100%;
+  }
+
+  .topline {
+    flex-direction: column-reverse;
+  }
+
+  .topline h3 {
+    text-align: left;
+  }
+
+  .topline ul {
+    padding: 0;
   }
 }
