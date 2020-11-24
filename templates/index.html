@@ -1,24 +1,26 @@
 {% import "macros/page.html" as page_macros %} {% extends "base.html" %} {%block
 content%} {% set section = get_section(path="posts/_index.md") %} {% for year,
 posts in section.pages | group_by(attribute="year") %}
-<h2>{{ year }}</h2>
+<div>
+  <h2>{{ year }}</h2>
 
-<ul>
-  {% for post in posts %}
-  <li class="card">
-    <div class="topline">
-      <ul class="tags">
-        {% for key,value in post.taxonomies %} {% for item in value %} {% set
-        url = "/" ~ key ~ "/" ~ item %}
-        <li><a href="{{ get_url(path=url) }}">{{item}}</a></li>
-        {% endfor %} {% endfor %}
-      </ul>
-      <a href="{{ post.permalink }}"><h3>{{ post.title }}</h3></a>
-    </div>
-    <a href="{{ post.permalink }}"
-      >{{post.content | striptags | truncate(length=180, end="...") }}</a
-    >
-  </li>
-  {% endfor %}
-</ul>
+  <ul>
+    {% for post in posts %}
+    <li class="card">
+      <div class="topline">
+        <ul class="tags">
+          {% for key,value in post.taxonomies %} {% for item in value %} {% set
+          url = "/" ~ key ~ "/" ~ item %}
+          <li><a href="{{ get_url(path=url) }}">{{item}}</a></li>
+          {% endfor %} {% endfor %}
+        </ul>
+        <a href="{{ post.permalink }}"><h3>{{ post.title }}</h3></a>
+      </div>
+      <a href="{{ post.permalink }}"
+        >{{post.content | striptags | truncate(length=180, end="...") }}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 {% endfor %} {% endblock content %}

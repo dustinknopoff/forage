@@ -105,6 +105,7 @@ main ul > li {
   justify-content: center;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .tagline > ul > li {
@@ -196,6 +197,12 @@ main blockquote {
   width: 100%;
   display: block;
   margin-bottom: 40px;
+}
+
+@media only screen and (max-height: 375px) {
+  .card {
+    height: 100%;
+  }
 }
 
 @media only screen and (max-device-width: 480px) {
