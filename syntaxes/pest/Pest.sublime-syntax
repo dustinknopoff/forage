@@ -1,0 +1,164 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Pest
+file_extensions:
+  - pest
+scope: source.pest.pest
+variables:
+  ident: '\b\w+\b'
+  trailing_op: '[*?+]'
+  replaceable_support_idents: '\b(WHITESPACE|COMMENT)\b'
+  support_idents: '\b(PUSH|POP|ANY|SOI|EOI|NEWLINE|ASCII_ALPHANUMERIC)\b|{{replaceable_support_idents}}'
+  escaped_char: '\\("|\\|r|n|t|0|''|x\h{2}|u\{\h{2,6}\})'
+contexts:
+  main:
+    - include: comments
+    - include: rule_decl
+    - match: \S
+      scope: invalid.pest
+
+  rule_decl:
+    - match: '^\s*{{replaceable_support_idents}}'
+      scope: support.function.override.pest
+      set: [rule_def, must_be_equals]
+    - match: '^\s*{{ident}}'
+      scope: entity.name.function.pest
+      set: [rule_def, must_be_equals]
+    - match: \S
+      scope: invalid.pest
+
+  must_be_equals:
+    - match: '='
+      scope: keyword.operator.pest
+      pop: true
+    - match: \S
+      scope: invalid.pest
+
+  rule_def:
+    - match: '([@_$]?)\{'
+      captures:
+        1: keyword.operator.pest
+      set:
+        - match: '\}'
+          pop: true
+        - include: rule_def_inner
+
+  escaped-char:
+    - match: '{{escaped_char}}'
+      scope: constant.character.escape.pest
+    - match: '\\.'
+      scope: invalid.pest
+
+  rule_def_inner: 
+    - include: comments
+    - match: '(\^?)(")'
+      captures:
+        1: keyword.operator.pest
+        2: punctuation.definition.string.begin.pest
+      push:
+        - meta_scope: string.quoted.double.pest
+        - include: escaped-char
+        - match: '"'
+          scope: punctuation.definition.string.end.pest
+          set: trailing
+    - match: ''''
+      scope: punctuation.definition.string.begin.pest
+      push:
+        - meta_scope: string.quoted.single.pest
+        - include: escaped-char
+        - match: ''''
+          scope: punctuation.definition.string.end.pest
+          set:
+            - match: '\.\.'
+              scope: keyword.operator.range.pest
+              push:
+              - match: ''''
+                scope: punctuation.definition.string.begin.pest
+                set:
+                  - meta_scope: string.quoted.single.pest
+                  - include: escaped-char
+                  - match: ''''
+                    scope: punctuation.definition.string.end.pest
+                    set: trailing
+              - match: \S
+                scope: invalid.pest
+                pop: true
+            - include: trailing
+    - match: '{{support_idents}}'
+      scope: meta.function-call support.function.pest
+      push: trailing
+    - match: '{{ident}}'
+      scope: meta.function-call variable.function.pest
+      push: trailing
+    - match: '[~|~]'
+      scope: keyword.operator.pest
+    - match: '[!&]'
+      scope: keyword.operator.pest
+    - match: \(
+      scope: punctuation.section.parens.begin.pest
+      push:
+      - match: \)
+        scope: punctuation.section.parens.end.pest
+        set: trailing
+      - include: rule_def_inner
+    - match: \S
+      scope: invalid.pest
+
+  rule_name:
+    - match: '{{ident}}'
+
+  comments:
+    - match: (//).*$\n?
+      scope: comment.line.double-dash.pest
+      captures:
+        1: punctuation.definition.comment.pest
+    - include: block_comment
+
+  block_comment:
+    - match: '/\*'
+      scope: punctuation.definition.comment.pest
+      push:
+        - meta_scope: comment.block.pest
+        - include: block_comment
+        - match: '\*/'
+          scope: punctuation.definition.comment.pest
+          pop: true
+
+  trailing:
+    - match: '{{trailing_op}}'
+      scope: keyword.operator.pest
+      set: 
+      - match: '{{trailing_op}}'
+        scope: invalid.pest
+      - match: ''
+        pop: true
+    - match: '{'
+      push: trailing_braces
+    - match: ''
+      pop: true
+
+  trailing_braces:
+    - match: '}'
+      scope: invalid.pest
+      pop: true
+    - match: \d+
+      scope: constant.numeric.integer.pest
+      set:
+      - match: '}'
+        pop: true
+      - match: ','
+        set:
+        - match: \d+
+          scope: constant.numeric.integer.pest
+          set:
+          - match: '}'
+            pop: true
+          - match: \S
+            scope: invalid.pest
+        - match: \S
+          scope: invalid.pest
+      - match: \S
+        scope: invalid.pest
+    - match: \S
+      scope: invalid.pest

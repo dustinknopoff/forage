@@ -28,7 +28,7 @@ As an unapologetic rustacean, the natural choice for language to build this pars
 
 Here's the complete `.pest` file:
 
-```
+```pest
 // CONSTANTS
 WHITESPACE = _{ " " | NEWLINE | "\t" }
 DATE = { ASCII_DIGIT{2} ~ "/" ~ ASCII_DIGIT{2} ~ "/" ~ ASCII_DIGIT{2} }
@@ -115,7 +115,7 @@ Jackpot!
 
 The relevant, high level part here is:
 
-```javascript
+```ts
     for (let i: number = 0; i < lines.length; i++) {
       if (contains(lines[i], "Course List")) {
         this.add_courses_to_take(lines, i, "");
@@ -142,7 +142,7 @@ As a rule, start from the beginning. Looking at the sample audit and the code bl
 
 First we'll define what whitespace means:
 
-```
+```pest
 WHITESPACE = _{ " " | NEWLINE | "\t" }
 ```
 
@@ -154,7 +154,7 @@ This can be read as:
 
 Next, you'll notice that the graduation date is in the format 08/20/22, let's create a rule for that as well.
 
-```
+```pest
 DATE = { ASCII_DIGIT{2} ~ "/" ~ ASCII_DIGIT{2} ~ "/" ~ ASCII_DIGIT{2} }
 ```
 
@@ -166,7 +166,7 @@ This can be read as:
 
 Soon, we're going to be composing these rules. An important part of pest rules is that everything with the `{}` "counts". So, when we want to get just the date from this block: `GRADUATION DATE: 08/20/22` we couldn't have a rule:
 
-```
+```pesy
 GRADUATION_DATE = { "GRADUATION_DATE" ~ DATE }
 ```
 
@@ -174,7 +174,7 @@ As pest would see the string "GRADUATION_DATE" as a something worth tracking.
 
 For this reason, we'll write it like this
 
-```
+```pest
 GRAD_STRING = _{"GRADUATION DATE:"}
 GRADUATION_DATE = { GRAD_STRING ~ DATE }
 ```
@@ -187,7 +187,7 @@ This can be read as:
 
 But wait! There's a whole bunch (24 lines) of text that comes before the tiny bit to care about. How do we get rid of that?
 
-```
+```pest
 SKIP_TO_GRAD = _{ (!"GRADUATION" ~ ANY)* }
 ```
 
@@ -199,7 +199,7 @@ This can be read as:
 
 This all comes together to create:
 
-```
+```pest
 // CONSTANTS
 WHITESPACE = _{ " " | NEWLINE | "\t" }
 DATE = { ASCII_DIGIT{2} ~ "/" ~ ASCII_DIGIT{2} ~ "/" ~ ASCII_DIGIT{2} }
