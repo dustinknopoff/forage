@@ -28,6 +28,17 @@ body {
   /* overflow-y: hidden; */
 }
 
+pre {
+  overflow: auto;
+  word-wrap: normal;
+  border-radius: 3px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 1.45rem;
+  padding: 1.45rem;
+}
+
 .search-info {
   color: #b5b3b3;
   font-style: italic;
