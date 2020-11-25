@@ -4,15 +4,13 @@
 
 {% block content %}
 <h1 class="title">{{ page.title }}</h1>
-<p class="subtitle"><strong>{{ page.date }}</strong></p>
-<article>
-  {{ page.content | safe }}
-    <a class="cta" href="{{page.extra | get(key="link")}}">
-      {% if "linkText" in page.extra %}
-        {{ page.extra | get(key="linkText")}}
-      {% else %}
-        See the code!
-      {% endif %}
-    </a>
-</article>
+<div class="subtitle"><strong>{{ page.date }}</strong></div>
+{{ page.content | safe }}
+  <a class="cta" href="{{page.extra | get(key="link")}}">
+    {% if "linkText" in page.extra %}
+      {{ page.extra | get(key="linkText")}}
+    {% else %}
+      See the code!
+    {% endif %} 
+  </a>
 {% endblock content %}
