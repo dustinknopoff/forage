@@ -1,3 +1,5 @@
+{% import "macros/icons.html" as icons %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href={{ get_url(path="styles.css", trailing_slash=false)}} />
         <link rel="stylesheet" type="text/css" href={{ get_url(path="modal.css", trailing_slash=false)}} />
         <meta charset="utf-8" />
+        <meta name="color-scheme" content="light dark">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
@@ -55,8 +58,8 @@
                             <span>tags</span>
                         </a>
                     </li>
-                    <li>
-                        <img id="search-img" class="search-img" src="/search.svg"  height="16"/>
+                    <li id="search-img" class="search-img" height="16">
+                        {{icons::search_icon()}}
                     </li>
                 </ul>
             </div>
@@ -76,16 +79,16 @@
                 <div class="links">
                     <a onClick="
                             javascript:window.location.href=atob('bWFpbHRvOndlYi1jb250YWN0QGtub3BvZmYuZGV2')">
-                        <img src="/mail.svg"></img>
+                        {{icons::mail_icon()}}
                     </a>
                     <a href="https://github.com/dustinknopoff" rel="noopener noreferrer nofollow" target="_blank">
-                        <img src="/github.svg"></img>
+                        {{icons::github_icon()}}
                     </a>
                     <a href="https://linkedin.com/in/dustinknopoff">
-                        <img src="/linkedin.svg"></img>
+                        {{icons::linkedin_icon()}}
                     </a>
                     <a href="/feed.xml">
-                        <img src="/rss.svg"></img>
+                        {{icons::rss_icon()}}
                     </a>
                 </div>
                 <div></div>
