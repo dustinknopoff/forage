@@ -8,7 +8,7 @@ document.addEventListener("keypress", function (event) {
   }
 });
 
-document.addEventListener("click", function (event) {
+document.getElementById("search-img").addEventListener("click", function () {
   const bodyBlackout = document.querySelector(".body-blackout");
   const popupModal = document.querySelector(`.popup-modal`);
   bodyBlackout.classList.add("is-blacked-out");

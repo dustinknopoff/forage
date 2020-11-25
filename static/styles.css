@@ -71,7 +71,7 @@ a {
   grid-row: 1;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-between;
 }
 
@@ -120,6 +120,8 @@ main ul > li {
 .logo {
   grid-row: 2;
   max-width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 /* MARK: POST_LIST */
@@ -205,7 +207,7 @@ main blockquote {
   }
 }
 
-@media only screen and (max-device-width: 480px) {
+@media (max-width: 480px) {
   :root {
     --base-font-size: 18px;
   }
@@ -216,7 +218,7 @@ main blockquote {
       "sidebar"
       "content";
     grid-template-columns: 100vw;
-    grid-template-rows: 110vh 90vh;
+    grid-template-rows: 120vh 90vh;
     width: 100vw;
     padding: 0 0 0 0;
     margin: 0;
@@ -229,6 +231,7 @@ main blockquote {
 
   .tagline {
     grid-area: 2;
+    flex-direction: column;
   }
 
   .tagline > ul {
@@ -241,11 +244,10 @@ main blockquote {
     grid-area: sidebar;
     background: white;
     margin: 0;
-    grid-template-rows: 100vh 10vh;
+    grid-template-rows: 100vh 20vh;
   }
 
   .description {
-    font-size: 2em;
     margin-bottom: 5px;
   }
 
@@ -263,7 +265,7 @@ main blockquote {
   }
 
   .tagline {
-    flex-direction: column-reverse;
+    flex-direction: column;
     background: var(--secondary-color);
   }
 

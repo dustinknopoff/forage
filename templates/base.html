@@ -38,6 +38,7 @@
         <div class="buffer"></div>
         <div id="sidebar">
             <div class="tagline">
+                <a class="description" href={{ get_url(path="@/posts/about.md")}}>rustacean, cook, and martial arts enthusiast</a>
                 <ul>
                     <li>
                         <a href="{{ get_url(path="/categories/dev", trailing_slash=false) }}">
@@ -55,11 +56,9 @@
                         </a>
                     </li>
                     <li>
-                        <img class="search-img" src="/search.svg"  height="16"/>
+                        <img id="search-img" class="search-img" src="/search.svg"  height="16"/>
                     </li>
                 </ul>
-                <a class="description" href={{ get_url(path="@/posts/about.md")}}>rustacean, cook, and martial arts enthusiast</a>
-                <div></div>
             </div>
             <a class="logo" href={{ config.base_url }}>
                 <img src="/DK Logo.png"></img>
