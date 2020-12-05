@@ -3,6 +3,7 @@ title = "Bashdoc - Round 1"
 date = 2018-10-24
 [extra]
 link = "https://github.com/dustinknopoff/bashdoc/tree/v0.0.5"
+after = ["bashdoc2.md", "bashdoc3.md"]
 [taxonomies]
 categories = ["dev"]
 tags = ["rust"]
@@ -204,5 +205,3 @@ impl AllDocs {
     }
 }
 ```
-
-> Read [part 2](@/posts/bashdoc2.md).

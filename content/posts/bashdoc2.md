@@ -3,6 +3,8 @@ title = "Bashdoc - Round 2"
 date = 2018-10-26
 [extra]
 link = "https://github.com/dustinknopoff/bashdoc/tree/v0.1.0"
+before = ["bashdoc.md"]
+after = ["bashdoc3.md"]
 [taxonomies]
 categories = ["dev"]
 tags = ["rust"]
@@ -254,4 +256,3 @@ and `export BASHDOC_CONFIG_PATH="${HOME}/.bashdocrc` being in a user's `.zshrc` 
 
 It was a fun project and I feel like I can actually use Rust to some degree now.
 
-> Read [part 3](@/posts/bashdoc3.md).

@@ -47,3 +47,30 @@
         </div>
     </div>
 {% endmacro page_pagination %}
+
+{% macro series(list, isBefore) %}
+<details>
+<summary>
+    <h5 style="margin: 0;">{% if isBefore %}Previously {% else %} Next {% endif %}in the series...</h5>
+</summary>
+<ul class="preview-list">
+{% for page in list %}
+  {% set page = get_page(path="posts/" ~ page) %}  
+    <li class="card-preview">
+      <div class="topline">
+        <ul class="tags">
+          {% for key,value in page.taxonomies %} {% for item in value %} {% set
+          url = "/" ~ key ~ "/" ~ item %}
+          <li><a href="{{ get_url(path=url) }}">{{item}}</a></li>
+          {% endfor %} {% endfor %}
+        </ul>
+        <a href="{{ page.permalink }}"><h3>{{ page.title }}</h3></a>
+      </div>
+      <a href="{{ page.permalink }}"
+        >{{page.content | striptags | truncate(length=80, end="...") }}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+</details>
+{% endmacro series %}

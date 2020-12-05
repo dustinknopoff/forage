@@ -3,6 +3,7 @@ title = "Bashdoc - Parsing with Nom"
 date = 2018-12-10
 [extra]
 link = "https://github.com/dustinknopoff/bashdoc/tree/0.2.0"
+before = ["bashdoc.md", "bashdoc2.md"]
 [taxonomies]
 categories = ["dev"]
 tags = ["rust"]
@@ -10,7 +11,6 @@ tags = ["rust"]
 
 > Part 3 of the unintended Bashdoc series.
 
-> Read the earlier posts: [part 1](@/posts/bashdoc.md) and [part 2](@/posts/bashdoc2.md)
 
 Since October, my interest in rust has gone from curiosity to "what can I make next in Rust." One of the things I'd discovered is [nom](https://crates.io/crates/nom), a library for building parsers. Since it's in Rust it's super fast. Their example parsers include things like CSV, MP3, PHP, and more. Looking at my own code, the repeated use of `split_whitespace()` seems costly and naive. Why iterate through different pieces of the text over and over again to get the structure I require when I can do it one pass?
 
