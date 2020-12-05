@@ -14,7 +14,7 @@ At the moment, I am completely enamored with [Rust](https://www.rust-lang.org) a
 
 ## Cooking
 
-![](https://res.cloudinary.com/dknopoff/image/upload/c_scale,f_auto,h_600/v1605190430/portfolio/brussels.jpg)
+![](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1605190430/portfolio/brussels.jpg)
 
 ## Taekwondo
 

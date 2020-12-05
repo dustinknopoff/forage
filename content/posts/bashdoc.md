@@ -205,4 +205,4 @@ impl AllDocs {
 }
 ```
 
-> Read the [part 2](../bashdoc2).
+> Read [part 2](@/posts/bashdoc2.md).

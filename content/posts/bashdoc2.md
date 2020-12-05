@@ -8,7 +8,7 @@ categories = ["dev"]
 tags = ["rust"]
 +++
 
-When I make something like [bashdoc](../../rust/bashdoc/), once the idea and way to make it happen is in my head, I work on it over and over again until it's done. And when it's something like bashdoc which outputs
+When I make something like [bashdoc](@/posts/bashdoc.md), once the idea and way to make it happen is in my head, I work on it over and over again until it's done. And when it's something like bashdoc which outputs
 
 ```
 Help: .zshrc
@@ -254,4 +254,4 @@ and `export BASHDOC_CONFIG_PATH="${HOME}/.bashdocrc` being in a user's `.zshrc` 
 
 It was a fun project and I feel like I can actually use Rust to some degree now.
 
-> Read the [part 3](../bashdoc2).
+> Read [part 3](@/posts/bashdoc3.md).
