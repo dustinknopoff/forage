@@ -204,7 +204,7 @@ main {
   padding: 0 20px 0 20px;
 }
 
-main a {
+main a:not(".card") {
   color: var(--accent-color);
 }
 
@@ -226,7 +226,7 @@ svg {
 
 .card-preview {
   width: 15vw;
-  background: white;
+  background: var(--background-color);
   border-radius: 13px;
   padding: 12px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
