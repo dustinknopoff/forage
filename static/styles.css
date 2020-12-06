@@ -238,6 +238,7 @@ svg {
   width: 100%;
   padding-bottom: 20px;
   overflow-x: scroll;
+  padding-left: 0;
 }
 
 .card-preview > .topline {
@@ -348,6 +349,10 @@ details {
 
   .search-info {
     display: none;
+  }
+
+  .card-preview {
+    width: 50vw;
   }
 }
 

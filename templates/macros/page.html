@@ -55,6 +55,7 @@
 </summary>
 <ul class="preview-list">
 {% for page in list %}
+  {% if loop.index <= 5 %}
   {% set page = get_page(path="posts/" ~ page) %}  
     <li class="card-preview">
       <div class="topline">
@@ -70,6 +71,7 @@
         >{{page.content | striptags | truncate(length=80, end="...") }}</a
       >
     </li>
+  {% endif %}
     {% endfor %}
   </ul>
 </details>
