@@ -1,7 +1,6 @@
 +++
 title = "Retrieving data from a WKWebView and passing to SwiftUI"
 date = 2020-12-05
-draft = true
 [extra]
 link = "https://github.com/dustinknopoff/degree-audit-macos/blob/main/Degree%20Audit%20macOS/View%20Elements/WebView.swift"
 before = ["neuaudit.md"]
@@ -18,7 +17,7 @@ tags = ["swift"]
 
 That's not strictly true.
 
-I did create a dashboard like interface in Swift UI, but it was janky and wayyyy to many line charts. So, that was sunset to the `archive` directory.
+I did create a dashboard like interface in Swift UI, but it was janky and wayyyy too many line charts. So, that was sunset into the `archive` directory.
 
 Fast forward to about a month ago. My Human-Computer Interaction course has an assignment to point out bad designs and create a quick prototype of how it could be fixed.
 
