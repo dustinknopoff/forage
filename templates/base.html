@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{%block title %}Dustin Knopoff{%endblock title%}</title>
+        <title>{%block title %}{{config.title}}{%endblock title%}</title>
         <link rel="stylesheet" type="text/css" href={{ get_url(path="reset.css", trailing_slash=false)}} />
         <link rel="stylesheet" type="text/css" href={{ get_url(path="styles.css", trailing_slash=false)}} />
         <link rel="stylesheet" type="text/css" href={{ get_url(path="modal.css", trailing_slash=false)}} />
@@ -12,7 +12,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
-        <meta name="author" content="{{ config.extra.author }}">
+        <meta name="author" content="{{ config.extra.forage_author }}">
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link>
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link>
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png"></link>
@@ -43,28 +43,20 @@
             <div class="tagline">
                 <a class="description" href={{ get_url(path="@/posts/about.md")}}>rustacean, cook, and martial arts enthusiast</a>
                 <ul>
-                    <li>
-                        <a href="{{ get_url(path="/categories/dev", trailing_slash=false) }}">
-                            <span>dev</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ get_url(path="/categories/design", trailing_slash=false) }}">
-                            <span>design</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ get_url(path="/tags", trailing_slash=false) }}">
-                            <span>tags</span>
-                        </a>
-                    </li>
+                    {% for item in config.extra.forage_sidebar %}
+                        <li class="mobile-menu-item">
+                            <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                                {{ item.label }}
+                            </a>
+                        </li>
+                    {% endfor %}
                     <li id="search-img" class="search-img" height="16">
                         {{icons::search_icon()}}
                     </li>
                 </ul>
             </div>
             <a class="logo" href={{ config.base_url }}>
-                <img src="/DK Logo.png"></img>
+                <img src="/logo.png"></img>
             </a>
         </nav>
         <span class="search-info">
@@ -77,21 +69,28 @@
             <footer>
                 <span>Copyright {{ now() | date(format="%Y") }}</span>
                 <div class="links">
-                    <a onClick="
-                            javascript:window.location.href=atob('bWFpbHRvOndlYi1jb250YWN0QGtub3BvZmYuZGV2')">
+                    {% if config.extra.forage_email %}
+                    <a onClick="{{config.extra.forage_email}}">
                         {{icons::mail_icon()}}
                     </a>
+                    {% endif %}
+                    {% if config.extra.forage_github %}
                     <a href="https://github.com/dustinknopoff" rel="noopener noreferrer nofollow" target="_blank">
                         {{icons::github_icon()}}
                     </a>
-                    <a href="https://linkedin.com/in/dustinknopoff">
+                    {% endif %}
+                    {% if config.extra.forage_linkedin %}
+                    <a href="{{config.extra.forage_linkedin}}" rel="noopener noreferrer nofollow" target="_blank">
                         {{icons::linkedin_icon()}}
                     </a>
+                    {% endif %}
                     <a href="/feed.xml">
                         {{icons::rss_icon()}}
                     </a>
                 </div>
-                <div></div>
+                <div>
+                    <a href="https://github.com/dustinknopoff/website-zola">Forage</a> theme made by <a href="https://dustinknopoff.dev">Dustin Knopoff</a> using <a href="https://getzola.org">Zola</a>
+                </div>
             </footer>
         </div>
         <div class="body-blackout" />
@@ -99,7 +98,7 @@
   <h1 class="font-weight-bold">
     Search Posts
   </h1>
-  <input type="search" id="search" placeholder="rust" />
+  <input type="search" id="search" placeholder="planetary escargo" />
   <ul class="search-results">
     <div class="search-results__items"></div>
   </ul>
