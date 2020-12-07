@@ -204,7 +204,7 @@ main {
   padding: 0 20px 0 20px;
 }
 
-main a:not(".card") {
+main p > a {
   color: var(--accent-color);
 }
 
