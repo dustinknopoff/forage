@@ -10,7 +10,7 @@ categories = ["dev"]
 tags = ["rust"]
 +++
 
-When I make something like [bashdoc](@/posts/bashdoc.md), once the idea and way to make it happen is in my head, I work on it over and over again until it's done. And when it's something like bashdoc which outputs
+When I make something like [bashdoc](@/articles/bashdoc.md), once the idea and way to make it happen is in my head, I work on it over and over again until it's done. And when it's something like bashdoc which outputs
 
 ```
 Help: .zshrc

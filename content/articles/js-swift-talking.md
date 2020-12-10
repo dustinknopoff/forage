@@ -9,7 +9,7 @@ categories = ["dev"]
 tags = ["swift"]
 +++
 
-> A vaguely related continuation of [NEU Audit Parsing](@/posts/neuaudit.md)
+> A vaguely related continuation of [NEU Audit Parsing](@/articles/neuaudit.md)
 
 [Skip the backstory](#retrieving-html-from-a-wkwebview)
 
