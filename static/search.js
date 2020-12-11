@@ -1,4 +1,4 @@
-document.addEventListener("keypress", function (event) {
+function handleClick(event) {
   const bodyBlackout = document.querySelector(".body-blackout");
   const popupModal = document.querySelector(`.popup-modal`);
   if (!bodyBlackout.classList.contains("is-blacked-out") && event.key === "s") {
@@ -6,15 +6,18 @@ document.addEventListener("keypress", function (event) {
     popupModal.classList.add("is--visible");
     initSearch();
   }
-});
+  if (
+    bodyBlackout.classList.contains("is-blacked-out") &&
+    event.key === "Escape"
+  ) {
+    bodyBlackout.classList.remove("is-blacked-out");
+    popupModal.classList.remove("is--visible");
+  }
+}
 
-document.getElementById("search-img").addEventListener("click", function () {
-  const bodyBlackout = document.querySelector(".body-blackout");
-  const popupModal = document.querySelector(`.popup-modal`);
-  bodyBlackout.classList.add("is-blacked-out");
-  popupModal.classList.add("is--visible");
-  initSearch();
-});
+document.addEventListener("keypress", handleClick);
+
+document.getElementById("search-img").addEventListener("click", handleClick);
 
 function debounce(func, wait) {
   var timeout;
@@ -168,7 +171,6 @@ function initSearch() {
     "keyup",
     debounce(function () {
       var term = $searchInput.value.trim();
-      console.log(term);
       if (term === currentTerm || !index) {
         return;
       }
