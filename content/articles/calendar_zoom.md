@@ -1,7 +1,6 @@
 +++
 title = "Extract Zoom links from Calendar"
 date = 2020-12-10
-draft = true
 [extra]
 link = "https://github.com/dustinknopoff/calendar"
 [taxonomies]
