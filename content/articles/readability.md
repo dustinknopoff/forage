@@ -1,7 +1,6 @@
 +++
 title = "Readability"
 date = 2020-12-11
-draft = true
 [extra]
 link = "https://github.com/dustinknopoff/raster-md"
 [taxonomies]
