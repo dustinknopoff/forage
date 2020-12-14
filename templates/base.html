@@ -7,7 +7,6 @@
         <link rel="stylesheet" type="text/css" href={{ get_url(path="reset.css", trailing_slash=false)}} />
         <link rel="stylesheet" type="text/css" href={{ get_url(path="styles.css", trailing_slash=false)}} />
         <link rel="stylesheet" type="text/css" href={{ get_url(path="modal.css", trailing_slash=false)}} />
-        <link rel="stylesheet" type="text/css" href={{ get_url(path="bigfoot-default.css", trailing_slash=false)}} />
         <meta charset="utf-8" />
         <meta name="color-scheme" content="light dark">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -113,4 +112,5 @@
     <script async type="text/javascript" src="{{ get_url(path="search_index.en.js") }}"></script>
     <script async type="text/javascript" src="{{ get_url(path="search.js") }}"></script>
     <script async type="text/javascript" src="{{ get_url(path="mobileScroll.js")}}"></script>
+    {% block extra_js %} {% endblock %}
 </html>
