@@ -7,6 +7,8 @@ function handleClick(event) {
   ) {
     bodyBlackout.classList.add("is-blacked-out");
     popupModal.classList.add("is--visible");
+    var $searchInput = document.getElementById("search");
+    $searchInput.focus();
     initSearch();
   }
 }
