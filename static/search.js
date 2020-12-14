@@ -1,23 +1,25 @@
 function handleClick(event) {
   const bodyBlackout = document.querySelector(".body-blackout");
   const popupModal = document.querySelector(`.popup-modal`);
-  if (!bodyBlackout.classList.contains("is-blacked-out") && event.key === "s") {
+  if (
+    (!bodyBlackout.classList.contains("is-blacked-out") && !event.key) ||
+    event.key === "s"
+  ) {
     bodyBlackout.classList.add("is-blacked-out");
     popupModal.classList.add("is--visible");
     initSearch();
-  }
-  if (
-    bodyBlackout.classList.contains("is-blacked-out") &&
-    event.key === "Escape"
-  ) {
-    bodyBlackout.classList.remove("is-blacked-out");
-    popupModal.classList.remove("is--visible");
   }
 }
 
 document.addEventListener("keypress", handleClick);
 
 document.getElementById("search-img").addEventListener("click", handleClick);
+document.getElementById("search-close").addEventListener("click", () => {
+  const bodyBlackout = document.querySelector(".body-blackout");
+  const popupModal = document.querySelector(`.popup-modal`);
+  bodyBlackout.classList.remove("is-blacked-out");
+  popupModal.classList.remove("is--visible");
+});
 
 function debounce(func, wait) {
   var timeout;

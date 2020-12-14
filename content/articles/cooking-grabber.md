@@ -73,6 +73,8 @@ Really simple! the `handleRequest` function extracts out the url from it's param
 
 On the mac, doing this in the browser (or curl) and then copy pasting in to my markdown editor is trivial. I've leveraged [shortcuts](https://www.icloud.com/shortcuts/e7bfe5625bd84bfbb4decef7db559e43) to do the same on mobile.
 
+<!-- TODO: EXPLAIN What will be going on. -->
+
 ## The worker
 
 I'm using the [scraper crate](https://crates.io/crates/scraper) for extracting from HTML using CSS selectors. Here's the entry function.
