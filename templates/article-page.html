@@ -13,11 +13,17 @@
 {% if page.extra.after %} 
   {{page_macros::series(list=page.extra.after, isBefore=false)}}
 {%endif%}
-  <a class="cta" href="{{page.extra | get(key="link")}}">
+<p class="cta">
+  <a href="{{page.extra | get(key="link")}}">
     {% if "linkText" in page.extra %}
       {{ page.extra | get(key="linkText")}}
     {% else %}
-      See the code!
+      See the code
     {% endif %} 
   </a>
+  {% if page.extra.discussion %} 
+  or 
+  <a href="{{page.extra.discussion}}">Join the discussion</a>
+  {% endif %}
+</p>
 {% endblock content %}

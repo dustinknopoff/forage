@@ -4,6 +4,7 @@ date = 2020-12-14
 draft = true
 [extra]
 link = "https://github.com/dustinknopoff/nytcooking-grabber/tree/ld-schema"
+discussion = "https://github.com/dustinknopoff/forage/discussions/2"
 [taxonomies]
 categories = ["dev"]
 tags = ["rust", "webassembly"]
@@ -28,7 +29,20 @@ Cloudflare has a generous free plan and their CLI tool is in rust. Also, the nic
 
 I highly recommend [cloudflare's docs](https://developers.cloudflare.com/workers/) for info on how to get started.
 
+## The Structure
+
+There's 3 key parts here:
+
+1. Worker glue code
+2. JSON-LD schema leveraging
+3. Actual rust code.
+
+### 1. Worker glue code
+
+Anything compiled to web assembly must be called from javascript as a response to a network request in cloudflare's workers.
+
 ```js
+// Direct from cloudflare's template
 addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
@@ -38,15 +52,20 @@ addEventListener("fetch", (event) => {
  * @param {Request} request
  */
 async function handleRequest(request) {
+  // Retrieve the 'url' from parameters
   let url = get("url", request.url);
   if (url) {
+    // async load the wasm binary to be used
     const { get_ld_json } = wasm_bindgen;
     await wasm_bindgen(wasm);
 
+    // fetch the HTML from url
     let data = await fetch(url).then((r) => r.text());
 
+    // run rust code.
     const recipe_context = `${get_ld_json(data)}(${url})`;
 
+    // return it!
     let res = new Response(recipe_context, {
       status: 200,
       headers: { "Content-Type": "text/markdown" },
@@ -73,7 +92,33 @@ Really simple! the `handleRequest` function extracts out the url from it's param
 
 On the mac, doing this in the browser (or curl) and then copy pasting in to my markdown editor is trivial. I've leveraged [shortcuts](https://www.icloud.com/shortcuts/e7bfe5625bd84bfbb4decef7db559e43) to do the same on mobile.
 
-<!-- TODO: EXPLAIN What will be going on. -->
+## JSON-LD Schema Leveraging
+
+JSON-LD schema as defined by their [website](https://schema.org):
+
+> Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. 
+
+It's also how you see this when you search chocolate cake:
+
+![](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1607957030/portfolio/ddg_recipe.png)
+
+_Most_ recipe websites include this in the `<head>` region.
+
+```html
+  <head>
+    <title>Dinner Hummus with Spiced Chicken and Cauliflower Recipe  - Leah Koenig | Food &amp; Wine</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/img/favicons/favicon-32.png" sizes="32x32">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" href="/img/favicons/favicon-57.png">
+    <!-- many more -->
+    <script type="application/ld+json">
+      // ...The full JSON schema for this recipe
+    </script>
+  </head>
+   <!-- the actual webpage -->
+```
 
 ## The worker
 
@@ -85,9 +130,11 @@ I'm using the [scraper crate](https://crates.io/crates/scraper) for extracting f
 /// parsed, and converted in to a markdown document.
 pub fn get_ld_json(contents: &str) -> String {
     let document = Html::parse_document(contents);
+    // We're getting out that JSON from the <head>
     let selector = Selector::parse(r#"script[type="application/ld+json"]"#).unwrap();
     let ctx = document.select(&selector).next().unwrap();
     let text = ctx.text().collect::<Vec<_>>();
+    // Converting it in to plain text to then serialize as JSON
     let as_txt = text.join("");
     let as_txt = traverse_for_type_recipe(&as_txt);
     let as_recipe: LdRecipe<'_> = match serde_json::from_str(&as_txt) {
