@@ -92,7 +92,7 @@ Really simple! the `handleRequest` function extracts out the url from it's param
 
 On the mac, doing this in the browser (or curl) and then copy pasting in to my markdown editor is trivial. I've leveraged [shortcuts](https://www.icloud.com/shortcuts/e7bfe5625bd84bfbb4decef7db559e43) to do the same on mobile.
 
-## JSON-LD Schema Leveraging
+### 2. JSON-LD Schema Leveraging
 
 JSON-LD schema as defined by their [website](https://schema.org):
 
@@ -120,7 +120,7 @@ _Most_ recipe websites include this in the `<head>` region.
    <!-- the actual webpage -->
 ```
 
-## The worker
+### 3. The worker/rust code
 
 I'm using the [scraper crate](https://crates.io/crates/scraper) for extracting from HTML using CSS selectors. Here's the entry function.
 
