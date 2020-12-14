@@ -25,6 +25,7 @@ forage_author = "Dustin Knopoff"
 forage_email = "javascript:window.location.href=atob('bWFpbHRvOndlYi1jb250YWN0QGtub3BvZmYuZGV2')"
 forage_github = "https://github.com/dustinknopoff"
 forage_linkedin = "https://linkedin.com/in/dustinknopoff"
+forage_microblog = "dustinknopoff"
 forage_sidebar = [
   {label = "dev", url = "$BASE_URL/categories/dev"},
   {label = "design", url = "$BASE_URL/categories/design"},
