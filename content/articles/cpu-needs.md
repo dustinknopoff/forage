@@ -1,7 +1,6 @@
 +++
 title = "Best Writing in College"
 date = 2020-12-15
-draft = true
 [extra]
 link = ""
 linkText = ""
@@ -15,13 +14,13 @@ The following is the best writing of my college career.
 
 Shopping for a computer is not as easy as one might think. You have to think about battery life, operating system, weight, screen size, hard drive space, and more! Once these decisions are made, you're often forced to deal with decisions such as:
 
-<img src="https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1607642229/apple-config.png" />
+![](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1607642229/apple-config.png)
 
 _Fig 1: [Apple](https://apple.com) Configuration for 16" MacBook Pro_
 
 Or
 
-<img src="https://res.cloudinary.com/dknopoff/image/upload/v1607642229/portfolio/lenovo-config.png" style="width: 60vw;height:5vw;" />
+![])https://res.cloudinary.com/dknopoff/image/upload/v1607642229/portfolio/lenovo-config.png)
 
 _Fig 2: [Lenovo](https://lenovo.com) Configuration for X1 Carbon_
 
