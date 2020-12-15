@@ -194,6 +194,10 @@ main img {
   height: auto;
 }
 
+main p {
+  line-height: 1.5;
+}
+
 .logo > img {
   max-width: 100%;
   max-height: 300px;
