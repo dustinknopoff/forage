@@ -20,7 +20,7 @@ _Fig 1: [Apple](https://apple.com) Configuration for 16" MacBook Pro_
 
 Or
 
-![])https://res.cloudinary.com/dknopoff/image/upload/v1607642229/portfolio/lenovo-config.png)
+![](https://res.cloudinary.com/dknopoff/image/upload/v1607642229/portfolio/lenovo-config.png)
 
 _Fig 2: [Lenovo](https://lenovo.com) Configuration for X1 Carbon_
 
