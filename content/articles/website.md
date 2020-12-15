@@ -3,6 +3,7 @@ title = "Website"
 date = 2018-07-28
 [extra]
 link = "https://github.com/dustinknopoff/portfolio-simple"
+after = ["forage.md"]
 [taxonomies]
 categories = ["design"]
 tags = []

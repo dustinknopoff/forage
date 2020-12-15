@@ -246,6 +246,16 @@ svg {
   padding-left: 0;
 }
 
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination > a {
+  padding: 20px;
+}
+
 .card-preview > .topline {
   flex-wrap: wrap-reverse;
 }
@@ -267,6 +277,36 @@ details {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+}
+
+/* .finds-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+} */
+
+.finds-list {
+  display: grid;
+  grid-gap: 2em; /* [1] Add some gap between rows and columns */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* [2] Make columns adjust according to the available viewport */
+  /* grid-auto-rows: 250px; /* [3] Set the height for implicitly-created row track */
+}
+
+.card-preview.finds {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: max-content;
+}
+
+.col--2x {
+  grid-row-end: span 2;
+}
+.col--3x {
+  grid-row-end: span 3;
 }
 
 @media only screen and (max-height: 375px) {

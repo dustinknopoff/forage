@@ -1,8 +1,11 @@
 {% extends "base.html" %} {% block content %}
 <h1 class="title">{{ section.title }}</h1>
-<ul>
+<ul class="finds-list">
   {% for post in paginator.pages %}
-  <li class="card">
+  <li class="card-preview finds {% if post.extra.banner %}col--2x{%endif %}">
+    {% if post.extra.banner %}
+    <img src="{{ post.extra.banner }}" />
+    {% endif %}
     <div class="topline">
       <ul class="tags">
         {% for key,value in post.taxonomies %} {% for item in value %} {% set
@@ -10,11 +13,19 @@
         <li><a href="{{ get_url(path=url) }}">{{item}}</a></li>
         {% endfor %} {% endfor %}
       </ul>
-      <a href="{{ post.permalink }}" class="card-link"
+      <a
+        href="{{ post.extra.link }}"
+        class="card-link"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
         ><h3>{{ post.title }}</h3></a
       >
     </div>
-    <a href="{{ post.permalink }}" class="card-link"
+    <a
+      href="{{ post.extra.link }}"
+      class="card-link"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
       >{{post.content | striptags | truncate(length=180, end="...") }}</a
     >
   </li>
