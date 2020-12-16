@@ -238,6 +238,10 @@ svg {
   margin: 0 20px;
 }
 
+.card-preview.finds > p > a {
+  color: var(--primary-color);
+}
+
 .preview-list {
   display: flex;
   width: 100%;

@@ -26,8 +26,9 @@
       class="card-link"
       target="_blank"
       rel="noopener noreferrer nofollow"
-      >{{post.content | striptags | truncate(length=180, end="...") }}</a
     >
+    {{post.content | safe}}
+    </a>
   </li>
   {% endfor %}
 </ul>
@@ -39,3 +40,13 @@
   {% endif %}
 </nav>
 {% endblock content %}
+
+{% block extra_js %}
+<link rel="stylesheet" type="text/css" href="{{ get_url(path="littlefoot.css", trailing_slash=false)}}" />
+<script async defer type="application/javascript" src="{{ get_url(path="littlefoot.js", trailing_slash=false)}}"></script>
+<script async defer type="application/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+    littlefoot.littlefoot()
+  })
+</script> 
+{% endblock extra_js %}
