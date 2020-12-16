@@ -1,7 +1,6 @@
 +++
 title = "Blur Detection"
 date = 2020-12-15
-draft = true
 [extra]
 link = "https://github.com/dustinknopoff/BlurDetection2"
 linkText = "Check it out"
