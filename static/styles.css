@@ -142,6 +142,11 @@ main ul > li {
   align-items: center;
 }
 
+.littlefoot {
+  --popover-background-color: var(--background-color);
+  --popover-text-color: var(--primary-color);
+}
+
 /* MARK: POST_LIST */
 #main {
   grid-area: content;

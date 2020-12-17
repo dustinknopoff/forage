@@ -5,8 +5,8 @@
 
 {% block extra_js %}
 <link rel="stylesheet" type="text/css" href="{{ get_url(path="littlefoot.css", trailing_slash=false)}}" />
-<script async defer type="application/javascript" src="{{ get_url(path="littlefoot.js", trailing_slash=false)}}"></script>
-<script async defer type="application/javascript">
+<script type="application/javascript" src="{{ get_url(path="littlefoot.js", trailing_slash=false)}}"></script>
+<script type="application/javascript">
   document.addEventListener("DOMContentLoaded", () => {
     littlefoot.littlefoot()
   })
