@@ -156,7 +156,6 @@ This where the `traverse_for_type_recipe` comes in.
 ```rust
 fn traverse_for_type_recipe(content: &str) -> String {
     let tree: serde_json::Value = serde_json::from_str(content).unwrap();
-    // let test_pattern = String::from("Recipe");
     let _recipe_str = serde_json::json!("Recipe");
     // Example: tests/ragu.json
     if let Some(_recipe_str) = tree.get("@type") {
@@ -220,7 +219,7 @@ pub struct LdRecipe<'r> {
 
 This is the `struct` we are trying to parse from the JSON we filtered for. It pretty much works or it doesn't.
 
-Then we simple construct the markdown and return it.
+Then we simply construct the markdown and return it.
 
 So a recipe like [https://www.foodandwine.com/recipes/lamb-martabak](https://www.foodandwine.com/recipes/lamb-martabak)
 
