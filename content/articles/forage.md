@@ -1,6 +1,6 @@
 +++
 title = "Website Part 3"
-date = 2020-12-18
+date = 2020-12-19
 draft = true
 [extra]
 link = "https://dustinknopoff.dev"
