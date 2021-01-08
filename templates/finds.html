@@ -4,7 +4,7 @@
   {% for post in paginator.pages %}
   <li class="card-preview finds {% if post.extra.banner %}col--2x{%endif %}">
     {% if post.extra.banner %}
-    <img src="{{ post.extra.banner }}" />
+    <img src="{{ post.extra.banner }}" alt="post banner" />
     {% endif %}
     <div class="topline">
       <ul class="tags">
