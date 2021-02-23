@@ -4,10 +4,6 @@ base_url = "https://dustinknopoff.dev"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
-
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
@@ -17,8 +13,30 @@ generate_feed = true
 taxonomies = [{name = "tags", rss = true}, {name = "categories", rss = true}]
 
 description = "rustacean, cook, and martial arts enthusiast"
-extra_syntaxes = ["syntaxes", "syntaxes/pest"]
 title = "Dustin Knopoff"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+render_emoji = true
+# Whether external links are to be opened in a new tab
+# If this is true, a `rel="noopener"` will always automatically be added for security reasons
+external_links_target_blank = true
+# Whether to set rel="nofollow" for all external links
+external_links_no_follow = true
+# Whether to set rel="noreferrer" for all external links
+external_links_no_referrer = true
+extra_syntaxes = ["syntaxes", "syntaxes/pest"]
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+
 [extra]
 # Put all your custom variables here
 forage_author = "Dustin Knopoff"
