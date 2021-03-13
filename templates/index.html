@@ -19,7 +19,8 @@ year, posts in section.pages | group_by(attribute="year") %}
         >
       </div>
       <a href="{{ post.permalink }}" class="card-link"
-        >{{post.content | striptags | truncate(length=180, end="...") }}</a
+        >{{post.content | striptags | truncate(length=180, end="...") | safe
+        }}</a
       >
     </li>
     {% endfor %}

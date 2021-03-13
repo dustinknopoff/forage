@@ -107,6 +107,10 @@ ul {
   display: flex;
 }
 
+.content {
+  max-width: 640px;
+}
+
 main ul {
   display: block;
 }
@@ -157,6 +161,7 @@ main ul > li {
 .card {
   height: 20vh;
   width: 100%;
+  max-width: 640px;
 }
 
 .card > * {
@@ -316,6 +321,47 @@ details {
 }
 .col--3x {
   grid-row-end: span 3;
+}
+
+/* MARK: TOC */
+
+.toc-wrapper {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .toc-container {
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+
+  .toc-wrapper > a {
+    font-weight: 300;
+    color: var(--hidden);
+    width: 100%;
+    text-align: left;
+  }
+
+  .toc-Link_h2 {
+    margin-left: 10px;
+    font-weight: 300;
+  }
+
+  .toc-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    position: sticky;
+    top: 30%;
+    visibility: visible;
+  }
+
+  .toc-Link.current {
+    color: var(--primary);
+    font-weight: 400;
+    transition: all 0.2s ease-in;
+  }
 }
 
 @media only screen and (max-height: 375px) {

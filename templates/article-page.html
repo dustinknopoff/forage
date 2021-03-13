@@ -16,6 +16,11 @@
 {% endblock extra_js %}
 
 {% block content %}
+{% if page.toc %}
+<div class="toc-container">
+  {% endif %}
+
+<div class="content">
 <h1 class="title">{{ page.title }}</h1>
 <div class="subtitle"><strong>{{ page.date }}</strong></div>
 {% if page.extra.before %} 
@@ -38,4 +43,52 @@
   <a href="{{page.extra.discussion}}" target="_blank" rel="noopener noreferrer nofollow">Join the discussion</a>
   {% endif %}
 </p>
+</div>
+
+  {% if page.toc %}
+   <nav class="toc-wrapper">
+    {% for h1 in page.toc %}
+    <a href="#{{h1.id}}" class="toc-Link toc-Link_h1" id="h-{{h1.id}}"
+      >{{ h1.title }}</a
+    >
+    {% if h1.children %} {% for h2 in h1.children %}
+    <a href="#{{h2.id}}" class="toc-Link toc-Link_h2" id="h-{{h2.id}}"
+      >{{ h2.title }}</a
+    >
+    {% endfor %} {% endif %} {% endfor %}
+  </nav>
+</div>
+{% endif %}
+
+<script type="text/javascript">
+  // Intersection Observer Options
+  var options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: [1],
+  };
+
+  var wrapping = document.querySelector(".content");
+  var allHtags = wrapping.querySelectorAll("h1,h2");
+  // Each Intersection Observer runs setCurrent
+  var observeHtags = new IntersectionObserver(setCurrent, options);
+  // Function that runs when the Intersection Observer fires
+  function setCurrent(e) {
+    var allSectionLinks = document.querySelectorAll(".toc-Link");
+    e.map((i) => {
+      if (i.isIntersecting === true) {
+        allSectionLinks.forEach((link) => link.classList.remove("current"));
+        document
+          .querySelector(`a[href="#${i.target.id.replace("h-", "")}"]`)
+          .classList.add("current");
+      }
+    });
+  }
+
+  // Now
+  allHtags.forEach((tag) => {
+    observeHtags.observe(tag);
+  });
+</script>
+
 {% endblock content %}

@@ -27,7 +27,7 @@
       {% if page.summary %}
         {{ page.summary | markdown | safe }}
       {%else %}
-        {{page.content | striptags | safe | truncate(length=180, end="...") }}
+        {{page.content | striptags | safe | truncate(length=180, end="...") | safe }}
       {% endif %}
     </a>
 </div>
@@ -68,7 +68,7 @@
         <a href="{{ page.permalink }}"><h3>{{ page.title }}</h3></a>
       </div>
       <a href="{{ page.permalink }}"
-        >{{page.content | striptags | truncate(length=80, end="...") }}</a
+        >{{page.content | striptags | truncate(length=80, end="...") | safe }}</a>
       >
     </li>
   {% endif %}
