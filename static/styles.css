@@ -13,6 +13,7 @@
 
 html {
   background: var(--background-color);
+  scroll-behavior: smooth;
 }
 
 /* MARK: Grid Setup */
@@ -481,5 +482,14 @@ details {
   input {
     background-color: #444444;
     color: lightgray;
+  }
+}
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
