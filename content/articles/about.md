@@ -6,7 +6,7 @@ link = "https://dustinknopoff.dev"
 linkText = "Learn More"
 +++
 
-Hi! I'm Dustin, a computer science and design student at Northeastern University. I have a passion for computer science, cooking, and taekwondo.
+Hi! I'm Dustin, a newly graduated software developer. I have a passion for computer science, cooking, and taekwondo.
 
 ## Programming
 
