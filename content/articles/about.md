@@ -14,10 +14,10 @@ At the moment, I am completely enamored with [Rust](https://www.rust-lang.org) a
 
 ## Cooking
 
-![](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1605190430/portfolio/brussels.jpg)
+![](https://res.cloudinary.com/dcloudinary/image/upload/f_auto/v1605190430/portfolio/brussels.jpg)
 
 ## Taekwondo
 
 I've been practicing Taekwondo for over 15 years. I'm a 3rd dan black belt in World Taekwondo Federation style Taekwondo.
 
-![Breaking 3 bricks on fire](https://res.cloudinary.com/dknopoff/image/upload/f_auto,e_blur_faces:500/v1553394222/portfolio/IMG_0397.jpg)
+![Breaking 3 bricks on fire](https://res.cloudinary.com/dcloudinary/image/upload/f_auto,e_blur_faces:500/v1553394222/portfolio/IMG_0397.jpg)

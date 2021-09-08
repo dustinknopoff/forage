@@ -8,7 +8,7 @@ categories = ["dev"]
 tags = ["rust"]
 +++
 
-![Example Degree Audit](https://res.cloudinary.com/dknopoff/image/upload/v1589926569/Example%20Degree%20Audit.png)
+![Example Degree Audit](https://res.cloudinary.com/dcloudinary/image/upload/v1589926569/Example%20Degree%20Audit.png)
 
 > See the full example [here](https://github.com/sandboxnu/graduatenu/blob/master/scrapers/test/mock_audits/cs_audit.html)
 
@@ -100,7 +100,7 @@ If only that file was created via immaculate conception. Instead it was a lot of
 
 In fact that was the first thing I did. There's a file [types.ts](https://github.com/sandboxnu/graduatenu/blob/master/frontend/src/models/types.ts) containing all of the typescript types used in their codebase. I copied it in to a constants.rs file and just converted them in to rust equivalents (`class` => `struct`, `number` => `isize`, `string[]` => `Vec<String>`, etc.).
 
-![Types in Rust and Typescript](https://res.cloudinary.com/dknopoff/image/upload/v1589928472/portfolio/audit-types.png)
+![Types in Rust and Typescript](https://res.cloudinary.com/dcloudinary/image/upload/v1589928472/portfolio/audit-types.png)
 
 Continuing to look through the GraduateNU codebase, there's a file [html_parser.ts](https://github.com/sandboxnu/graduatenu/blob/master/scrapers/src/html_parser.ts) which is exactly what we intend to do:
 
@@ -213,7 +213,7 @@ GRAD_PARSER = { SKIP_TO_GRAD ~ GRADUATION_DATE }
 
 And using [pest.rs](https://pest.rs) to it test out
 
-![Grad Parser on pest.rs](https://res.cloudinary.com/dknopoff/image/upload/v1589934035/portfolio/grad-parser.png)
+![Grad Parser on pest.rs](https://res.cloudinary.com/dcloudinary/image/upload/v1589934035/portfolio/grad-parser.png)
 
 This process was repeated until all of the sections GraduateNU extracted, were extracted in the pest rules.
 

@@ -17,9 +17,9 @@ _This_ is where being a designer shines. When you experience (or empathise with)
 
 ## Introducing Downsize (the UI prototype)
 
-![](https://res.cloudinary.com/dknopoff/image/upload/v1608157859/downsize/UI_Spec.jpg)
+![](https://res.cloudinary.com/dcloudinary/image/upload/v1608157859/downsize/UI_Spec.jpg)
 
-![](https://res.cloudinary.com/dknopoff/image/upload/v1608157951/downsize/UI_Overview.png)
+![](https://res.cloudinary.com/dcloudinary/image/upload/v1608157951/downsize/UI_Overview.png)
 
 ### Core Concepts
 
@@ -36,4 +36,4 @@ A cool little UI feature is when a user buys an item, Downsize will load the cos
 
 One of the requirements for this project was to showcase the experience of using this theoretical service.
 
-<video src="https://res.cloudinary.com/dknopoff/video/upload/v1608158220/downsize/Downsize.mp4" style="width:100%" controls loop ></video>
+<video src="https://res.cloudinary.com/dcloudinary/video/upload/v1608158220/downsize/Downsize.mp4" style="width:100%" controls loop ></video>

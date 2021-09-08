@@ -14,13 +14,13 @@ The following is the best writing of my college career.
 
 Shopping for a computer is not as easy as one might think. You have to think about battery life, operating system, weight, screen size, hard drive space, and more! Once these decisions are made, you're often forced to deal with decisions such as:
 
-![](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1607642229/apple-config.png)
+![](https://res.cloudinary.com/dcloudinary/image/upload/f_auto/v1607642229/apple-config.png)
 
 _Fig 1: [Apple](https://apple.com) Configuration for 16" MacBook Pro_
 
 Or
 
-![](https://res.cloudinary.com/dknopoff/image/upload/v1607642229/portfolio/lenovo-config.png)
+![](https://res.cloudinary.com/dcloudinary/image/upload/v1607642229/portfolio/lenovo-config.png)
 
 _Fig 2: [Lenovo](https://lenovo.com) Configuration for X1 Carbon_
 
@@ -48,7 +48,7 @@ Low refers to web browsing, document writing, and researching.
 
 Every year the makers of computer processors release new chips which they refer to as generations. The most popular chipmaker, Intel has chosen to separate their chip offerings into "i" - categories.  These categories are a way of grouping the performance of chips (Higher is better). For example in the above chart, i7, i5, and i3 categories would match well to high, medium, and low users respectively.
 
-![](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1607642229/portfolio/slejven-djurakovic-0uXzoEzYZ4I-unsplash.jpg)
+![](https://res.cloudinary.com/dcloudinary/image/upload/f_auto/v1607642229/portfolio/slejven-djurakovic-0uXzoEzYZ4I-unsplash.jpg)
 
 _Intel CPU taken by [Slejven Djurakovic](https://unsplash.com/photos/0uXzoEzYZ4I)_
 
@@ -60,7 +60,7 @@ Very intensive workloads, things like 4K photo editing, video editing, and softw
 
 A processor's cache is incredibly important for computers to feel fast. The cache is basically a shortcut for data. Instead of having to retrieve information from a hard drive, it can pull from the cache (if the data is in there). It takes 0.5 nanoseconds to retrieve data stored in the cache versus from a hard drive it takes 20 million nanoseconds (Fig 3). 
 
-![](https://res.cloudinary.com/dknopoff/image/upload/c_crop,f_auto/v1607642229/portfolio/cache-compare.png)
+![](https://res.cloudinary.com/dcloudinary/image/upload/c_crop,f_auto/v1607642229/portfolio/cache-compare.png)
 
 _Fig 3: Latencies of various computer systems: [source](https://gist.github.com/jboner/2841832)_
 

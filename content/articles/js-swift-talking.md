@@ -21,11 +21,11 @@ I did create a dashboard like interface in Swift UI, but it was janky and wayyyy
 
 Fast forward to about a month ago. My Human-Computer Interaction course has an assignment to point out bad designs and create a quick prototype of how it could be fixed.
 
-![](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1607189153/portfolio/Audit.png)
+![](https://res.cloudinary.com/dcloudinary/image/upload/f_auto/v1607189153/portfolio/Audit.png)
 
 And on a weekend where I should be doing other homework, I figure "Eh. I should try and make this into a macOS app with SwiftUI!"
 
-![](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1607189495/portfolio/degree_audit_swiftui.png)
+![](https://res.cloudinary.com/dcloudinary/image/upload/f_auto/v1607189495/portfolio/degree_audit_swiftui.png)
 
 That is maybe 6 hours of work which really speaks to SwiftUI's capabilities!
 

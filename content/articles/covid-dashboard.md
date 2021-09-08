@@ -15,9 +15,9 @@ Sometimes, a class assignment will actually line up with one of these moments of
 
 Naturally, there's an extreme desire to design a single location for all things COVID related at Northeastern. While I was unable to implement it, the design is quite functional.
 
-![](https://res.cloudinary.com/dknopoff/image/upload/v1607656564/portfolio/QR.png)
+![](https://res.cloudinary.com/dcloudinary/image/upload/v1607656564/portfolio/QR.png)
 
-![](https://res.cloudinary.com/dknopoff/image/upload/v1607656560/portfolio/Lab_Results_Expanded.png)
+![](https://res.cloudinary.com/dcloudinary/image/upload/v1607656560/portfolio/Lab_Results_Expanded.png)
 
 These 2 screens are the ones I'm most proud of. Simple yet information dense with gradual complication. 
 - When we're tested at Northeastern, the two things we need are our ID numbers and QR code saying we're safe to come to campus (no symptoms). 

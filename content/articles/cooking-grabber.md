@@ -99,7 +99,7 @@ JSON-LD schema as defined by their [website](https://schema.org):
 
 It's also how you see this when you search chocolate cake:
 
-![](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1607957030/portfolio/ddg_recipe.png)
+![](https://res.cloudinary.com/dcloudinary/image/upload/f_auto/v1607957030/portfolio/ddg_recipe.png)
 
 _Most_ recipe websites include this in the `<head>` region.
 

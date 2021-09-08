@@ -11,7 +11,7 @@ tags = []
 
 This website has been an idea for a long, long time. It started out as HTML written in Python using [yattag](http://www.yattag.org) which became quickly unusable. It was then migrated to using [pystache](https://github.com/defunkt/pystache) and injected JavaScript.
 
-![Old Website](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1534892818/portfolio/old-website.png)
+![Old Website](https://res.cloudinary.com/dcloudinary/image/upload/f_auto/v1534892818/portfolio/old-website.png)
 
 > The previous iteration
 
@@ -25,7 +25,7 @@ Discovering Gatsby meant that I could continue to have the speed I had from stat
 
 I'd also found NetlifyCMS, essentially a GUI backend for markdown based posts for a website. I'd attempted to use it but kept getting errors. In the end, I couldn't figure it out and decided just adding files was sufficient.
 
-![Current Website](https://res.cloudinary.com/dknopoff/image/upload/f_auto/v1536024150/portfolio/curr-website.png)
+![Current Website](https://res.cloudinary.com/dcloudinary/image/upload/f_auto/v1536024150/portfolio/curr-website.png)
 
 > Current iteration
 
