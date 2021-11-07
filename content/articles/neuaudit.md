@@ -166,7 +166,7 @@ This can be read as:
 
 Soon, we're going to be composing these rules. An important part of pest rules is that everything with the `{}` "counts". So, when we want to get just the date from this block: `GRADUATION DATE: 08/20/22` we couldn't have a rule:
 
-```pesy
+```pest
 GRADUATION_DATE = { "GRADUATION_DATE" ~ DATE }
 ```
 
