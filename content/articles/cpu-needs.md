@@ -1,13 +1,14 @@
-+++
-title = "Best Writing in College"
-date = 2020-12-15
-[extra]
-link = ""
-linkText = ""
-[taxonomies]
-categories = []
-tags = []
-+++
+---
+title: Best Writing in College
+date: 2020-12-15
+extra:
+  link: ""
+  linkText: ""
+taxonomies:
+  categories: []
+  tags: []
+
+---
 The following is the best writing of my college career. 
 
 # What CPU do you need?

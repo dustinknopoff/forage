@@ -1,12 +1,15 @@
-+++
-title = "Parsing Northeastern's Graduation Audit"
-date = 2020-05-19
-[extra]
-link = "https://github.com/dustinknopoff/audit-parser"
-[taxonomies]
-categories = ["dev"]
-tags = ["rust"]
-+++
+---
+title: Parsing Northeastern's Graduation Audit
+date: 2020-05-19
+extra:
+  link: https://github.com/dustinknopoff/audit-parser
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - rust
+
+---
 
 ![Example Degree Audit](https://res.cloudinary.com/dcloudinary/image/upload/v1589926569/Example%20Degree%20Audit.png)
 

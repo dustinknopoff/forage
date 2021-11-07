@@ -1,13 +1,17 @@
-+++
-title = "Recipe Grabber"
-date = 2020-12-14
-[extra]
-link = "https://github.com/dustinknopoff/nytcooking-grabber/tree/ld-schema"
-discussion = "https://github.com/dustinknopoff/forage/discussions/2"
-[taxonomies]
-categories = ["dev"]
-tags = ["rust", "webassembly"]
-+++
+---
+title: Recipe Grabber
+date: 2020-12-14
+extra:
+  link: https://github.com/dustinknopoff/nytcooking-grabber/tree/ld-schema
+  discussion: https://github.com/dustinknopoff/forage/discussions/2
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - rust
+    - webassembly
+
+---
 
 Keeping track of things you find on the internet is hard. Every service either wants to be **the** service for everything on the web and does a poor job displaying/indexing the content, or focuses in on a single data type and then you forget about every one of the individual services that are 'perfect' for that data type.
 

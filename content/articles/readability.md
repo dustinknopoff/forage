@@ -1,12 +1,15 @@
-+++
-title = "Readability"
-date = 2020-12-11
-[extra]
-link = "https://github.com/dustinknopoff/raster-md"
-[taxonomies]
-categories = ["dev"]
-tags = ["rust"]
-+++
+---
+title: Readability
+date: 2020-12-11
+extra:
+  link: https://github.com/dustinknopoff/raster-md
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - rust
+
+---
 
 What do you do when you want to keep online content that's password protected, _offline_?
 

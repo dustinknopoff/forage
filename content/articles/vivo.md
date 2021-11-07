@@ -1,12 +1,15 @@
-+++
-title = "Shoe Scraper"
-date = 2018-05-18
-[extra]
-link = "https://github.com/dustinknopoff/py-explore/blob/master/vivo.py"
-[taxonomies]
-categories = ["dev"]
-tags = ["python"]
-+++
+---
+title: Shoe Scraper
+date: 2018-05-18
+extra:
+  link: https://github.com/dustinknopoff/py-explore/blob/master/vivo.py
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - python
+
+---
 
 I am a huge fan of minimal, very small sole shoes. All of [Vivo Barefoot](https://www.vivobarefoot.com/us)'s shoes fit this desire. Except that they're way out of my price range. So, why not try and learn to scrape the web?
 

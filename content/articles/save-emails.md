@@ -1,12 +1,15 @@
-+++
-title = "Save Emails as PDFs"
-date = 2018-07-07
-[extra]
-link = "https://github.com/dustinknopoff/py-explore/tree/master/save-emails"
-[taxonomies]
-categories = ["dev"]
-tags = ["shell"]
-+++
+---
+title: Save Emails as PDFs
+date: 2018-07-07
+extra:
+  link: https://github.com/dustinknopoff/py-explore/tree/master/save-emails
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - shell
+
+---
 
 Someone posed the question of how to preserve emails on the Mac as PDFs [here](https://talk.macpowerusers.com/t/preserving-emails/4277). It was a question I was curious about and had no idea how to answer. So, I started to do my research.
 

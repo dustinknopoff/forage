@@ -1,12 +1,15 @@
-+++
-title = "Making a Vim Extension for TeaCode"
-date = 2018-09-13
-[extra]
-link = "https://github.com/dustinknopoff/TeaCode-Vim-Extension"
-[taxonomies]
-categories = ["dev"]
-tags = ["shell"]
-+++
+---
+title: Making a Vim Extension for TeaCode
+date: 2018-09-13
+extra:
+  link: https://github.com/dustinknopoff/TeaCode-Vim-Extension
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - shell
+
+---
 
 [TeaCode](https://www.apptorium.com/teacode) is this really awesome code expander that has a key detail which puts it above all others for me. It recognizes filetypes as distinct. This means you can have some expander for a function in Python and Swift that are both called with `-f ...` but output very different results. It's been absolutely fantastic jumping between Python, React, and Rust in the past few months and stuff having access to tons of little boilerplate avoiders.
 

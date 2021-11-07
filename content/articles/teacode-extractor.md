@@ -1,12 +1,15 @@
-+++
-title = "TeaCode Previewer"
-date = 2018-07-08
-[extra]
-link = "https://github.com/dustinknopoff/teacodebundles"
-[taxonomies]
-categories = ["dev"]
-tags = ["python"]
-+++
+---
+title: TeaCode Previewer
+date: 2018-07-08
+extra:
+  link: https://github.com/dustinknopoff/teacodebundles
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - python
+
+---
 
 In the slack channel for TeaCode, there is a channel `#expanders` where people can share there expanders. These come in `.tcbundle` files which look something like this:
 

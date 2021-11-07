@@ -1,13 +1,18 @@
-+++
-title = "Bashdoc - Parsing with Nom"
-date = 2018-12-10
-[extra]
-link = "https://github.com/dustinknopoff/bashdoc/tree/0.2.0"
-before = ["bashdoc.md", "bashdoc2.md"]
-[taxonomies]
-categories = ["dev"]
-tags = ["rust"]
-+++
+---
+title: Bashdoc - Parsing with Nom
+date: 2018-12-10
+extra:
+  link: https://github.com/dustinknopoff/bashdoc/tree/0.2.0
+  before:
+    - bashdoc.md
+    - bashdoc2.md
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - rust
+
+---
 
 > Part 3 of the unintended Bashdoc series.
 

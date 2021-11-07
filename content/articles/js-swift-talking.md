@@ -1,13 +1,17 @@
-+++
-title = "Retrieving data from a WKWebView and passing to SwiftUI"
-date = 2020-12-05
-[extra]
-link = "https://github.com/dustinknopoff/degree-audit-macos/blob/main/Degree%20Audit%20macOS/View%20Elements/WebView.swift"
-before = ["neuaudit.md"]
-[taxonomies]
-categories = ["dev"]
-tags = ["swift"]
-+++
+---
+title: Retrieving data from a WKWebView and passing to SwiftUI
+date: 2020-12-05
+extra:
+  link: https://github.com/dustinknopoff/degree-audit-macos/blob/main/Degree%20Audit%20macOS/View%20Elements/WebView.swift
+  before:
+    - neuaudit.md
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - swift
+
+---
 
 > A vaguely related continuation of [NEU Audit Parsing](@/articles/neuaudit.md)
 

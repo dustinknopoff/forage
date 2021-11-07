@@ -1,12 +1,15 @@
-+++
-title = "Splitting PDFs"
-date = 2018-07-07
-[extra]
-link = "https://github.com/dustinknopoff/py-explore/blob/master/splitpdfs.py"
-[taxonomies]
-categories = ["dev"]
-tags = ["python"]
-+++
+---
+title: Splitting PDFs
+date: 2018-07-07
+extra:
+  link: https://github.com/dustinknopoff/py-explore/blob/master/splitpdfs.py
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - python
+
+---
 
 Manipulating PDFs is quite a bit more difficult than I was expecting. Someone posted on the Mac Power Users forum asking if there was a way to programmatically split a pdf into multiple pdfs of differing lengths. In other words, taking a 10 page pdf and splitting it into 4 pdfs with 1,3,4, and 2 pages respectively.
 

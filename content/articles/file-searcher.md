@@ -1,12 +1,15 @@
-+++
-title = "Directory and File Searcher"
-date = 2018-08-21
-[extra]
-link = "https://gist.github.com/dustinknopoff/d01011beaf8b4248e5f39abd2396d040"
-[taxonomies]
-categories = ["dev"]
-tags = ["shell"]
-+++
+---
+title: Directory and File Searcher
+date: 2018-08-21
+extra:
+  link: https://gist.github.com/dustinknopoff/d01011beaf8b4248e5f39abd2396d040
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - shell
+
+---
 
 Since my discovery of [fzf](https://github.com/junegunn/fzf) and [ripgrep](https://github.com/BurntSushi/ripgrep), I've been searching for a way to have a single place to search files and their contents easily. Over 3 months later, I found this snippet as an example in the README for `fzf`.
 

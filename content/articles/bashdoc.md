@@ -1,13 +1,17 @@
-+++
-title = "Bashdoc - Round 1"
-date = 2018-10-24
-[extra]
-link = "https://github.com/dustinknopoff/bashdoc/tree/v0.0.5"
-after = ["bashdoc2.md", "bashdoc3.md"]
-[taxonomies]
-categories = ["dev"]
-tags = ["rust"]
-+++
+---
+title: Bashdoc - Round 1
+date: 2018-10-24
+extra:
+  link: https://github.com/dustinknopoff/bashdoc/tree/v0.0.5
+  after:
+    - bashdoc2.md
+    - bashdoc3.md
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - rust
+---
 
 I believe there is a moment where all developers discover how powerful and efficient mastering the command line is. When using Finder or actually clicking on things or moving the mouse seems like so much extra work. Vim is an excellent example of this. Once you immerse yourself in the syntax of vim, if you go back to a GUI editor it feels like immense effort to actually click to go to the end of a line or the end of a document.
 

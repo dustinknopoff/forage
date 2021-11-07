@@ -1,12 +1,14 @@
-+++
-title = "Money Buddy"
-date = 2018-06-26
-[extra]
-link = "https://github.com/dustinknopoff/moneybuddy"
-[taxonomies]
-categories = ["design"]
-tags = []
-+++
+---
+title: Money Buddy
+date: 2018-06-26
+extra:
+  link: https://github.com/dustinknopoff/moneybuddy
+taxonomies:
+  categories:
+    - design
+  tags: []
+
+---
 
 This was Jessica Holoschutz Berger and I's final project for 5D Fundamentals at Northeastern University. The concept was to emphasize the common issue in the US where customers will buy more than they can afford.
 

@@ -1,13 +1,15 @@
-+++
-title = "Interaction Design - COVID"
-date = 2020-12-13
-[extra]
-link = "https://www.figma.com/proto/oHeKZbVmHGK4Za4qTPrtvw/COVID-Testing-Web-App-VD?node-id=1%3A2&viewport=698%2C186%2C0.3161039650440216&scaling=scale-down"
-linkText = "View Full Prototype"
-[taxonomies]
-categories = ["design"]
-tags = []
-+++
+---
+title: Interaction Design - COVID
+date: 2020-12-13
+extra:
+  link: https://www.figma.com/proto/oHeKZbVmHGK4Za4qTPrtvw/COVID-Testing-Web-App-VD?node-id=1%3A2&viewport=698%2C186%2C0.3161039650440216&scaling=scale-down
+  linkText: View Full Prototype
+taxonomies:
+  categories:
+    - design
+  tags: []
+
+---
 
 Studying computer science AND design can sometimes feel like the absolute worst position to be in. You're constantly aware of the typefaces in advertisements, whether an application is using Electron or not, and at times overwhelmed by all the things in that world that could be tweaked to be _better_ (An absolutely objective opinion, ha).
 

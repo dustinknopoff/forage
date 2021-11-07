@@ -1,12 +1,15 @@
-+++
-title = "Extract Zoom links from Calendar"
-date = 2020-12-10
-[extra]
-link = "https://github.com/dustinknopoff/calendar"
-[taxonomies]
-categories = ["dev"]
-tags = ["swift"]
-+++
+---
+title: Extract Zoom links from Calendar
+date: 2020-12-10
+extra:
+  link: https://github.com/dustinknopoff/calendar
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - swift
+
+---
 
 For some reason, Zoom refuses to connect my Northeastern schedule in to the app. Having to open the Calendar app, wait for it to load, click on the next event, and then double click the zoom link in the description is _way to much work_.
 

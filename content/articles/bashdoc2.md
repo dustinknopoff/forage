@@ -1,14 +1,19 @@
-+++
-title = "Bashdoc - Round 2"
-date = 2018-10-26
-[extra]
-link = "https://github.com/dustinknopoff/bashdoc/tree/v0.1.0"
-before = ["bashdoc.md"]
-after = ["bashdoc3.md"]
-[taxonomies]
-categories = ["dev"]
-tags = ["rust"]
-+++
+---
+title: Bashdoc - Round 2
+date: 2018-10-26
+extra:
+  link: https://github.com/dustinknopoff/bashdoc/tree/v0.1.0
+  before:
+    - bashdoc.md
+  after:
+    - bashdoc3.md
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - rust
+
+---
 
 When I make something like [bashdoc](@/articles/bashdoc.md), once the idea and way to make it happen is in my head, I work on it over and over again until it's done. And when it's something like bashdoc which outputs
 

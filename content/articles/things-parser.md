@@ -1,12 +1,15 @@
-+++
-title = "Things 3 Parser"
-date = 2018-06-12
-[extra]
-link = "https://github.com/dustinknopoff/tparse"
-[taxonomies]
-categories = ["dev"]
-tags = ["python"]
-+++
+---
+title: Things 3 Parser
+date: 2018-06-12
+extra:
+  link: https://github.com/dustinknopoff/tparse
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - python
+
+---
 
 This was my attempt at porting [@pdavidsonreiler](https://github.com/pdavisonreiber/Public-Drafts-Scripts/tree/master/Things%20Parser) natural language parser in Drafts 5 for Things 3 to Python. I was curious about how it was done and about bringing that functionality to the Mac.
 

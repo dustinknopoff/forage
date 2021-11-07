@@ -1,13 +1,16 @@
-+++
-title = "Website"
-date = 2018-07-28
-[extra]
-link = "https://github.com/dustinknopoff/portfolio-simple"
-#after = ["forage.md"]
-[taxonomies]
-categories = ["design"]
-tags = []
-+++
+---
+title: Website
+date: 2018-07-28
+extra:
+  link: https://github.com/dustinknopoff/portfolio-simple
+#   after:
+#     - forage.md
+taxonomies:
+  categories:
+    - design
+  tags: []
+
+---
 
 This website has been an idea for a long, long time. It started out as HTML written in Python using [yattag](http://www.yattag.org) which became quickly unusable. It was then migrated to using [pystache](https://github.com/defunkt/pystache) and injected JavaScript.
 

@@ -1,12 +1,15 @@
-+++
-title = "Building a Mini Shell in Rust"
-date = 2018-10-16
-[extra]
-link = "https://github.com/dustinknopoff/rust-minishell"
-[taxonomies]
-categories = ["dev"]
-tags = ["rust"]
-+++
+---
+title: Building a Mini Shell in Rust
+date: 2018-10-16
+extra:
+  link: https://github.com/dustinknopoff/rust-minishell
+taxonomies:
+  categories:
+    - dev
+  tags:
+    - rust
+
+---
 
 > Disclaimer: I'm sure there is a much more elegant way to do this.
 
