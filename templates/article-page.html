@@ -31,13 +31,15 @@
   {{page_macros::series(list=page.extra.after, isBefore=false)}}
 {%endif%}
 <p class="cta">
-  <a href="{{page.extra | get(key="link")}}" target="_blank" rel="noopener noreferrer nofollow">
-    {% if "linkText" in page.extra %}
-      {{ page.extra | get(key="linkText")}}
-    {% else %}
-      See the code
-    {% endif %} 
-  </a>
+  {% if "link" in page.extra %}
+    <a href="{{page.extra | get(key="link")}}" target="_blank" rel="noopener noreferrer nofollow">
+      {% if "linkText" in page.extra %}
+        {{ page.extra | get(key="linkText")}}
+      {% else %}
+        See the code
+      {% endif %} 
+    </a>
+  {% endif %}
   {% if page.extra.discussion %} 
   or 
   <a href="{{page.extra.discussion}}" target="_blank" rel="noopener noreferrer nofollow">Join the discussion</a>

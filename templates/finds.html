@@ -13,21 +13,12 @@
         <li><a href="{{ get_url(path=url) }}">{{item}}</a></li>
         {% endfor %} {% endfor %}
       </ul>
-      <a
-        href="{{ post.extra.link }}"
-        class="card-link"
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-        ><h3>{{ post.title }}</h3></a
-      >
+      <a href="{{post.permalink}}">
+      <h3>{{ post.title }}</h3>
+      </a>
     </div>
-    <a
-      href="{{ post.extra.link }}"
-      class="card-link"
-      target="_blank"
-      rel="noopener noreferrer nofollow"
-    >
-    {{post.content | safe}}
+    <a href="{{post.permalink}}">
+    {{post.content | truncate | safe}}
     </a>
   </li>
   {% endfor %}
