@@ -193,6 +193,7 @@ main ul > li {
 footer {
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
 }
 
 footer > .links > * {
@@ -253,6 +254,15 @@ svg {
   color: var(--primary-color);
 }
 
+.card-preview.finds {
+  width: auto;
+}
+
+.card-preview.finds h1,.card-preview.finds h2,.card-preview.finds h3,.card-preview.finds h4,.card-preview.finds h5,.card-preview.finds h6, .card-preview.finds p {
+  font-weight: 300;
+  filter: invert(0.3);
+}
+
 .preview-list {
   display: flex;
   width: 100%;
@@ -294,21 +304,21 @@ details {
   align-items: center;
 }
 
-/* .finds-list {
+.finds-list {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-} */
+  flex-direction: column;
+}
 
-.finds-list {
+/* .finds-list {
   display: grid;
-  grid-gap: 2em; /* [1] Add some gap between rows and columns */
+  grid-gap: 2em; 
   grid-template-columns: repeat(
     auto-fill,
     minmax(200px, 1fr)
-  ); /* [2] Make columns adjust according to the available viewport */
-  /* grid-auto-rows: 250px; /* [3] Set the height for implicitly-created row track */
-}
+  ); 
+} */
 
 .card-preview.finds {
   display: flex;

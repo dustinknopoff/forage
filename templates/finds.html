@@ -3,6 +3,7 @@
 <ul class="finds-list">
   {% for post in paginator.pages %}
   <li class="card-preview finds {% if post.extra.banner %}col--2x{%endif %}">
+      <a href="{{post.permalink}}">
     {% if post.extra.banner %}
     <img src="{{ post.extra.banner }}" alt="post banner" />
     {% endif %}
@@ -13,13 +14,10 @@
         <li><a href="{{ get_url(path=url) }}">{{item}}</a></li>
         {% endfor %} {% endfor %}
       </ul>
-      <a href="{{post.permalink}}">
-      <h3>{{ post.title }}</h3>
-      </a>
+        <h3>{{ post.title }}</h3>
     </div>
-    <a href="{{post.permalink}}">
-    {{post.content | truncate | safe}}
-    </a>
+      {{post.content | safe }}
+      </a>
   </li>
   {% endfor %}
 </ul>
