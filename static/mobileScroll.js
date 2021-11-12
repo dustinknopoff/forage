@@ -145,11 +145,3 @@ function isMobile(param) {
 
   return result;
 }
-
-setTimeout(() => {
-  if (window.innerWidth <= 480) {
-    document.getElementById("main").scrollIntoView({ behavior: "smooth" });
-  }
-}, 700);
-
-console.log(isMobile(window.navigator).any);

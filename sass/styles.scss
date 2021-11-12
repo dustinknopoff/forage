@@ -381,9 +381,21 @@ details {
   }
 }
 
+  .mobile {
+    display: none;
+  }
+
 @media (max-width: 480px) {
   :root {
     --base-font-size: 18px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: grid;
   }
 
   body {
@@ -501,5 +513,44 @@ details {
 @media screen and (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: block;
+  }
+
+  .buffer {
+    display: none;
+  }
+
+  #sidebar {
+    display: flex;
+    flex-direction: row-reverse;
+    position: sticky;
+    top: 0;
+    height: 20vh;
+    background: var(--secondary-color);
+
+    > .tagline {
+      padding: 20px;
+      background: none;
+      justify-content: flex-start;
+    }
+  }
+
+  main {
+    overflow:visible;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    background: var(--background-color);
+  }
+
+  .logo {
+    width: 100px;
   }
 }
