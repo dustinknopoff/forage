@@ -1,0 +1,59 @@
+---
+import slugify from "slugify"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import { Markdown } from 'astro/components';
+import IntersectionObserver from "../../components/IntersectionObserver.svelte"
+export async function getStaticPaths({ paginate }) {
+  const allPosts = Astro.fetchContent('../../../content/articles/*.md')
+
+ return allPosts
+ .filter(post => (post.title !== "Articles"))
+ .map((post) => {
+     return {
+         props: {post},
+         params: { slug: slugify(post.title)}
+     }
+ })
+}
+
+const { post } = Astro.props
+const { params } = Astro.request
+const headings = post.content.headers
+
+---
+
+<BaseLayout>
+<IntersectionObserver>
+<div class={headings.length > 0 ? "toc-container": ''}>
+    <div class="content animate">
+        <h1 class="title">{post.title}</h1>
+        <div class="subtitle"><strong>{new Date(post.date).toLocaleString()}</strong></div>
+        <Markdown>
+            {post.content.source}
+        </Markdown>
+        <p class="cta">
+        {post.extra.link && (
+             <a href={post.extra.link} target="_blank" rel="noopener noreferrer nofollow">
+        {post.extra.linkText || "See the code"}
+    </a>
+        )}
+         {post.extra.discussion && (
+             <a href={post.extra.discussion} target="_blank" rel="noopener noreferrer nofollow">
+        {"Join the discussion"}
+    </a>
+        )}
+        </p>
+    </div>
+
+        {post.content.headers && (
+            <nav class="toc-wrapper">
+                {headings.map(heading => (
+                    <a href={`#${heading.slug}`} class={`toc-Link toc-Link_h${heading.depth}`} id={`#${heading.slug}`}
+      >{ heading.text }</a
+    >
+                ))}
+            </nav>
+        )}
+    </div>
+    </IntersectionObserver>
+</BaseLayout>

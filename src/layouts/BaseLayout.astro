@@ -1,0 +1,109 @@
+---
+import GithubIcon from "../components/icons/GithubIcon.svelte"
+import LinkedInIcon from "../components/icons/LinkedInIcon.svelte"
+import RSSIcon from "../components/icons/RSSIcon.svelte"
+import EmailIcon from "../components/icons/EmailIcon.svelte"
+import SearchIcon from "../components/icons/SearchIcon.svelte"
+import CloseIcon from "../components/icons/CloseIcon.svelte"
+---
+<html lang="en">
+	<head>
+		<title>Dustin Knopoff</title>
+		<link rel="stylesheet" type="text/css" href={Astro.resolve("../styles/global.css")} />
+		<link rel="stylesheet" type="text/css" href={Astro.resolve("../styles/animations.css")} />
+		<meta charset="utf-8" />
+		<meta name="color-scheme" content="light dark" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="rustacean, cook, and martial arts enthusiast" />
+		<meta name="author" content="Dustin Knopoff" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="referrer" content="no-referrer-when-downgrade" />
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+	</head>
+	<body>
+		<div class="buffer" />
+		<nav id="sidebar">
+			<div class="tagline">
+				<a class="description" href="/about">rustacean, cook, and martial arts enthusiast</a>
+				<ul>
+					<li class="mobile-menu-item">
+						<a href="/tags/dev"> dev </a>
+					</li>
+					<li class="mobile-menu-item">
+						<a href="/tags/design"> design </a>
+					</li>
+					<li class="mobile-menu-item">
+						<a href="/tags"> tags </a>
+					</li>
+					<li id="search-img" class="search-img" height="16">
+						<SearchIcon />
+					</li>
+				</ul>
+			</div>
+			<a class="logo" href="/" width="100" height="200">
+				<img src="/logo.png" alt="logo" />
+			</a>
+		</nav>
+		<span class="search-info"> Press s to search </span>
+		<div id="main">
+			<main>
+				<slot />
+			</main>
+			<footer>
+				<span>Copyright {new Date().getFullYear()}</span>
+				<div class="links">
+					<!-- svelte-ignore a11y-invalid-attribute -->
+					<a href="javascript:window.location.href=atob('bWFpbHRvOndlYi1jb250YWN0QGtub3BvZmYuZGV2')">
+						<EmailIcon />
+					</a>
+					<a href="https://github.com/dustinknopoff" rel="noopener noreferrer nofollow" target="_blank">
+						<GithubIcon />
+					</a>
+					<a href="https://linkedin.com/in/dustinknopoff" rel="noopener noreferrer nofollow" target="_blank">
+						<LinkedInIcon />
+					</a>
+					<a href="/rss.xml">
+						<RSSIcon />
+					</a>
+				</div>
+				<div>
+					<a href="https://github.com/dustinknopoff/website-zola">Forage</a> theme made by
+					<a href="https://dustinknopoff.dev">Dustin Knopoff</a>
+					using <a href="https://getzola.org">Zola</a>
+				</div>
+			</footer>
+		</div>
+		<div class="body-blackout" />
+		<div class="popup-modal shadow">
+			<div id="search-header animate glow">
+				<h1 class="font-weight-bold">Search Posts</h1>
+				<a id="search-close">
+					<CloseIcon />
+				</a>
+			</div>
+			<input type="search" id="search" placeholder="planetary escargo" autofocus />
+			<ul class="search-results">
+				<div class="search-results__items" />
+			</ul>
+		</div>
+	</body>
+</html>

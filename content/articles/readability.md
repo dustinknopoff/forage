@@ -72,9 +72,9 @@ That's it. If you go with stdlib error handling and arguments, it's probably eve
 
 So that's wonderful. We've got our stripped HTML and piping to `pandoc` is easy. But what's the most accessible way to access this? Alfred.
 
-<kbd>command</kbd> + <kbd>space</kbd>
+`command + space`
 
-<kbd>html2md</kbd> + <kbd>enter</kmd>
+`html2md enter`
 
 Done 💥
 

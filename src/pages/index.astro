@@ -1,0 +1,44 @@
+---
+// Component Imports
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { Markdown } from 'astro/components';
+import slugify from "slugify";
+const allPosts = await Astro.fetchContent('../../content/articles/*.md')
+const byYear = allPosts.reduce((acc, curr) => {
+  const year = new Date(curr.date).getFullYear();
+  if (acc[year]) {
+    acc[year] = [...acc[year], curr]
+  } else {
+    acc[year] = [curr]
+  }
+  return acc;
+}, {})
+console.log(byYear["2021"][0])
+---
+<BaseLayout>
+  <div class="animate blur">
+  {Object.keys(byYear).map((year)=> (
+    <h2>{year}</h2>
+    <ul>
+      {byYear[year].map((post) => (      
+      <li class="card">
+        <div class="topline">
+          <ul class="tags">
+          </ul>
+          <a href={"/articles/" + slugify(post.title)} class="card-link"
+            ><h3>{post.title}</h3></a
+          >
+        </div>
+        <a href={"/articles/" + slugify(post.title)} class="card-link"
+          >
+          <Markdown>
+            {post.content.source.slice(0,150)}
+          </Markdown>
+          </a
+        >
+      </li>
+      ))}
+    </ul>
+  ))}
+</div>
+</BaseLayout>
