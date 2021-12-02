@@ -3,6 +3,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { Markdown } from 'astro/components';
 import slugify from "slugify";
+import { stripHtml } from "string-strip-html";
 const allPosts = await Astro.fetchContent('../../content/articles/*.md')
 const byYear = allPosts.reduce((acc, curr) => {
   const year = new Date(curr.date).getFullYear();
@@ -13,7 +14,6 @@ const byYear = allPosts.reduce((acc, curr) => {
   }
   return acc;
 }, {})
-console.log(byYear["2021"][0])
 ---
 <BaseLayout>
   <div class="animate blur">
@@ -24,6 +24,11 @@ console.log(byYear["2021"][0])
       <li class="card">
         <div class="topline">
           <ul class="tags">
+            {post.taxonomies?.tags.map((tag) => (
+              <li>
+                <a href={`/tags/${tag}`}>{tag}</a>
+              </li>
+            ))}
           </ul>
           <a href={"/articles/" + slugify(post.title)} class="card-link"
             ><h3>{post.title}</h3></a
@@ -32,7 +37,7 @@ console.log(byYear["2021"][0])
         <a href={"/articles/" + slugify(post.title)} class="card-link"
           >
           <Markdown>
-            {post.content.source.slice(0,150)}
+            {stripHtml(post.content.html).result.substr(0,150)}
           </Markdown>
           </a
         >

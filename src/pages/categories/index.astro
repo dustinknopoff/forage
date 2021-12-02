@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+// fetch all the posts
+const allPosts = await Astro.fetchContent('../../../content/articles/*.md')
+
+// prepare an array with all the unique tags
+const tags = [...new Set([].concat.apply([], allPosts.map(post => post.taxonomies?.categories)))]
+---
+<BaseLayout>
+<ul class="tag-list">
+     {tags.map((tag) => (
+        <li><a class="tag" href={`/categories/${tag}`}>{tag}</a></li>
+    ))}
+</ul>
+</BaseLayout>

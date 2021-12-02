@@ -26,7 +26,6 @@
 
 		// Now
 		allHtags.forEach((tag) => {
-			console.log("am I firing?")
 			observeHtags.observe(tag)
 		})
 	})

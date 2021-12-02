@@ -3,9 +3,43 @@ import slugify from "slugify"
 import BaseLayout from "../../layouts/BaseLayout.astro"
 import { Markdown } from 'astro/components';
 import IntersectionObserver from "../../components/IntersectionObserver.svelte"
-export async function getStaticPaths({ paginate }) {
+import entities from "entities"
+import elasticlunr from "elasticlunr"
+import fs from 'node:fs/promises';
+export async function getStaticPaths({ rss }) {
+    var index = elasticlunr(function () {
+        this.addField('title');
+        this.addField('body');
+        this.addField('tags')
+        this.setRef('id');
+    });
   const allPosts = Astro.fetchContent('../../../content/articles/*.md')
-
+  const sortedPosts = allPosts.sort((a,b) => new Date(a) - new Date(b))
+    rss({
+        // The RSS Feed title, description, and custom metadata.
+        title: 'Dustin Knopoff',
+        description: 'rustacean, cook, and martial arts enthusiast',
+        customData: `<language>en-us</language>`,
+        // The list of items for your RSS feed, sorted.
+        items: sortedPosts.map(item => ({
+        title: item.title,
+        description: entities.encodeHTML(item.content.html),
+        link: `/articles/${slugify(item.title)}`,
+        pubDate: item.date,
+        })),
+    });
+    allPosts.forEach((post, idx) => {
+        let tags = []
+        if (post.taxonomies?.categories) { tags = [...tags,...post.taxonomies.categories ]}
+        if (post.taxonomies?.tags) { tags = [...tags,...post.taxonomies.tags ]}
+        index.addDoc({
+            id: idx,
+            title: post.title,
+            body: post.content.source,
+            tags: JSON.stringify(tags)
+        })
+    })
+    await fs.writeFile("./public/search_index.js", "utf-8")
  return allPosts
  .filter(post => (post.title !== "Articles"))
  .map((post) => {
