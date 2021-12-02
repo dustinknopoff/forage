@@ -1,4 +1,5 @@
 function handleClick(event) {
+  console.log("firing")
   const bodyBlackout = document.querySelector(".body-blackout");
   const popupModal = document.querySelector(`.popup-modal`);
   if (

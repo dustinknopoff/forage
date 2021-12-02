@@ -5,7 +5,7 @@ import { Markdown } from 'astro/components';
 import IntersectionObserver from "../../components/IntersectionObserver.svelte"
 import entities from "entities"
 import elasticlunr from "elasticlunr"
-import fs from 'node:fs/promises';
+import {writeFile} from 'node:fs/promises';
 export async function getStaticPaths({ rss }) {
     var index = elasticlunr(function () {
         this.addField('title');
@@ -28,26 +28,26 @@ export async function getStaticPaths({ rss }) {
         pubDate: item.date,
         })),
     });
-    allPosts.forEach((post, idx) => {
+    allPosts.forEach((post) => {
         let tags = []
         if (post.taxonomies?.categories) { tags = [...tags,...post.taxonomies.categories ]}
         if (post.taxonomies?.tags) { tags = [...tags,...post.taxonomies.tags ]}
         index.addDoc({
-            id: idx,
+            id: `/articles/${slugify(post.title)}`,
             title: post.title,
             body: post.content.source,
             tags: JSON.stringify(tags)
         })
     })
-    await fs.writeFile("./public/search_index.js", "utf-8")
- return allPosts
- .filter(post => (post.title !== "Articles"))
- .map((post) => {
-     return {
-         props: {post},
-         params: { slug: slugify(post.title)}
-     }
- })
+    await writeFile("./public/search_index.js", `window.searchIndex = ${JSON.stringify(index.toJSON())}`)
+    return allPosts
+    .filter(post => (post.title !== "Articles"))
+    .map((post) => {
+        return {
+            props: {post},
+            params: { slug: slugify(post.title)}
+        }
+    })
 }
 
 const { post } = Astro.props
