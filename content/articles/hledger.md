@@ -6,11 +6,66 @@ draft: true
 
 I recently watched, [this video by Colin Dean](https://www.youtube.com/watch?v=FJtaM43PgXQ) which for the first time plaintext accounting click.
 
-This is going to assume you've watched that video and understand the general concept of a ledger file and running `hledger` on that file.
+This is a brief overview of what `hledger` is used for and the key takeaways to stick with it.
+
+## Overview
+
+`hledger` is part of a family of programs focused on [plaintext accounting](https://plaintextaccounting.org). I've found myself hopping around _many_ financial tracking applications and largely unhappy with all of them (_especially_ when it comes to multi-currency accounts).
+
+At the heart of `hledger` lies the ledger file. This is a regular textfile usually with the extension `.journal`.
+
+The recommendation is to with something like this
+
+```
+; Declare top level accounts, setting their types and display order;
+; Replace these account names with yours; it helps commands like bs and is detect them.
+account Assets       ; type:A, things I own
+account Liabilities  ; type:L, things I owe
+account Equity       ; type:E, net worth or "total investment"; equal to A - L
+account Expenses     ; type:X, outflow categories; part of E, separated for reporting
+
+commodity 1,000.00 USD
+commodity 1,000.00 GBP
+```
+
+- Assets include things like checking accounts, savings, investments, cash in your wallet or purse.
+- Liabilities is anything you owe (mortgage, credit cards, etc.)
+- Expenses is anything you pay for (coffee shop, groceries, software, etc.)
+- Equity is...still something I don't understand.
+
+Where in Mint or You Need a Budget like programs you might see a transaction like this
+
+```
+Jul 4, 2021 Brindisa, Spanish Foods   ...   $23.49
+```
+
+`hledger` **requires** every transaction to be balanced (equaling 0)
+
+```
+2021-07-04 Brindisa, Spanish Foods
+  Expenses:Food                              23.49 USD
+  Liabilities:CreditCards:American Express  -23.49 USD
+```
+
+The is the double entry part of double entry bookkeeping.
+
+With that background, here are some key points to make using hledger easier.
+
+## Start right now
+
+Don't try to backfill information for this year. It will be a painfully tedious process and likely make you not want to continue.
+
+When you're declaring balances of prior to tracking with `hledger`, balance your transactions against Equity.
+
+```
+2021-12-24 Opening Balances
+  Assets:Checking     48.33 USD
+  Equity             -48.33 USD
+```
 
 ## Don't use money signs
 
-Always use USD in place of `$`. The same for all currencies.
+Always use USD in place of `$`. The same for all currencies. Certain tools do not work with currency signs.
 
 ## Commodities
 
