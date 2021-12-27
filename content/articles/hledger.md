@@ -68,7 +68,7 @@ Always use USD in place of `$`. The same for all currencies. Certain tools do no
 
 ## Commodities
 
-Everything is commodity. A US Dollar, British Pound, or a BTC. Their values is only derived based on what you define it as.
+Everything is a commodity. A US Dollar, British Pound, or a BTC. Their values is only derived based on what you define it as.
 
 ```dat
 P 2021/12/25 12:00:00 AAPL @ 170.00 USD
