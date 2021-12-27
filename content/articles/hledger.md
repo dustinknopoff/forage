@@ -3,7 +3,7 @@ title: Plaintext Accounting Crib Sheet
 date: 2022-12-25
 ---
 
-I recently watched, [this video by Colin Dean](https://www.youtube.com/watch?v=FJtaM43PgXQ) which for the first time plaintext accounting click.
+I recently watched, [this video by Colin Dean](https://www.youtube.com/watch?v=FJtaM43PgXQ) which for the first time made plaintext accounting click.
 
 This is a brief overview of what `hledger` is used for and the key takeaways to stick with it.
 
