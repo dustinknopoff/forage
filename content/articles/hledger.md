@@ -1,7 +1,6 @@
 ---
 title: Plaintext Accounting Crib Sheet
 date: 2022-12-25
-draft: true
 ---
 
 I recently watched, [this video by Colin Dean](https://www.youtube.com/watch?v=FJtaM43PgXQ) which for the first time plaintext accounting click.
