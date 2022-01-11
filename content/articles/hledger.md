@@ -117,10 +117,10 @@ $ hledger bal ^Income ^Expenses
 
 In the case where you pay with a credit card, these purchases would go against your liability.
 
-Your net worth is the same comparison but between Income and Liabilities
+Your net worth is the same comparison but between Assets and Liabilities
 
 ```
-$ hledger bal ^Income ^Liabilities
+$ hledger bal ^Assets ^Liabilities
 
            43.49 USD  Assets:Checking
           -20.56 USD  Liabilities:CreditCards:Amex
