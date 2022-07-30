@@ -3,7 +3,7 @@ homepage = "https://github.com/dustinknopoff/website-zola"
 license = "MIT"
 name = "forage"
 # The minimum version of Zola required
-min_version = "0.12.0"
+min_version = "0.16.0"
 # An optional live demo URL
 demo = ""
 

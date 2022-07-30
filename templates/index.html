@@ -1,29 +1,38 @@
-{% import "macros/page.html" as page_macros %} {% extends "base.html" %} {%block
-content%} {% set section = get_section(path="articles/_index.md") %} {% for
-year, posts in section.pages | group_by(attribute="year") %}
-<div class="animate blur">
-  <h2>{{ year }}</h2>
-
-  <ul>
-    {% for post in posts %}
-    <li class="card">
-      <div class="topline">
-        <ul class="tags">
-          {% for key,value in post.taxonomies %} {% for item in value %} {% set
-          url = "/" ~ key ~ "/" ~ item %}
-          <li><a href="{{ get_url(path=url) }}">{{item}}</a></li>
-          {% endfor %} {% endfor %}
-        </ul>
-        <a href="{{ post.permalink }}" class="card-link"
-          ><h3>{{ post.title }}</h3></a
-        >
-      </div>
-      <a href="{{ post.permalink }}" class="card-link"
-        >{{post.content | striptags | truncate(length=180, end="...") | safe
-        }}</a
-      >
-    </li>
+{% import "macros/page.html" as page_macros %} 
+{% extends "base.html" %} 
+{%block content%} 
+  <header id="intro">
+    <h1>:wave: I’m Dustin</h1>
+    <h2>rustacean, martial artist, and cook</h2>
+    <!-- <p>Lorem Ipsum</p> -->
+  </header>
+<div class="posts">
+  <div>
+  {% set section = get_section(path="articles/_index.md") %}   
+  {% for year, posts in section.pages | group_by(attribute="year") %}
+    <div class="animate blur">
+      <h2>{{ year }}</h2>
+      <ul>
+        {% for post in posts %}
+          <li>
+            {% if loop.index == 1 %}
+              <li class="card">
+              <a href="{{ post.permalink }}">
+              <span class="topline">
+              {{ post.title }}
+              </span>
+              <p>{{post.content | striptags | truncate(length=180, end="...") | safe
+                }}</p>
+              </a>
+            </li>
+            {% else %}
+              <a href="{{ post.permalink }}">{{ post.title }}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
     {% endfor %}
-  </ul>
+  </div>
 </div>
-{% endfor %} {% endblock content %}
+ {% endblock content %}
