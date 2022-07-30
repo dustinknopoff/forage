@@ -13,7 +13,7 @@
     <div class="animate blur">
       <h2>{{ year }}</h2>
       <ul>
-        {% for post in posts %}
+        {% for post in posts | sort(attribute="date") %}
           <li>
             {% if loop.index == 1 %}
               <li class="card">
