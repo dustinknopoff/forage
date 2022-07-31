@@ -4,6 +4,7 @@
 {% block title %} {{page.title}} {% endblock  title %}
 
 {% block extra_js %}
+<script src="https://unpkg.com/shiki"></script>
 {% endblock extra_js %}
 
 {% block content %}
@@ -35,6 +36,17 @@
 </p>
 </div>
 </article>
+
+<script>
+  shiki
+    .getHighlighter({
+      theme: 'nord'
+    })
+    .then(highlighter => {
+      const code = highlighter.codeToHtml(`console.log('shiki');`, { lang: 'js' })
+      document.getElementById('output').innerHTML = code
+    })
+</script>
 
 
 {% endblock content %}

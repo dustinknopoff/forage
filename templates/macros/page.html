@@ -59,12 +59,6 @@
   {% set page = get_page(path="articles/" ~ page) %}  
     <li class="card-preview">
       <div class="topline">
-        <ul class="tags">
-          {% for key,value in page.taxonomies %} {% for item in value %} {% set
-          url = "/" ~ key ~ "/" ~ item %}
-          <li><a href="{{ get_url(path=url) }}">{{item}}</a></li>
-          {% endfor %} {% endfor %}
-        </ul>
         <a href="{{ page.permalink }}"><h3>{{ page.title }}</h3></a>
       </div>
       <a href="{{ page.permalink }}"
