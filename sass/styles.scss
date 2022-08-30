@@ -9,11 +9,20 @@
   --title: "iA Writer Quattro S", monospace;
   --content: "iA Writer Quattro S", monospace;
   --mono: Courier, monospace;
+  --size-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
+  --size-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+  --size-500: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  --size-600: clamp(1.37rem, 1.21rem + 0.8vw, 1.78rem);
+  --size-700: clamp(1.71rem, 1.45rem + 1.29vw, 2.37rem);
+  --size-800: clamp(2.14rem, 1.74rem + 1.99vw, 3.16rem);
+  --size-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
+  --size-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
 }
 
 html {
   background: var(--background-color);
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 /* MARK: Grid Setup */
@@ -50,9 +59,7 @@ a {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  transform: skewX(calc(28deg * var(--scroll, 0))) 
-    skewY(calc(-30deg * var(--scroll, 0)))
-    rotateY(calc(180deg * var(--scroll, 0)));
+  transform: skewX(calc(28deg * var(--scroll, 0))) skewY(calc(-30deg * var(--scroll, 0))) rotateY(calc(180deg * var(--scroll, 0)));
 }
 
 header#intro {
@@ -103,7 +110,7 @@ footer {
   justify-content: space-between;
   padding: 15px 15px 0 15px;
 
-  > .links > * {
+  >.links>* {
     padding: 10px;
   }
 }
@@ -130,11 +137,10 @@ main {
   border-width: 3px;
   padding: 20px;
   border-style: solid;
-  border-image: 
-    linear-gradient(
-      to bottom, 
+  border-image:
+    linear-gradient(to bottom,
       var(--background-color),
-      var(--accent-color), 
+      var(--accent-color),
     ) 1 100%;
 }
 
@@ -142,10 +148,43 @@ article {
   display: flex;
   justify-content: center;
   align-content: center;
+
+  * {
+    line-height: calc(2px + 2ex + 2px);
+  }
+
+  h1 {
+    font-size: var(--size-900);
+  }
+
+  h2 {
+    font-size: var(--size-800);
+  }
+
+  h3 {
+    font-size: var(--size-700);
+  }
+
+  h4 {
+    font-size: var(--size-600);
+  }
+
+  h5 {
+    font-size: var(--size-500);
+  }
+
+  h6 {
+    font-size: var(--size-400);
+  }
+
+  p {
+    font-size: var(--size-300);
+  }
 }
 
 
-main p > a,
+
+main p>a,
 footer a {
   color: var(--accent-color);
 }
@@ -161,7 +200,7 @@ main blockquote {
   justify-content: center;
 }
 
-.pagination > a {
+.pagination>a {
   padding: 20px;
 }
 
@@ -215,6 +254,10 @@ details {
 @media screen and (max-width: 768px) {
   body {
     display: block;
+  }
+
+  html {
+    font-size: 18px;
   }
 
 }
