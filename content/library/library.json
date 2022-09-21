@@ -130,13 +130,11 @@
                 {
                     "title": "The Man From Earth",
                     "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/V086R82gNgWrotaXZFO4JhdgB1.jpg",
-                    "author": "Jerome Bixby",
                     "link": "https://www.themoviedb.org/movie/13363-the-man-from-earth"
                 },
                 {
                     "title": "The Last Samurai",
                     "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/lsasOSgYI85EHygtT5SvcxtZVYT.jpg",
-                    "author": "John Logan",
                     "link": "https://www.themoviedb.org/movie/616-the-last-samurai"
                 }
             ]
@@ -148,14 +146,38 @@
                 {
                     "title": "Psych",
                     "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/fDI15gTVbtW5Sbv5QenqecRxWKJ.jpg",
-                    "author": "Steve Franks",
                     "link": "https://www.themoviedb.org/tv/1447-psych"
                 },
                 {
                     "title": "Lie To Me",
                     "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/euhgvAtvBx4CElItl5qwEgWxpdh.jpg",
-                    "author": "Sam Baum",
                     "link": "https://www.themoviedb.org/tv/8358-lie-to-me"
+                }
+            ]
+        },
+        {
+            "name": "YouTube",
+            "url": "https://dustinknopoff.dev/library/#youtube",
+            "books": [
+                {
+                    "title": "Storror",
+                    "image": "https://yt3.ggpht.com/ytc/AMLnZu8orTnEHbbHo7P_uEClzTQvtySoZHhr3KqAcvPoZQ=s176-c-k-c0x00ffffff-no-rj",
+                    "link": "https://www.youtube.com/c/STORROR"
+                },
+                {
+                    "title": "Steezy",
+                    "image": "https://yt3.ggpht.com/ytc/AMLnZu93xW3LrwaRjhDPcGb1yCsrVteTa_0YcY4I-poRwg=s176-c-k-c0x00ffffff-no-rj",
+                    "link": "https://www.youtube.com/c/steezystudio"
+                },
+                {
+                    "title": "JimmyTheGiant",
+                    "image": "https://yt3.ggpht.com/ytc/AMLnZu_4heAanT_g5lUnT8FyaPitTfJWHJfuVrKJABvcVw=s176-c-k-c0x00ffffff-no-rj",
+                    "link": "https://www.youtube.com/c/JimmyTheGiant"
+                },
+                {
+                    "title": "Jon Gjenset",
+                    "image": "https://yt3.ggpht.com/ytc/AMLnZu-c1jJCzAsfE1qp1nXNUUqU2sH6UvkNEfYKNMwfDQ=s176-c-k-c0x00ffffff-no-rj",
+                    "link": "https://www.youtube.com/c/JonGjengset"
                 }
             ]
         }

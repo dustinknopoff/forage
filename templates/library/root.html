@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
         <link rel="stylesheet" type="text/css" href={{ get_url(path="library.css", trailing_slash=false)}} />
 
-        {% set data = load_data(path="content/library/reading.json") %}
+        {% set data = load_data(path="content/library/library.json") %}
 <div class="container">
     <div class="content-container">
         <div class="profile">
@@ -39,7 +39,9 @@
                                     {% else %}
                                         <h3>{{book.title}}</h3>
                                     {% endif %}
+                                    {% if book.author %}
                                     <h4 class="book-author">by&nbsp;{{book.author}}</h4>
+                                    {% endif %}
                                     {% if book.date_finished %}
                                         <span class="book-finished">Finished On {{book.date_finished}}</span>
                                     {% endif %}
