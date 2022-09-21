@@ -1,7 +1,15 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+{% block title %}
+{{config.title}} | Library
+{% endblock %}
+{% block head %}
+    {% set data = load_data(path="content/library/library.json") %}
         <link rel="stylesheet" type="text/css" href={{ get_url(path="library.css", trailing_slash=false)}} />
-
-        {% set data = load_data(path="content/library/library.json") %}
+        <meta name="description" content="{{data.bio}}" />
+        <meta name="og:description" content="{{data.bio}}" />
+{% endblock %}
+{% block content %}
+    {% set data = load_data(path="content/library/library.json") %}
 <div class="container">
     <div class="content-container">
         <div class="profile">

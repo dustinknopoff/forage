@@ -12,7 +12,6 @@
         <meta name="color-scheme" content="light dark">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
         <meta name="author" content="{{ config.extra.forage_author }}">
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"></link>
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"></link>
@@ -39,6 +38,9 @@
         <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
       {% endif %}
       <script type="text/javascript" src={{ get_url(path="logo.js", trailing_slash=false)}}></script>
+      {% block head %}
+        <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+      {% endblock %}
     </head>
    <body>
     <main>
