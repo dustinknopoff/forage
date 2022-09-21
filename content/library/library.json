@@ -162,6 +162,11 @@
                     "title": "Chuck",
                     "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/ejV52ysoiVdXUJBOiNI9KTM36el.jpg",
                     "link": "https://www.themoviedb.org/tv/1404-chuck"
+                },
+                {
+                    "title": "The Great Pottery Throw Down",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/89RRcMbTgELBRmFCD1B9n4wPv39.jpg",
+                    "link": "https://www.themoviedb.org/tv/77631-the-great-pottery-throw-down"
                 }
             ]
         },
