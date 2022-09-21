@@ -31,7 +31,7 @@
                         {% for book in list.books %}
                             <div class="book">
                                 {% if book.image %}
-                                    <img class="book-image" src="{{book.image}}" async defer />
+                                    <img class="book-image" src="https://cors-anywhere.knopoff.workers.dev/?{{book.image}}" async defer />
                                 {% endif %}
                                 <div>
                                     {% if book.link %}
