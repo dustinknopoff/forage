@@ -55,27 +55,31 @@
             </svg>
         </a>
     </main>
-    <footer>
-        <span>Copyright {{ now() | date(format="%Y") }}</span>
-        <div class="links">
-            {% if config.extra.forage_email %}
-                <a onClick="{{config.extra.forage_email}}">
-                    {{icons::mail_icon()}}
+        <footer>
+            <span>Copyright {{ now() | date(format="%Y") }}</span>
+            <div class="links">
+                {% if config.extra.forage_email %}
+                    <a onClick="{{config.extra.forage_email}}">
+                        {{icons::mail_icon()}}
+                    </a>
+                {% endif %}
+                {% if config.extra.forage_github %}
+                    <a href="https://github.com/dustinknopoff" rel="noopener noreferrer nofollow" target="_blank">
+                        {{icons::github_icon()}}
+                    </a>
+                {% endif %}
+                {% if config.extra.forage_linkedin %}
+                    <a href="{{config.extra.forage_linkedin}}" rel="noopener noreferrer nofollow" target="_blank">
+                        {{icons::linkedin_icon()}}
+                    </a>
+                {% endif %}
+                <a href="/feed.xml">
+                    {{icons::rss_icon()}}
                 </a>
-            {% endif %}
-            {% if config.extra.forage_github %}
-                <a href="https://github.com/dustinknopoff" rel="noopener noreferrer nofollow" target="_blank">
-                    {{icons::github_icon()}}
-                </a>
-            {% endif %}
-            {% if config.extra.forage_linkedin %}
-                <a href="{{config.extra.forage_linkedin}}" rel="noopener noreferrer nofollow" target="_blank">
-                    {{icons::linkedin_icon()}}
-                </a>
-            {% endif %}
-            <a href="/feed.xml">
-                {{icons::rss_icon()}}
-                </a>
+                <a href="/library">
+                   {{icons::bookmark_icon()}}
+               </a>
+            </div>
             </div>
         </footer>
    </body>

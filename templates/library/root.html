@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block content %}
+        <link rel="stylesheet" type="text/css" href={{ get_url(path="library.css", trailing_slash=false)}} />
+
+        {% set data = load_data(path="content/library/reading.json") %}
+<div class="container">
+    <div class="content-container">
+        <div class="profile">
+            <h1>{{data.name}}</h1>
+            <p class="profile-bio">{{data.bio}}</p>
+            <a href="{{data.url}}" class="profile-link" target="_blank">View Profile</a>
+
+            <div class="following">
+                <h2>Following</h2>
+                {% for feed in data.following %}
+                    <a href="{{feed.url}}" class="profile-link" target="_blank">
+                        {{feed.name}}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="lists">
+            {% for list in data.lists %}
+                <details class="list">
+                    <summary id={{list.name}}>
+                        <h2 class="list-name">
+                            {{list.name}}
+                        </h2>
+                        <a href="#{{list.name | slugify}}">🔗</a>
+                    </summary>
+                    <div class="books">
+                        {% for book in list.books %}
+                            <div class="book">
+                                {% if book.image %}
+                                    <img class="book-image" src="{{book.image}}" async defer />
+                                {% endif %}
+                                <div>
+                                    {% if book.link %}
+                                        <h3><a href="{{book.link}}">{{book.title}}</a></h3>
+                                    {% else %}
+                                        <h3>{{book.title}}</h3>
+                                    {% endif %}
+                                    <h4 class="book-author">by&nbsp;{{book.author}}</h4>
+                                    {% if book.date_finished %}
+                                        <span class="book-finished">Finished On {{book.date_finished}}</span>
+                                    {% endif %}
+                                    {% if book.notes %}
+                                        <p class="notes">{{book.notes | safe}}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% if book.notes %}
+                                <p class="notes mobile">{{book.notes | safe}}</p>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </details>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

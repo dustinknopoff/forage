@@ -1,0 +1,151 @@
+.container {
+    padding: 24px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    &>*+* {
+        margin-left: 16px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: stretch;
+
+        &>*+* {
+            margin-left: 8px;
+        }
+    }
+}
+
+.profile {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+    &>*+* {
+        margin-top: 16px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        min-width: inherit;
+    }
+
+    @media only screen and (min-width: 768px) {
+        position: sticky;
+        top: 25px;
+    }
+
+    .following {
+        margin-top: 5vh;
+        border-top: 1px solid var(--accent-color);
+    }
+}
+
+.profile-link {
+    color: var(--primary-color);
+    font-weight: normal;
+
+    &:hover {
+        color: var(--accent-color);
+    }
+}
+
+.profile-bio {
+    font-weight: normal;
+}
+
+.lists {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+
+    &>*+* {
+        margin-top: 24px;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+
+    &>*+* {
+        margin-top: 8px;
+    }
+}
+
+.list-name {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.book-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media only screen and (max-width: 1168px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 960px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.book {
+    flex-grow: 1;
+    flex-basis: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    a {
+        color: var(--accent-color);
+    }
+
+    &>* {
+        margin: 5px;
+    }
+}
+
+.book-author {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.book-image {
+    width: 150px;
+    border-radius: 6px;
+}
+
+.book-finished {
+    color: var(--accent-color);
+}
+
+summary {
+    position: sticky;
+    top: 0;
+    background: var(--background-color);
+    padding: 15px;
+}
+
+.notes.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .notes.mobile {
+        display: block;
+    }
+
+    .notes {
+        display: none;
+    }
+}
