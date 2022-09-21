@@ -152,6 +152,11 @@
                     "title": "Lie To Me",
                     "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/euhgvAtvBx4CElItl5qwEgWxpdh.jpg",
                     "link": "https://www.themoviedb.org/tv/8358-lie-to-me"
+                },
+                {
+                    "title": "Avatar: The Last Airbender",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/cHFZA8Tlv03nKTGXhLOYOLtqoSm.jpg",
+                    "link": "https://www.themoviedb.org/tv/246-avatar-the-last-airbender"
                 }
             ]
         },
