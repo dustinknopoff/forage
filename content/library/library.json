@@ -205,6 +205,29 @@
                     "link": "https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw"
                 }
             ]
+        },
+        {
+            "name": "Music - Artists",
+            "url": "https://dustinknopoff.dev/library/#music-artists",
+            "books": [
+                {
+                    "title": "Lake Street Dive",
+                    "image": "https://i.scdn.co/image/ab6761610000f178990c13fc50180f1c22a4ffe6",
+                    "link": "https://www.lakestreetdive.com/"
+                }
+            ]
+        },
+        {
+            "name": "Music - Albums",
+            "url": "https://dustinknopoff.dev/library/#music-albums",
+            "books": [
+                {
+                    "title": "El Madrileño",
+                    "image": "https://i.scdn.co/image/ab67616d0000b273a408c78e231f716383a58eb3",
+                    "author": "C. Tangana",
+                    "link": "https://www.instagram.com/c.tangana/"
+                }
+            ]
         }
     ],
     "following": []
