@@ -1,3 +1,15 @@
-{% extends "base.html" %} {% block content %}
-
+{% extends "base.html" %} 
+{% import "macros/library.html" as library %}
+{% block title %}
+{{config.title}} | Library
+{% endblock %}
+{% block head %}
+    {% set data = load_data(path="content/library/" ~ page.date ~ ".json") %}
+        <link rel="stylesheet" type="text/css" href={{ get_url(path="library.css", trailing_slash=false)}} />
+        <meta name="description" content="{{data.bio}}" />
+        <meta name="og:description" content="{{data.bio}}" />
+{% endblock %}
+{% block content %}
+{% set data = load_data(path="content/library/" ~ page.date ~ ".json") %}
+{{library::content(data=data)}}
 {% endblock content %}
