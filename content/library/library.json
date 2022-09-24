@@ -230,5 +230,10 @@
             ]
         }
     ],
-    "following": []
+    "following": [
+        {
+            "url": "https://diklein.com/podcasts",
+            "name": "David Klein"
+        }
+    ]
 }
