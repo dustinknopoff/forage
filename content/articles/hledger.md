@@ -15,7 +15,7 @@ At the heart of `hledger` lies the ledger file. This is a regular textfile usual
 
 The recommendation is to with something like this
 
-```
+```tsv
 ; Declare top level accounts, setting their types and display order;
 ; Replace these account names with yours; it helps commands like bs and is detect them.
 account Assets       ; type:A, things I own
@@ -34,13 +34,13 @@ commodity 1,000.00 GBP
 
 Where in Mint or You Need a Budget like programs you might see a transaction like this
 
-```
+```tsv
 Jul 4, 2021 Brindisa, Spanish Foods   ...   $23.49
 ```
 
 `hledger` **requires** every transaction to be balanced (equaling 0)
 
-```
+```tsv
 2021-07-04 Brindisa, Spanish Foods
   Expenses:Food                              23.49 USD
   Liabilities:CreditCards:American Express  -23.49 USD
@@ -56,7 +56,7 @@ Don't try to backfill information for this year. It will be a painfully tedious 
 
 When you're declaring balances of prior to tracking with `hledger`, balance your transactions against Equity.
 
-```
+```tsv
 2021-12-24 Opening Balances
   Assets:Checking     48.33 USD
   Equity             -48.33 USD
@@ -70,7 +70,7 @@ Always use USD in place of `$`. The same for all currencies. Certain tools do no
 
 Everything is a commodity. A US Dollar, British Pound, or a BTC. Their values is only derived based on what you define it as.
 
-```dat
+```tsv
 P 2021/12/25 12:00:00 AAPL @ 170.00 USD
 ```
 
@@ -87,7 +87,7 @@ More succinctly:
 
 > Opening Balances (+) Asset, (-) Equity
 
-```
+```tsv
 ; Example
 2021-12-25 Opening Balance
     Assets:Checking     2000.00 USD
@@ -104,7 +104,7 @@ But first, here's how you should record expenses
 
 Once this is in place, you can query for your cash flow (Comparing what comes in vs goes out)
 
-```
+```tsv
 $ hledger bal ^Income ^Expenses
            28.60 GBP  Expenses:Food:Groceries
            34.10 GBP  Expenses:Shopping:Electronics & Software
@@ -119,7 +119,7 @@ In the case where you pay with a credit card, these purchases would go against y
 
 Your net worth is the same comparison but between Assets and Liabilities
 
-```
+```tsv
 $ hledger bal ^Assets ^Liabilities
 
            43.49 USD  Assets:Checking
@@ -139,7 +139,7 @@ I label by kind (Checking, Savings, Wallet, Investment) and then the name of the
 
 i.e.
 
-```
+```tsv
 Assets:Checking:Bank of America
 Assets:Investments:Charles Schwab
 Assets:Cash:Wallet
@@ -152,7 +152,7 @@ In general, keep things as simple as possible! But, if you need a reference [Min
 <details>
 <summary>The list as Ledger Account Names</summary>
 
-```
+```tsv
 Income:Paycheck
 Income:Investment
 Income:Returned Purchase
@@ -256,7 +256,7 @@ Expenses:Taxes:Property Tax
 
 Label by where it's coming from.
 
-```
+```tsv
 Income:Venmo
 Income:Google
 ```
