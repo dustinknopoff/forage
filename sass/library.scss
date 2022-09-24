@@ -180,3 +180,38 @@ nav {
         display: none;
     }
 }
+
+/* SEARCH */
+#search-output {
+    display: none;
+
+    &.active {
+        display: flex;
+        width: 60vw;
+        overflow-x: scroll;
+        position: absolute;
+        top: 40px;
+        background: var(--background-color);
+        color: var(--foreground-color);
+        padding: 1rem;
+        box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        max-height: 500px;
+        z-index: 100;
+    }
+}
+
+#search {
+    border-radius: 4px;
+    border: 2px solid var(--accent-color);
+    padding: 5px;
+    width: 300px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+}

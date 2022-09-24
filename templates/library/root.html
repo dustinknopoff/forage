@@ -11,6 +11,12 @@
 {% endblock %}
 {% block content %}
 {% set data = load_data(path="content/library/library.json") %}
+<div class="search">
+    <input type="search" id="search" placeholder="Storror"></input>
+    <ul id="search-output">
+
+    </ul>
+</div>
 {{library::content(data=data)}}
 {% if section.pages %}
 <nav>
@@ -26,4 +32,64 @@
     </ul>
 </nav>
 {% endif %}
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script type="module">
+    import init, { slugify } from '/pkg/slug.js';
+    const hash = new URL(window.location.href).hash
+    try { 
+        const element = document.querySelector(hash) 
+        console.log(hash)
+        element.closest("details").open = true
+        element.scrollIntoView()
+    } catch { }
+
+    async function run() {
+        await init();
+        const books = await (await fetch("/library/library.json")).json()
+        const allItems = []
+        for (const list of books.lists) {
+            for (const item of list.books) {
+                allItems.push({...item, link: slugify(`${list.name}-${item.title}`)})
+            }
+        }
+        window.fuse = new Fuse(allItems, {
+            keys: ['title', 'author']
+        })
+    }
+
+    run()
+
+    document.getElementById("search").addEventListener("keyup", (event) => {
+        const results = window.fuse.search(event.target.value)
+        const container = document.getElementById("search-output")
+        container.classList.remove("active")
+        container.innerHTML = '';
+        if (results && event.target.value != '') {
+            container.classList.add("active")
+        }
+        results.forEach(({item}) => {
+            const newResult = document.createElement("li")
+            newResult.classList.add("book")
+            const href = document.createElement("a")
+            href.onclick = () => {
+                const element = document.getElementById(item.link)
+                window.location.hash = '#' + item.link
+                element.closest("details").open = true
+                element.scrollIntoView()
+            }
+            if (item.image) {
+                const image = document.createElement("img")
+                image.classList.add("book-image", "search")
+                image.src = `https://cors-anywhere.knopoff.workers.dev/?${item.image}`
+                href.appendChild(image)
+            }
+            const titleElement = document.createElement("p")
+            titleElement.innerText = item.title
+            href.appendChild(titleElement)
+            newResult.appendChild(href)
+            container.appendChild(newResult)
+        })
+    })
+</script>
 {% endblock content %}
