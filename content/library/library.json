@@ -112,7 +112,7 @@
                 {
                     "title": "Dune",
                     "image": "https://covers.openlibrary.org/b/id/9719751-M.jpg",
-                    "author": "Paulo Coehlo",
+                    "author": "Frank Herbert",
                     "link": "https://openlibrary.org/books/OL22275832M/Dune"
                 },
                 {
@@ -136,12 +136,6 @@
                     "title": "The Last Samurai",
                     "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/lsasOSgYI85EHygtT5SvcxtZVYT.jpg",
                     "link": "https://www.themoviedb.org/movie/616-the-last-samurai"
-                },
-                {
-                    "title": "Jojo Rabbit",
-                    "image": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts112/v4/ac/fc/55/acfc5550-a612-84c9-2455-4f0ac33c5b79/mza_12775081575377677092.png/268x0w.png",
-                    "author": "Ben Gilbert and David Rosenthal",
-                    "link": "https://acquired.fm"
                 }
             ]
         },
