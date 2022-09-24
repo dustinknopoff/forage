@@ -54,7 +54,7 @@
             }
         }
         window.fuse = new Fuse(allItems, {
-            keys: ['title', 'author']
+            keys: [{ name: 'title', weight: 2}, 'author']
         })
     }
 
