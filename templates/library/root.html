@@ -33,13 +33,12 @@
 </nav>
 {% endif %}
 
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-<script type="module">
+<script defer src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2" ></script>
+<script defer type="module">
     import init, { slugify } from '/pkg/slug.js';
     const hash = new URL(window.location.href).hash
     try { 
         const element = document.querySelector(hash) 
-        console.log(hash)
         element.closest("details").open = true
         element.scrollIntoView()
     } catch { }
