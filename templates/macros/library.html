@@ -8,14 +8,19 @@
 
             <div class="following">
                 <h2>Following</h2>
+                <ul>
                 {% for feed in data.following %}
-                    <a href="{{feed.url}}" class="profile-link" target="_blank">
-                        {{feed.name}}
-                    </a>
+                    <li>
+                        <a href="{{feed.url}}" class="profile-link" target="_blank">
+                            {{feed.name}}
+                        </a>
+                    </li>
                 {% endfor %}
+                </ul>
             </div>
         </div>
         <div class="lists">
+            <p>Last Updated on {{data.last_updated | date(format="%B %d, %Y")}}</p>
             {% for list in data.lists %}
                 <details class="list">
                     <summary id="{{list.name | slugify}}"">
@@ -40,7 +45,7 @@
                                     <h4 class="book-author">by&nbsp;{{book.author}}</h4>
                                     {% endif %}
                                     {% if book.date_finished %}
-                                        <span class="book-finished">Finished On {{book.date_finished}}</span>
+                                        <span class="book-finished">Finished On {{book.date_finished | date}}</span>
                                     {% endif %}
                                     {% if book.notes %}
                                         <p class="notes">{{book.notes | safe}}</p>

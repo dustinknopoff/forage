@@ -45,6 +45,11 @@
     .following {
         margin-top: 5vh;
         border-top: 1px solid var(--accent-color);
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
     }
 }
 
