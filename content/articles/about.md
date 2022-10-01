@@ -1,24 +1,27 @@
 ---
-date: 2019-03-23
+date: 2022-10-01
 title: About Me
-extra:
-  link: https://dustinknopoff.dev
-  linkText: Learn More
 
 ---
 
-Hi! I'm Dustin, a newly graduated software developer. I have a passion for computer science, cooking, and taekwondo.
+:wave: I'm Dustin, a fullstack developer originally from Connecticut and currently based in London, UK working for Yelp.
 
-## Programming
+I'm obsessed with making people more _efficient_. It brings me joy to help with automating the repetitive tasks in their life. In code, I find Rust scratches a similar itch of fearless efficiency but, I'm attempting my best to implement the practices taught in [Grokking Simplicity](https://www.manning.com/books/grokking-simplicity) in areas where using Rust isn't possible.
 
-At the moment, I am completely enamored with [Rust](https://www.rust-lang.org) and actively working on a iOS application in my free time. Over time I've transitioned from wanting to know everything about computer science and attempting to learn as many languages as possible. Now, I'm most interested in what I believe is best referred to as _ergonomic performance_. That is, languages, concepts, frameworks, etc. that have been designed to maximize performance or to design their libraries in such a way that one has to be aware of performance concerns. (i.e. [rayon](https://github.com/rayon-rs/rayon))
+Outside of coding (and consuming all the medias, check out my [favorites here](/library)), I love to cook, bake, design things, and a variety of atypical physical exercise. Specifically I've dabbled in Taekwondo, BJJ, Wing Chun, Parkour, and Aerial Silks.
 
-## Cooking
+Always open to chat by [email](helloweb@knopoff.dev)
 
-![](https://res.cloudinary.com/dcloudinary/image/upload/f_auto/v1605190430/portfolio/brussels.jpg)
+---
 
-## Taekwondo
+### Topics Currently on the Mind
 
-I've been practicing Taekwondo for over 15 years. I'm a 3rd dan black belt in World Taekwondo Federation style Taekwondo.
-
-![Breaking 3 bricks on fire](https://res.cloudinary.com/dcloudinary/image/upload/f_auto,e_blur_faces:500/v1553394222/portfolio/IMG_0397.jpg)
+- Second Brain(s) and Tools for Thought
+- Graceful Complexity in UI/UX
+- Designing interfaces that invite people to not fear making a mistake by touching the wrong thing
+- WebAuthn server via Cloudflare Workers
+- Can shadows acting in relation to ambient light make UIs interact with the external world in a pleasing way for a user?
+- Sharing computation between frontend and backend
+- Do I have anything to add to the podcast space?
+- When can there be an ergonomic way to write Rust for web UIs
+- How much of improving software design is providing the space for iteration before considering sharing it with others?

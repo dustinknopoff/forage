@@ -48,7 +48,7 @@
                                     <h4 class="book-author">by&nbsp;{{book.author}}</h4>
                                     {% endif %}
                                     {% if book.date_finished %}
-                                        <span class="book-finished">Finished on {{book.date_finished | date}}</span>
+                                        <span class="book-finished">Finished on {{book.date_finished | date(format="%B %m, %Y")}}</span>
                                     {% endif %}
                                     {% if book.notes %}
                                         <p class="notes">{{book.notes | markdown(inline=true) | safe}}</p>
