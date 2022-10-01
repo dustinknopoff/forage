@@ -26,3 +26,11 @@ Always open to chat by [email](helloweb@knopoff.dev)
 - When can there be an ergonomic way to write Rust for web UIs
 - How much of improving software design is providing the space for iteration before considering sharing it with others?
 - [Library.JSON](https://tomcritchlow.com/2020/04/15/library-json/)
+
+
+### Tech I'm Watching
+
+- [Zed](https://zed.dev)
+- [Arc Browser](https://arc.net)
+- [Warp](https://warp.dev)
+- [Everything UI from Raph and cmyr](https://raphlinus.github.io)
