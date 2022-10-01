@@ -10,11 +10,14 @@
                 <h2>Following</h2>
                 <ul>
                 {% for feed in data.following %}
-                    <li>
-                        <a href="{{feed.url}}" class="profile-link" target="_blank">
-                            {{feed.name}}
-                        </a>
-                    </li>
+                    {% set feed_data = load_data(url=feed.url,format="json") %}
+                    {% if feed_data %}
+                        <li>
+                            <a href="{{feed_data["url"]}}" class="profile-link" target="_blank">
+                                {{feed_data["name"]}}
+                            </a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
                 </ul>
             </div>

@@ -257,11 +257,7 @@
     ],
     "following": [
         {
-            "url": "https://diklein.com/podcasts",
-            "name": "David Klein"
-        },
-        {
-            "url": "https://dustinsenos.com",
+            "url": "https://www.dustinsenos.com/library.json",
             "name": "Dustin Senos"
         }
     ]
