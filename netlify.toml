@@ -7,3 +7,11 @@ ZOLA_VERSION = "0.13.0"
 
 [context.deploy-preview]
 command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[[redirects]]
+from = "/now"
+to = "/articles/about"
+
+[[redirects]]
+from = "/recipes"
+to = "https://recipes.knopoff.dev"
