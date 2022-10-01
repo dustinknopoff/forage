@@ -34,7 +34,7 @@
                     </summary>
                     <div class="books">
                         {% for book in list.books %}
-                            <div class="book" id="{{list.name ~ "-" ~ book.title | slugify}}">
+                            <article class="book" id="{{list.name ~ "-" ~ book.title | slugify}}">
                                 {% if book.image %}
                                     <img class="book-image" src="https://cors-anywhere.knopoff.workers.dev/?{{book.image}}" async defer />
                                 {% endif %}
@@ -54,7 +54,7 @@
                                         <p class="notes">{{book.notes | markdown(inline=true) | safe}}</p>
                                     {% endif %}
                                 </div>
-                            </div>
+                            </article>
                             {% if book.notes %}
                                 <p class="notes mobile">{{book.notes | safe}}</p>
                             {% endif %}
