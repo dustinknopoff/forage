@@ -150,6 +150,7 @@ article {
 
   * {
     line-height: calc(2px + 2ex + 2px);
+    font-size: var(--size-400);
   }
 
   h1 {
@@ -177,7 +178,7 @@ article {
   }
 
   p {
-    font-size: var(--size-300);
+    font-size: var(--size-400);
   }
 }
 
