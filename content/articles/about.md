@@ -34,3 +34,14 @@ Always open to chat by [email](helloweb@knopoff.dev)
 - [Arc Browser](https://arc.net)
 - [Warp](https://warp.dev)
 - [Everything UI from Raph and cmyr](https://raphlinus.github.io)
+
+
+## 5 Essential Foods
+
+Quite proud to have been taught to value the 5 most essential foods
+
+- Olive Oil
+- Coffee
+- Chocolate
+- Wine
+- Anything on the Grill (especially important as the son of an Argentine)
