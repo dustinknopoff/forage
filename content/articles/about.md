@@ -25,3 +25,4 @@ Always open to chat by [email](helloweb@knopoff.dev)
 - Do I have anything to add to the podcast space?
 - When can there be an ergonomic way to write Rust for web UIs
 - How much of improving software design is providing the space for iteration before considering sharing it with others?
+- [Library.JSON](https://tomcritchlow.com/2020/04/15/library-json/)
