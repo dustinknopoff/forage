@@ -51,7 +51,7 @@
                                         <span class="book-finished">Finished On {{book.date_finished | date}}</span>
                                     {% endif %}
                                     {% if book.notes %}
-                                        <p class="notes">{{book.notes | safe}}</p>
+                                        <p class="notes">{{book.notes | markdown(inline=true) | safe}}</p>
                                     {% endif %}
                                 </div>
                             </div>
