@@ -51,19 +51,16 @@
 {% macro series(list, isBefore) %}
 <details>
 <summary>
-    <h5 style="margin: 0;">{% if isBefore %}Previously {% else %} Next {% endif %}in the series...</h5>
+    <h5 style="margin: 0; display: inline-block;">{% if isBefore %}Previously {% else %} Next {% endif %}in the series...</h5>
 </summary>
 <ul class="preview-list">
 {% for page in list %}
   {% if loop.index <= 5 %}
   {% set page = get_page(path="articles/" ~ page) %}  
     <li class="card-preview">
-      <div class="topline">
-        <a href="{{ page.permalink }}"><h3>{{ page.title }}</h3></a>
-      </div>
-      <a href="{{ page.permalink }}"
-        >{{page.content | striptags | truncate(length=80, end="...") | safe }}</a>
-      >
+      <a href="{{ page.permalink }}">
+        <p>{{ page.title }}</p>
+      </a>
     </li>
   {% endif %}
     {% endfor %}

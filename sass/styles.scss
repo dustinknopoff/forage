@@ -224,6 +224,25 @@ footer a {
   margin: 2px;
 }
 
+ul.preview-list {
+  list-style: none;
+  font-weight: 800;
+  background: var(--darkened-primary);
+  border-radius: 4px;
+
+  .card-preview {
+    margin: 10px;
+  }
+
+  p {
+    display: inline;
+  }
+
+  a {
+    line-height: 1.2;
+  }
+}
+
 main blockquote {
   padding: 10px;
   font-style: italic;
