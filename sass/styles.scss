@@ -184,6 +184,8 @@ article {
 
   a {
     background: var(--darkened-primary);
+    padding: 2px;
+    border-radius: 4px;
 
     &:hover {
       text-decoration: underline;
@@ -239,6 +241,7 @@ details {
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #2b2b2b;
+    --darkened-primary: hsl(0, 0%, 27%);
     --primary-color: white;
     --tertiary-color: #cc5955;
     --secondary-color: #bf9a7c;
