@@ -23,7 +23,10 @@
             </div>
         </div>
         <div class="lists">
-            <p>Last Updated on {{data.last_updated | date(format="%B %d, %Y")}}</p>
+            <div class="flex">
+                <p>Last Updated on {{data.last_updated | date(format="%B %d, %Y")}}</p>
+                <button id="expand">Toggle All</button>
+            </div>
             {% for list in data.lists %}
                 <details class="list">
                     <summary id="{{list.name | slugify}}"">
@@ -65,4 +68,9 @@
         </div>
     </div>
 </div>
+<script>
+    document.querySelector("#expand").addEventListener("click", function() {
+        Array.from(document.querySelectorAll('details.list')).forEach(elmnt => (elmnt.open = !elmnt.open))
+    })
+</script>
 {% endmacro %}

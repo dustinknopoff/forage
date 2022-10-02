@@ -224,3 +224,21 @@ nav {
     justify-content: center;
     padding-top: 1rem;
 }
+
+.flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: baseline;
+
+    button {
+        height: min-content;
+        background: var(--darkened-primary);
+        border: none;
+        border-radius: 4px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
