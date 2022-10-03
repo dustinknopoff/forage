@@ -193,7 +193,8 @@
                 {
                     "title": "The Baker and the Beauty",
                     "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AcnUsMc1rbP12fRTTX0noCdN5FT.jpg",
-                    "link": "https://www.themoviedb.org/tv/63395-she-s-with-me"
+                    "link": "https://www.themoviedb.org/tv/63395-she-s-with-me",
+                    "notes": "Super funny if you're familiar with Jewish and/or Israeli culture"
                 }
             ]
         },
@@ -212,11 +213,6 @@
                     "image": "https://yt3.ggpht.com/ytc/AMLnZu93xW3LrwaRjhDPcGb1yCsrVteTa_0YcY4I-poRwg=s176-c-k-c0x00ffffff-no-rj",
                     "link": "https://www.youtube.com/c/steezystudio",
                     "notes": "The 3 Choreographers, 1 Song series is fantastic"
-                },
-                {
-                    "title": "JimmyTheGiant",
-                    "image": "https://yt3.ggpht.com/ytc/AMLnZu_4heAanT_g5lUnT8FyaPitTfJWHJfuVrKJABvcVw=s176-c-k-c0x00ffffff-no-rj",
-                    "link": "https://www.youtube.com/c/JimmyTheGiant"
                 },
                 {
                     "title": "Jon Gjenset",
@@ -239,6 +235,11 @@
                     "title": "Lake Street Dive",
                     "image": "https://i.scdn.co/image/ab6761610000f178990c13fc50180f1c22a4ffe6",
                     "link": "https://www.lakestreetdive.com/"
+                },
+                {
+                    "title": "Dermot Kennedy",
+                    "image": "https://i.scdn.co/image/ab67616d0000b273c9fec49c8930fb10e4756dfe",
+                    "link": "https://open.spotify.com/artist/5KNNVgR6LBIABRIomyCwKJ?si=Ahe0kMpfQpKeE7EqlKOAeQ"
                 }
             ]
         },
