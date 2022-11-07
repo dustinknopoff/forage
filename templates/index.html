@@ -1,38 +1,38 @@
-{% import "macros/page.html" as page_macros %} 
-{% extends "base.html" %} 
-{%block content%} 
-  <header id="intro">
-    <h1>:wave: I’m Dustin</h1>
-    <h2>rustacean, martial artist, and cook</h2>
-    <!-- <p>Lorem Ipsum</p> -->
-  </header>
+{% import "macros/page.html" as page_macros %}
+{% extends "base.html" %}
+{%block content%}
+<header id="intro">
+  <h1>:wave: I’m Dustin</h1>
+  <h2>rustacean, martial artist, and cook</h2>
+  <!-- <p>Lorem Ipsum</p> -->
+</header>
 <div class="posts">
   <div>
-  {% set section = get_section(path="articles/_index.md") %}   
-  {% for year, posts in section.pages | group_by(attribute="year") %}
+    {% set section = get_section(path="articles/_index.md") %}
+    {% for year, posts in section.pages | group_by(attribute="year") %}
     <div class="animate blur">
       <h2 class="year">{{ year }}</h2>
       <ul>
-        {% for post in posts | sort(attribute="date") %}
-          <li>
-            {% if loop.index == 1 %}
-              <li class="card">
-              <a href="{{ post.permalink }}">
-              <span class="topline">
+        {% for post in posts | sort(attribute="date") | reverse %}
+        <li>
+          {% if loop.index == 1 %}
+        <li class="card">
+          <a href="{{ post.permalink }}">
+            <span class="topline">
               {{ post.title }}
-              </span>
-              <p>{{post.content | striptags | truncate(length=180, end="...") | safe
-                }}</p>
-              </a>
-            </li>
-            {% else %}
-              <a href="{{ post.permalink }}">{{ post.title }}</a>
-            {% endif %}
-          </li>
+            </span>
+            <p>{{post.content | striptags | truncate(length=180, end="...") | safe
+              }}</p>
+          </a>
+        </li>
+        {% else %}
+        <a href="{{ post.permalink }}">{{ post.title }}</a>
+        {% endif %}
+        </li>
         {% endfor %}
       </ul>
     </div>
     {% endfor %}
   </div>
 </div>
- {% endblock content %}
+{% endblock content %}
