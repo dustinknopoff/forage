@@ -60,6 +60,8 @@
 
 html {
   background: var(--background-color);
+  height: 100%;
+  width: 100%;
 
   /**
    * Disable smooth scrolling when users have prefers-reduced-motion enabled
@@ -71,9 +73,7 @@ html {
 
 /* MARK: Grid Setup */
 body {
-  width: 100vw;
   margin: 0;
-  min-height: 100vh;
   grid-auto-flow: row;
   color: var(--primary-color);
   font-family: var(--content);
@@ -146,7 +146,8 @@ header#intro {
   display: inline-block;
 }
 
-.posts a:hover {
+a:hover,
+a:focus {
   text-decoration: underline;
 }
 
@@ -247,10 +248,7 @@ article {
     background: var(--darkened-primary);
     padding: 2px;
     border-radius: 4px;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
   }
 
   img {

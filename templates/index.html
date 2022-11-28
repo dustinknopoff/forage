@@ -1,18 +1,18 @@
 {% import "macros/page.html" as page_macros %}
 {% extends "base.html" %}
 {%block content%}
-<header id="intro">
+<header id="intro" title="introduction">
   <h1>:wave: I’m Dustin</h1>
   <h2>rustacean, martial artist, and cook</h2>
   <!-- <p>Lorem Ipsum</p> -->
 </header>
-<div class="posts wrapper">
+<section class="posts wrapper" title="Posts">
   <div>
     {% set section = get_section(path="articles/_index.md") %}
     {% for year, posts in section.pages | group_by(attribute="year") %}
     <div class="animate blur">
       <h2 class="year">{{ year }}</h2>
-      <ul>
+      <ul title="Posts in {{year}}">
         {% for post in posts | sort(attribute="date") | reverse %}
         <li>
           {% if loop.index == 1 %}
@@ -34,5 +34,5 @@
     </div>
     {% endfor %}
   </div>
-</div>
+</section>
 {% endblock content %}
