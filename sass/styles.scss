@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #212121;
-  --darkened-primary: hsl(0, 0%, 85%);
-  --base-font-size: 16px;
-  --secondary-color: #e7bb96;
-  --tertiary-color: #7b3634;
-  --accent-color: #0a648f;
-  --background-color: white;
-  --border-color: #efefef;
+  --primary-color: lch(12.74% 0 139.088), hsl(0, 0%, 13%);
+  --darkened-primary: lch(86.695% 0 139.088), hsl(0, 0%, 85%);
+  --base-font-size: 1rem;
+  --secondary-color: lch(79.202% 27.671 62.662), hsl(27, 63%, 75%);
+  --tertiary-color: lch(32.203% 34.508 29.327), hsl(2, 41%, 34%);
+  --accent-color: lch(39.685% 32.998 247.566), hsl(199, 87%, 30%);
+  --background-color: lch(100% 0 139.088), white;
+  --border-color: lch(94.796% 0 139.088), hsl(0, 0%, 94%);
   --title: "iA Writer Quattro S", monospace;
   --content: "iA Writer Quattro S", monospace;
   --mono: Courier, monospace;
@@ -19,30 +19,53 @@
   --size-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
   --size-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
 
+  --space-3xs: clamp(0.31rem, calc(0.29rem + 0.12vw), 0.38rem);
+  --space-2xs: clamp(0.69rem, calc(0.66rem + 0.12vw), 0.75rem);
+  --space-xs: clamp(1.00rem, calc(0.95rem + 0.24vw), 1.13rem);
+  --space-s: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.50rem);
+  --space-m: clamp(2.00rem, calc(1.90rem + 0.49vw), 2.25rem);
+  --space-l: clamp(2.63rem, calc(2.48rem + 0.73vw), 3.00rem);
+  --space-xl: clamp(3.94rem, calc(3.72rem + 1.10vw), 4.50rem);
+  --space-2xl: clamp(5.25rem, calc(4.96rem + 1.46vw), 6.00rem);
+  --space-3xl: clamp(7.88rem, calc(7.44rem + 2.20vw), 9.00rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.31rem, calc(0.14rem + 0.85vw), 0.75rem);
+  --space-2xs-xs: clamp(0.69rem, calc(0.52rem + 0.85vw), 1.13rem);
+  --space-xs-s: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+  --space-s-m: clamp(1.31rem, calc(0.95rem + 1.83vw), 2.25rem);
+  --space-m-l: clamp(2.00rem, calc(1.61rem + 1.95vw), 3.00rem);
+  --space-l-xl: clamp(2.63rem, calc(1.89rem + 3.66vw), 4.50rem);
+  --space-xl-2xl: clamp(3.94rem, calc(3.13rem + 4.02vw), 6.00rem);
+  --space-2xl-3xl: clamp(5.25rem, calc(3.79rem + 7.32vw), 9.00rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1.31rem, calc(0.65rem + 3.29vw), 3.00rem);
+
   @media (prefers-color-scheme: dark) {
-    --background-color: #2b2b2b;
-    --darkened-primary: hsl(0, 0%, 27%);
-    --primary-color: white;
-    --tertiary-color: #cc5955;
-    --secondary-color: #bf9a7c;
-    --border-color: #494949;
+    --background-color: lch(17.533% 0 139.088), hsl(0, 0%, 17%);
+    --darkened-primary: lch(29.289% 0 139.088), hsl(0, 0%, 27%);
+    --primary-color: lch(100% 0 139.088), hsl(0, 0%, 100%);
+    --tertiary-color: lch(53.467% 53.167 29.35), hsl(2, 54%, 57%);
+    --secondary-color: lch(66.774% 23.646 63.147), hsl(27, 34%, 62%);
+    --border-color: lch(31.458% 0 139.088), hsl(0, 0%, 29%);
   }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
   background: var(--background-color);
-  scroll-behavior: smooth;
-  font-size: 16px;
 
   /**
    * Disable smooth scrolling when users have prefers-reduced-motion enabled
    */
-  @media screen and (prefers-reduced-motion: reduce) {
-    scroll-behavior: auto;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 18px;
+  @media screen and (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
   }
 }
 
@@ -96,17 +119,31 @@ header#intro {
   text-align: center;
 }
 
-.posts {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  padding-left: 10px;
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr Min(70ch, Calc(#{100%} - 32px)) 1fr;
+  grid-column-gap: 16px;
+}
+
+.wrapper>* {
+  grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
 }
 
 .posts ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.posts li a {
+  max-width: 90%;
+  display: inline-block;
 }
 
 .posts a:hover {
@@ -157,7 +194,7 @@ main {
 
 
 .content {
-  width: calc(min(75ch, 80vw));
+  // width: calc(min(75ch, 80vw));
   border-width: 3px;
   padding: 20px;
   border-style: solid;
@@ -214,6 +251,10 @@ article {
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  img {
+    grid-column: 1 / -1 !important;
   }
 }
 
@@ -291,7 +332,7 @@ details {
 
 @media (prefers-color-scheme: dark) {
   input {
-    background-color: #444444;
-    color: lightgray;
+    background-color: lch(29.289% 0 139.088), hsl(0, 0%, 27%);
+    color: lch(84.913% 0 139.088), hsl(0, 0%, 83%);
   }
 }

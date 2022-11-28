@@ -6,7 +6,7 @@
   <h2>rustacean, martial artist, and cook</h2>
   <!-- <p>Lorem Ipsum</p> -->
 </header>
-<div class="posts">
+<div class="posts wrapper">
   <div>
     {% set section = get_section(path="articles/_index.md") %}
     {% for year, posts in section.pages | group_by(attribute="year") %}

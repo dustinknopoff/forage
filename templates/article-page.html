@@ -1,40 +1,40 @@
 {% import "macros/page.html" as page_macros %}
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
-{% block title %} {{page.title}} {% endblock  title %}
+{% block title %} {{page.title}} {% endblock title %}
 
 {% block extra_js %}
 <script src="https://unpkg.com/shiki"></script>
 {% endblock extra_js %}
 
 {% block content %}
-<article>
-<div class="content animate">
-<h1 class="title">{{ page.title }}</h1>
-<div class="subtitle"><strong>{{ page.date }}</strong></div>
-{% if page.extra.before %} 
-  {{page_macros::series(list=page.extra.before, isBefore=true)}}
-{%endif%}
-{{ page.content | safe }}
-{% if page.extra.after %} 
-  {{page_macros::series(list=page.extra.after, isBefore=false)}}
-{%endif%}
-<p class="cta">
-  {% if "link" in page.extra %}
-    <a href="{{page.extra | get(key="link")}}" target="_blank" rel="noopener noreferrer nofollow">
-      {% if "linkText" in page.extra %}
+<article class="wrapper">
+  <div class="content animate">
+    <h1 class="title">{{ page.title }}</h1>
+    <div class="subtitle"><strong>{{ page.date }}</strong></div>
+    {% if page.extra.before %}
+    {{page_macros::series(list=page.extra.before, isBefore=true)}}
+    {%endif%}
+    {{ page.content | safe }}
+    {% if page.extra.after %}
+    {{page_macros::series(list=page.extra.after, isBefore=false)}}
+    {%endif%}
+    <p class="cta">
+      {% if "link" in page.extra %}
+      <a href="{{page.extra | get(key="link")}}" target="_blank" rel="noopener noreferrer nofollow">
+        {% if "linkText" in page.extra %}
         {{ page.extra | get(key="linkText")}}
-      {% else %}
+        {% else %}
         See the code
-      {% endif %} 
-    </a>
-  {% endif %}
-  {% if page.extra.discussion %} 
-  or 
-  <a href="{{page.extra.discussion}}" target="_blank" rel="noopener noreferrer nofollow">Join the discussion</a>
-  {% endif %}
-</p>
-</div>
+        {% endif %}
+      </a>
+      {% endif %}
+      {% if page.extra.discussion %}
+      or
+      <a href="{{page.extra.discussion}}" target="_blank" rel="noopener noreferrer nofollow">Join the discussion</a>
+      {% endif %}
+    </p>
+  </div>
 </article>
 
 <script>
