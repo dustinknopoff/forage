@@ -107,6 +107,12 @@ pre {
   padding: 1.45rem;
 }
 
+code:not([class]) {
+  background: var(--border-color, --border-color-hsl);
+  padding: 2px;
+  border-radius: 3px;
+}
+
 
 a {
   text-decoration: none;
