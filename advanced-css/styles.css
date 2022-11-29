@@ -1,0 +1,343 @@
+:root {
+    --primary-color: oklch(24.84% 0 0);
+    --darkened-primary: oklch(88.45% 0 0);
+    --base-font-size: 1rem;
+    --secondary-color: oklch(82.31% 0.07 60.89);
+    --tertiary-color: oklch(42.33% 0.097 24.05);
+    --accent-color: oklch(48% 0.101 236.82);
+    --background-color: oklch(100% 3.5594404092893915e-8 106.37411396324424);
+    --border-color: oklch(100% 3.5594404092893915e-8 106.37411396324424);
+    --title: "iA Writer Quattro S", monospace;
+    --content: "iA Writer Quattro S", monospace;
+    --mono: Courier, monospace;
+    --size-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
+    --size-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+    --size-500: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    --size-600: clamp(1.37rem, 1.21rem + 0.8vw, 1.78rem);
+    --size-700: clamp(1.71rem, 1.45rem + 1.29vw, 2.37rem);
+    --size-800: clamp(2.14rem, 1.74rem + 1.99vw, 3.16rem);
+    --size-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
+    --size-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
+
+    --space-3xs: clamp(0.31rem, calc(0.29rem + 0.12vw), 0.38rem);
+    --space-2xs: clamp(0.69rem, calc(0.66rem + 0.12vw), 0.75rem);
+    --space-xs: clamp(1.00rem, calc(0.95rem + 0.24vw), 1.13rem);
+    --space-s: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.50rem);
+    --space-m: clamp(2.00rem, calc(1.90rem + 0.49vw), 2.25rem);
+    --space-l: clamp(2.63rem, calc(2.48rem + 0.73vw), 3.00rem);
+    --space-xl: clamp(3.94rem, calc(3.72rem + 1.10vw), 4.50rem);
+    --space-2xl: clamp(5.25rem, calc(4.96rem + 1.46vw), 6.00rem);
+    --space-3xl: clamp(7.88rem, calc(7.44rem + 2.20vw), 9.00rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.31rem, calc(0.14rem + 0.85vw), 0.75rem);
+    --space-2xs-xs: clamp(0.69rem, calc(0.52rem + 0.85vw), 1.13rem);
+    --space-xs-s: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+    --space-s-m: clamp(1.31rem, calc(0.95rem + 1.83vw), 2.25rem);
+    --space-m-l: clamp(2.00rem, calc(1.61rem + 1.95vw), 3.00rem);
+    --space-l-xl: clamp(2.63rem, calc(1.89rem + 3.66vw), 4.50rem);
+    --space-xl-2xl: clamp(3.94rem, calc(3.13rem + 4.02vw), 6.00rem);
+    --space-2xl-3xl: clamp(5.25rem, calc(3.79rem + 7.32vw), 9.00rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(1.31rem, calc(0.65rem + 3.29vw), 3.00rem);
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: oklch(29.05% 0 0);
+        --darkened-primary: oklch(38.99% 0 0);
+        --primary-color: oklch(100% 3.5594404092893915e-8 106.37411396324424);
+        --tertiary-color: oklch(61.09% 0.147 24.36);
+        --secondary-color: , oklch(71.45% 0.06 60.92);
+        --border-color: oklch(40.89% 0 0);
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--background-color);
+    height: 100%;
+    width: 100%;
+
+}
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* MARK: Grid Setup */
+body {
+    margin: 0;
+    grid-auto-flow: row;
+    color: var(--primary-color);
+    font-family: var(--content);
+}
+
+pre {
+    overflow: auto;
+    word-wrap: normal;
+    border-radius: 3px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 1.45rem;
+    padding: 1.45rem;
+}
+
+code:not([class]) {
+    background: var(--border-color);
+    padding: 2px;
+    border-radius: 3px;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+#logo {
+    width: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    transform: skewX(calc(28deg * var(--scroll, 0))) skewY(calc(-30deg * var(--scroll, 0))) rotateY(calc(180deg * var(--scroll, 0)));
+}
+
+header#intro {
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr min(70ch, calc(100% - 32px)) 1fr;
+    grid-column-gap: 16px;
+}
+
+.wrapper>* {
+    grid-column: 2;
+}
+
+.full-bleed {
+    width: 100%;
+    grid-column: 1 / 4;
+}
+
+.posts ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.posts li a {
+    max-width: 90%;
+    display: inline-block;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+.card {
+    max-width: 320px;
+    height: 150px;
+    background-image: url("./cardbg.svg");
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.card .topline {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* MARK: FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 0 15px;
+
+}
+
+footer>.links>* {
+    padding: 10px;
+}
+
+
+main {
+    min-height: 94vh;
+
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: calc(min(640px, 80vw));
+}
+
+main p {
+    line-height: 1.5;
+}
+
+
+.content {
+    border-width: 3px;
+    padding: 20px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, var(--background-color), var(--accent-color)) 1 100%;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+article * {
+    line-height: calc(2px + 2ex + 2px);
+    font-size: var(--size-400);
+}
+
+article h1 {
+    font-size: var(--size-900);
+}
+
+article h2 {
+    font-size: var(--size-800);
+}
+
+article h3 {
+    font-size: var(--size-700);
+}
+
+article h4 {
+    font-size: var(--size-600);
+}
+
+article h5 {
+    font-size: var(--size-500);
+}
+
+article h6 {
+    font-size: var(--size-400);
+}
+
+article p {
+    font-size: var(--size-400);
+}
+
+article a {
+    background: var(--darkened-primary);
+    padding: 2px;
+    border-radius: 4px;
+    text-decoration: underline;
+}
+
+article img {
+    grid-column: 1 / -1 !important;
+}
+
+
+
+footer a {
+    color: var(--accent-color);
+    margin: 2px;
+}
+
+ul.preview-list {
+    list-style: none;
+    font-weight: 800;
+    background: var(--darkened-primary);
+    border-radius: 4px;
+
+}
+
+ul.preview-list .card-preview {
+    margin: 10px;
+}
+
+ul.preview-list p {
+    display: inline;
+}
+
+ul.preview-list a {
+    line-height: 1.2;
+}
+
+main blockquote {
+    padding: 10px;
+    font-style: italic;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination>a {
+    padding: 20px;
+}
+
+
+details {
+    padding: 30px 0;
+}
+
+
+
+@media (max-width: 480px) {
+    :root {
+        --base-font-size: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .year {
+        display: inline-block;
+    }
+
+    .card {
+        margin: 45px 0;
+    }
+
+    body {
+        padding: 0;
+        width: 98vw;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    input {
+        background-color: oklch(38.99% 0 0);
+        color: oklch(86.89% 0 0);
+    }
+}

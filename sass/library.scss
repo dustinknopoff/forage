@@ -44,7 +44,7 @@
 
     .following {
         margin-top: 5vh;
-        border-top: 1px solid var(--accent-color, --accent-color-hsl);
+        border-top: 1px solid var(--accent-color);
 
         ul {
             list-style-type: none;
@@ -54,11 +54,11 @@
 }
 
 .profile-link {
-    color: var(--primary-color, --primary-color-hsl);
+    color: var(--primary-color);
     font-weight: normal;
 
     &:hover {
-        color: var(--accent-color, --accent-color-hsl);
+        color: var(--accent-color);
     }
 }
 
@@ -114,7 +114,7 @@
     padding: 10px;
 
     a {
-        color: var(--accent-color, --accent-color-hsl);
+        color: var(--accent-color);
     }
 
     &>* {
@@ -133,13 +133,13 @@
 }
 
 .book-finished {
-    color: var(--accent-color, --accent-color-hsl);
+    color: var(--accent-color);
 }
 
 summary {
     position: sticky;
     top: 0;
-    background: var(--background-color, --background-color-hsl);
+    background: var(--background-color);
     padding: 15px;
 }
 
@@ -174,7 +174,7 @@ nav {
             margin: 10px;
 
             a {
-                color: var(--accent-color, --accent-color-hsl);
+                color: var(--accent-color);
             }
         }
     }
@@ -200,8 +200,8 @@ nav {
         overflow-x: scroll;
         position: absolute;
         top: 40px;
-        background: var(--background-color, --background-color-hsl);
-        color: var(--primary-color, --primary-color-hsl);
+        background: var(--background-color);
+        color: var(--primary-color);
         padding: 1rem;
         box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
         border-radius: 4px;
@@ -212,7 +212,7 @@ nav {
 
 #search {
     border-radius: 4px;
-    border: 2px solid var(--accent-color, --accent-color-hsl);
+    border: 2px solid var(--accent-color);
     padding: 5px;
     width: 300px;
 }
@@ -233,7 +233,7 @@ nav {
 
     button {
         height: min-content;
-        background: var(--darkened-primary, --darkened-primary-hsl);
+        background: var(--darkened-primary);
         border: none;
         border-radius: 4px;
 

@@ -1,0 +1,362 @@
+:root {
+  --primary-color: #212121;
+  --darkened-primary: #d9d9d9;
+  --base-font-size: 1rem;
+  --secondary-color: #e7bb97;
+  --tertiary-color: #7a3533;
+  --accent-color: #0b658f;
+  --background-color: #fff;
+  --border-color: #fff;
+  --title: "iA Writer Quattro S", monospace;
+  --content: "iA Writer Quattro S", monospace;
+  --mono: Courier, monospace;
+  --size-300: clamp(.7rem, .66rem + .2vw, .8rem);
+  --size-400: clamp(.88rem, .83rem + .24vw, 1rem);
+  --size-500: clamp(1.09rem, 1rem + .47vw, 1.33rem);
+  --size-600: clamp(1.37rem, 1.21rem + .8vw, 1.78rem);
+  --size-700: clamp(1.71rem, 1.45rem + 1.29vw, 2.37rem);
+  --size-800: clamp(2.14rem, 1.74rem + 1.99vw, 3.16rem);
+  --size-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
+  --size-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
+  --space-3xs: clamp(.31rem, calc(.29rem + .12vw), .38rem);
+  --space-2xs: clamp(.69rem, calc(.66rem + .12vw), .75rem);
+  --space-xs: clamp(1rem, calc(.95rem + .24vw), 1.13rem);
+  --space-s: clamp(1.31rem, calc(1.24rem + .37vw), 1.5rem);
+  --space-m: clamp(2rem, calc(1.9rem + .49vw), 2.25rem);
+  --space-l: clamp(2.63rem, calc(2.48rem + .73vw), 3rem);
+  --space-xl: clamp(3.94rem, calc(3.72rem + 1.1vw), 4.5rem);
+  --space-2xl: clamp(5.25rem, calc(4.96rem + 1.46vw), 6rem);
+  --space-3xl: clamp(7.88rem, calc(7.44rem + 2.2vw), 9rem);
+  --space-3xs-2xs: clamp(.31rem, calc(.14rem + .85vw), .75rem);
+  --space-2xs-xs: clamp(.69rem, calc(.52rem + .85vw), 1.13rem);
+  --space-xs-s: clamp(1rem, calc(.8rem + .98vw), 1.5rem);
+  --space-s-m: clamp(1.31rem, calc(.95rem + 1.83vw), 2.25rem);
+  --space-m-l: clamp(2rem, calc(1.61rem + 1.95vw), 3rem);
+  --space-l-xl: clamp(2.63rem, calc(1.89rem + 3.66vw), 4.5rem);
+  --space-xl-2xl: clamp(3.94rem, calc(3.13rem + 4.02vw), 6rem);
+  --space-2xl-3xl: clamp(5.25rem, calc(3.79rem + 7.32vw), 9rem);
+  --space-s-l: clamp(1.31rem, calc(.65rem + 3.29vw), 3rem);
+}
+
+@supports (color: color(display-p3 0 0 0)) {
+  :root {
+    --primary-color: color(display-p3 .130009 .130009 .130009);
+    --darkened-primary: color(display-p3 .84995 .84995 .84995);
+    --secondary-color: color(display-p3 .879532 .741005 .612001);
+    --tertiary-color: color(display-p3 .446092 .224931 .209527);
+    --accent-color: color(display-p3 .174598 .389515 .54615);
+    --background-color: color(display-p3 1 1 1);
+    --border-color: color(display-p3 1 1 1);
+  }
+}
+
+@supports (color: lab(0% 0 0)) {
+  :root {
+    --primary-color: lab(12.8144% -.00000745058 -.00000298023);
+    --darkened-primary: lab(86.602% 0 0);
+    --secondary-color: lab(79.3015% 12.7026 24.5673);
+    --tertiary-color: lab(32.1397% 30.545 16.8077);
+    --accent-color: lab(39.6542% -12.5114 -30.5027);
+    --background-color: lab(100% -.0000298023 .0000119209);
+    --border-color: lab(100% -.0000298023 .0000119209);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #2b2b2b;
+    --darkened-primary: #454545;
+    --primary-color: #fff;
+    --tertiary-color: #cd5a56;
+    --secondary-color: , #bf9b7d;
+    --border-color: #4a4a4a;
+  }
+
+  @supports (color: color(display-p3 0 0 0)) {
+    :root {
+      --background-color: color(display-p3 .170001 .170001 .170001);
+      --darkened-primary: color(display-p3 .270045 .270045 .270045);
+      --primary-color: color(display-p3 1 1 1);
+      --tertiary-color: color(display-p3 .747479 .379383 .353378);
+      --secondary-color: , color(display-p3 .72692 .612369 .505607);
+      --border-color: color(display-p3 .289964 .289964 .289964);
+    }
+  }
+
+  @supports (color: lab(0% 0 0)) {
+    :root {
+      --background-color: lab(17.698% 0 0);
+      --darkened-primary: lab(29.2284% -.0000149012 0);
+      --primary-color: lab(100% -.0000298023 .0000119209);
+      --tertiary-color: lab(53.406% 46.2698 25.9736);
+      --secondary-color: , lab(66.7305% 10.8649 21.0474);
+      --border-color: lab(31.4324% 0 -.00000596046);
+    }
+  }
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background-color);
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  color: var(--primary-color);
+  font-family: var(--content);
+  grid-auto-flow: row;
+  margin: 0;
+}
+
+pre {
+  word-wrap: normal;
+  border-radius: 3px;
+  margin: 0 0 1.45rem;
+  padding: 1.45rem;
+  overflow: auto;
+}
+
+code:not([class]) {
+  background: var(--border-color);
+  border-radius: 3px;
+  padding: 2px;
+}
+
+a {
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#logo {
+  width: 50px;
+  -webkit-transform: skewX(calc(28deg * var(--scroll, 0))) skewY(calc(-30deg * var(--scroll, 0))) rotateY(calc(180deg * var(--scroll, 0)));
+  transform: skewX(calc(28deg * var(--scroll, 0))) skewY(calc(-30deg * var(--scroll, 0))) rotateY(calc(180deg * var(--scroll, 0)));
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+header#intro {
+  height: 60vh;
+  width: 100vw;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.wrapper {
+  grid-column-gap: 16px;
+  grid-template-columns: 1fr min(70ch, 100% - 32px) 1fr;
+  display: grid;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+
+.posts ul {
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  display: flex;
+}
+
+.posts li a {
+  max-width: 90%;
+  display: inline-block;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+.card {
+  max-width: 320px;
+  height: 150px;
+  background-image: url("./cardbg.svg");
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  display: flex;
+}
+
+.card .topline {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+footer {
+  justify-content: space-between;
+  padding: 15px 15px 0;
+  display: flex;
+}
+
+footer > .links > * {
+  padding: 10px;
+}
+
+main {
+  min-height: 94vh;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: calc(min(640px, 80vw));
+}
+
+main p {
+  line-height: 1.5;
+}
+
+.content {
+  border-style: solid;
+  border-width: 3px;
+  border-image: linear-gradient(to bottom, var(--background-color), var(--accent-color)) 1 100%;
+  padding: 20px;
+}
+
+article {
+  align-content: center;
+  justify-content: center;
+  display: flex;
+}
+
+article * {
+  line-height: calc(4px + 2ex);
+  font-size: var(--size-400);
+}
+
+article h1 {
+  font-size: var(--size-900);
+}
+
+article h2 {
+  font-size: var(--size-800);
+}
+
+article h3 {
+  font-size: var(--size-700);
+}
+
+article h4 {
+  font-size: var(--size-600);
+}
+
+article h5 {
+  font-size: var(--size-500);
+}
+
+article h6, article p {
+  font-size: var(--size-400);
+}
+
+article a {
+  background: var(--darkened-primary);
+  border-radius: 4px;
+  padding: 2px;
+  text-decoration: underline;
+}
+
+article img {
+  grid-column: 1 / -1 !important;
+}
+
+footer a {
+  color: var(--accent-color);
+  margin: 2px;
+}
+
+ul.preview-list {
+  background: var(--darkened-primary);
+  border-radius: 4px;
+  font-weight: 800;
+  list-style: none;
+}
+
+ul.preview-list .card-preview {
+  margin: 10px;
+}
+
+ul.preview-list p {
+  display: inline;
+}
+
+ul.preview-list a {
+  line-height: 1.2;
+}
+
+main blockquote {
+  padding: 10px;
+  font-style: italic;
+}
+
+.pagination {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.pagination > a {
+  padding: 20px;
+}
+
+details {
+  padding: 30px 0;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --base-font-size: 18px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .year {
+    display: inline-block;
+  }
+
+  .card {
+    margin: 45px 0;
+  }
+
+  body {
+    width: 98vw;
+    padding: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  input {
+    color: #d4d4d4;
+    color: color(display-p3 .830044 .830044 .830044);
+    color: lab(84.7924% -.0000298023 0);
+    background-color: #454545;
+    background-color: color(display-p3 .270045 .270045 .270045);
+    background-color: lab(29.2284% -.0000149012 0);
+  }
+}
+
+/*# sourceMappingURL=static/styles.css.map */
