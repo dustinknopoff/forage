@@ -10,7 +10,7 @@ I'm obsessed with making people more _efficient_. It brings me joy to help with 
 
 Outside of coding (and consuming all the medias, check out my [favorites here](/library)), I love to cook, bake, design things, and a variety of atypical physical exercise. Specifically I've dabbled in Taekwondo, BJJ, Wing Chun, Parkour, and Aerial Silks.
 
-Always open to chat by [email](mailto:helloweb@knopoff.dev)
+Always open to chat by <a onClick="javascript:window.location.href=atob('bWFpbHRvOndlYi1jb250YWN0QGtub3BvZmYuZGV2')">email</a>
 
 ---
 

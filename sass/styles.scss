@@ -1,12 +1,19 @@
 :root {
-  --primary-color: lch(12.74% 0 139.088), hsl(0, 0%, 13%);
-  --darkened-primary: lch(86.695% 0 139.088), hsl(0, 0%, 85%);
+  --primary-color-hsl: hsl(0, 0%, 13%);
+  --primary-color: lch(12.74% 0 139.088);
+  --darkened-primary: lch(86.695% 0 139.088);
+  --darkened-primary-hsl: hsl(0, 0%, 85%);
   --base-font-size: 1rem;
-  --secondary-color: lch(79.202% 27.671 62.662), hsl(27, 63%, 75%);
-  --tertiary-color: lch(32.203% 34.508 29.327), hsl(2, 41%, 34%);
-  --accent-color: lch(39.685% 32.998 247.566), hsl(199, 87%, 30%);
-  --background-color: lch(100% 0 139.088), white;
-  --border-color: lch(94.796% 0 139.088), hsl(0, 0%, 94%);
+  --secondary-color: lch(79.202% 27.671 62.662);
+  --secondary-color-hsl: hsl(27, 63%, 75%);
+  --tertiary-color: lch(32.203% 34.508 29.327);
+  --tertiary-color-hsl: hsl(2, 41%, 34%);
+  --accent-color: lch(39.685% 32.998 247.566);
+  --accent-color-hsl: hsl(199, 87%, 30%);
+  --background-color-hsl: hsl(0, 0%, 100%);
+  --background-color: lch(100% 0 139.088);
+  --border-color: lch(94.796% 0 139.088);
+  --border-color-hsl: hsl(0, 0%, 94%);
   --title: "iA Writer Quattro S", monospace;
   --content: "iA Writer Quattro S", monospace;
   --mono: Courier, monospace;
@@ -43,12 +50,18 @@
   --space-s-l: clamp(1.31rem, calc(0.65rem + 3.29vw), 3.00rem);
 
   @media (prefers-color-scheme: dark) {
-    --background-color: lch(17.533% 0 139.088), hsl(0, 0%, 17%);
-    --darkened-primary: lch(29.289% 0 139.088), hsl(0, 0%, 27%);
-    --primary-color: lch(100% 0 139.088), hsl(0, 0%, 100%);
-    --tertiary-color: lch(53.467% 53.167 29.35), hsl(2, 54%, 57%);
-    --secondary-color: lch(66.774% 23.646 63.147), hsl(27, 34%, 62%);
-    --border-color: lch(31.458% 0 139.088), hsl(0, 0%, 29%);
+    --background-color: lch(17.533% 0 139.088);
+    --background-color-hsl: hsl(0, 0%, 17%);
+    --darkened-primary: lch(29.289% 0 139.088);
+    --darkened-primary-hsl: hsl(0, 0%, 27%);
+    --primary-color: lch(100% 0 139.088);
+    --primary-color-hsl: (0, 0%, 100%);
+    --tertiary-color: lch(53.467% 53.167 29.35);
+    --tertiary-color-hsl: hsl(2, 54%, 57%);
+    --secondary-color: lch(66.774% 23.646 63.147);
+    --secondary-color-hsl: , hsl(27, 34%, 62%);
+    --border-color: lch(31.458% 0 139.088);
+    --border-color-hsl: hsl(0, 0%, 29%);
   }
 }
 
@@ -75,7 +88,7 @@ html {
 body {
   margin: 0;
   grid-auto-flow: row;
-  color: var(--primary-color);
+  color: var(--primary-color, --primary-color-hsl);
   font-family: var(--content);
 
   @media screen and (max-width: 768px) {
@@ -97,7 +110,7 @@ pre {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--primary-color, --primary-color-hsl);
   cursor: pointer;
 }
 
@@ -330,7 +343,9 @@ details {
 
 @media (prefers-color-scheme: dark) {
   input {
-    background-color: lch(29.289% 0 139.088), hsl(0, 0%, 27%);
-    color: lch(84.913% 0 139.088), hsl(0, 0%, 83%);
+    background-color: hsl(0, 0%, 27%);
+    background-color: lch(29.289% 0 139.088);
+    color: hsl(0, 0%, 83%);
+    color: lch(84.913% 0 139.088);
   }
 }
