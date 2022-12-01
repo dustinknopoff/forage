@@ -1,4 +1,5 @@
 :root {
+    --drag-opacity: 0.1;
     --primary-color: oklch(24.84% 0 0);
     --darkened-primary: oklch(88.45% 0 0);
     --base-font-size: 1rem;
@@ -211,7 +212,6 @@ footer>.links>* {
 
 main {
     min-height: 94vh;
-
 }
 
 main img {
@@ -361,4 +361,22 @@ details {
         background-color: oklch(38.99% 0 0);
         color: oklch(86.89% 0 0);
     }
+}
+
+.block1,
+.block2 {
+    height: 3px;
+    background: var(--accent-color);
+    width: 20px;
+    border-radius: 2px;
+    margin: 0px 3px;
+}
+
+.drag-handlers {
+    display: flex;
+    opacity: var(--drag-opacity);
+    transform: rotate(90deg) translateY(20px);
+    position: fixed;
+    left: 0;
+    top: 50%;
 }

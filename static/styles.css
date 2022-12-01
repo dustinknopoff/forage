@@ -1,4 +1,5 @@
 :root {
+  --drag-opacity: .1;
   --primary-color: #212121;
   --darkened-primary: #d9d9d9;
   --base-font-size: 1rem;
@@ -120,10 +121,15 @@ body {
 
 pre {
   word-wrap: normal;
+  z-index: 0;
   border-radius: 3px;
   margin: 0 0 1.45rem;
   padding: 1.45rem;
   overflow: auto;
+}
+
+code {
+  z-index: 0;
 }
 
 code:not([class]) {
@@ -373,6 +379,24 @@ details {
     background-color: color(display-p3 .270045 .270045 .270045);
     background-color: lab(29.2284% -.0000149012 0);
   }
+}
+
+.block1, .block2 {
+  height: 3px;
+  background: var(--accent-color);
+  width: 20px;
+  border-radius: 2px;
+  margin: 0 3px;
+}
+
+.drag-handlers {
+  opacity: var(--drag-opacity);
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  -webkit-transform: rotate(90deg)translateY(20px);
+  transform: rotate(90deg)translateY(20px);
 }
 
 /*# sourceMappingURL=static/styles.css.map */

@@ -5,9 +5,7 @@
 
 <head>
     <title>{%block title %}{{config.title}}{%endblock title%}</title>
-    <link rel="stylesheet" type="text/css" href={{ get_url(path="reset.css" , trailing_slash=false)}} />
     <link rel="stylesheet" type="text/css" href={{ get_url(path="styles.css" , trailing_slash=false)}} />
-    <link rel="stylesheet" type="text/css" href={{ get_url(path="modal.css" , trailing_slash=false)}} />
     <link rel="stylesheet" type="text/css" href={{ get_url(path="animations.css" , trailing_slash=false)}} />
     <meta charset="utf-8" />
     <meta name="color-scheme" content="light dark">
@@ -67,6 +65,10 @@
 </head>
 
 <body>
+    <div class="drag-handlers">
+        <div class="block1"></div>
+        <div class="block2"></div>
+    </div>
     <main title="content">
         {% block content %}
         {% endblock %}
@@ -127,6 +129,7 @@
 <script type="text/javascript" defer>
     let swipeLimit = 50
     let startX
+    const root = document.documentElement
     const dialogElem = document.getElementById("search")
 
     if (typeof dialogElem.showModal !== "function") {
@@ -144,15 +147,26 @@
                 initSearch();
             }
         }
+        root.style.setProperty('--drag-opacity', `0.1`)
         document.body.removeEventListener('touchend', endTouch)
+        document.body.removeEventListener('touchmove', moveTouch)
+    }
+
+    const moveTouch = e => {
+        const progressX = startX - e.touches[0].clientX
+        const translation = progressX > 0
+            ? parseInt(-Math.abs(progressX))
+            : parseInt(Math.abs(progressX))
+        root.style.setProperty('--drag-opacity', `${translation / 100}`)
     }
 
     const startTouch = e => {
         const { touches } = e
-        if (touches && touches.length === 2) {
+        if (touches && touches.length === 1) {
             const touch = touches[0]
             startX = touch.clientX
             document.body.addEventListener('touchend', endTouch)
+            document.body.addEventListener('touchmove', moveTouch)
         }
     }
     document.body.addEventListener('touchstart', startTouch)
