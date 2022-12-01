@@ -109,4 +109,28 @@
     </footer>
 </body>
 
+<script type="text/javascript" defer>
+    let swipeLimit = 50
+    let startX
+    const endTouch = e => {
+        const finishingTouch = e.changedTouches[0].clientX
+        if (startX < finishingTouch - swipeLimit) {
+            let p = document.createElement("p")
+            p.innerText = "Triggered Search"
+            document.body.appendChild(p)
+        }
+        document.body.removeEventListener('touchend', endTouch)
+    }
+
+    const startTouch = e => {
+        const { touches } = e
+        if (touches && touches.length === 2) {
+            const touch = touches[0]
+            startX = touch.clientX
+            document.body.addEventListener('touchend', endTouch)
+        }
+    }
+    document.body.addEventListener('touchstart', startTouch)
+</script>
+
 </html>
