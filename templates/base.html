@@ -127,7 +127,7 @@
 </body>
 
 <script type="text/javascript" defer>
-    let swipeLimit = 50
+    let swipeThreshold = 50
     let startX
     const root = document.documentElement
     const dialogElem = document.getElementById("search")
@@ -139,7 +139,7 @@
 
     const endTouch = e => {
         const finishingTouch = e.changedTouches[0].clientX
-        if (startX < finishingTouch - swipeLimit) {
+        if (startX < finishingTouch - swipeThreshold) {
             if (!dialogElem.open) {
                 dialogElem.showModal();
                 var $searchInput = document.getElementById("search-box");
@@ -170,6 +170,41 @@
         }
     }
     document.body.addEventListener('touchstart', startTouch)
+</script>
+<script type="text/javascript" src={{ get_url(path="hammer.js" , trailing_slash=false)}}></script>
+<script>
+    function debounce(func, wait) {
+        var timeout;
+
+        return function () {
+            var context = this;
+            var args = arguments;
+            clearTimeout(timeout);
+
+            timeout = setTimeout(function () {
+                timeout = null;
+                func.apply(context, args);
+            }, wait);
+        };
+    }
+
+    const hammertime = new Hammer(document.body);
+    const queue = ["panleft", "pandown", "panright", "pandown", "panleft"]
+    let index = 0;
+    hammertime.on('pan', debounce(function (ev) {
+        if (dialogElem.open) {
+            index = 0;
+            return;
+        }
+        if (index === 4) {
+            dialogElem.showModal();
+            var $searchInput = document.getElementById("search-box");
+            $searchInput.focus();
+            initSearch();
+        } else if (ev.additionalEvent === queue[index]) {
+            index += 1;
+        }
+    }, 7));
 </script>
 
 </html>
