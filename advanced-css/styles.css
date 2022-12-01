@@ -127,6 +127,22 @@ header#intro {
     text-align: center;
 }
 
+dialog {
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+button[value="cancel"] {
+    margin: 20px 0 0 0;
+}
+
+.search-results__items {
+    list-style: none;
+    padding: 0;
+    min-width: 300px;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: 1fr min(70ch, calc(100% - 32px)) 1fr;

@@ -1,27 +1,15 @@
-function handleClick(event) {
-  const bodyBlackout = document.querySelector(".body-blackout");
-  const popupModal = document.querySelector(`.popup-modal`);
-  if (
-    (!bodyBlackout.classList.contains("is-blacked-out") && !event.key) ||
-    event.key === "s"
-  ) {
-    bodyBlackout.classList.add("is-blacked-out");
-    popupModal.classList.add("is--visible");
-    var $searchInput = document.getElementById("search");
+function handleKeyPress(event) {
+  const dialogElem = document.getElementById("search")
+
+  var $searchInput = document.getElementById("search-box");
+  if (!dialogElem.open && $searchInput != document.activeElement && event.key === "s") {
+    dialogElem.showModal();
     $searchInput.focus();
     initSearch();
   }
 }
 
-document.addEventListener("keypress", handleClick);
-
-document.getElementById("search-img").addEventListener("click", handleClick);
-document.getElementById("search-close").addEventListener("click", () => {
-  const bodyBlackout = document.querySelector(".body-blackout");
-  const popupModal = document.querySelector(`.popup-modal`);
-  bodyBlackout.classList.remove("is-blacked-out");
-  popupModal.classList.remove("is--visible");
-});
+document.addEventListener("keypress", handleKeyPress);
 
 function debounce(func, wait) {
   var timeout;
@@ -156,7 +144,7 @@ function formatSearchResultItem(item, terms) {
 }
 
 function initSearch() {
-  var $searchInput = document.getElementById("search");
+  var $searchInput = document.getElementById("search-box");
   var $searchResults = document.querySelector(".search-results");
   var $searchResultsItems = document.querySelector(".search-results__items");
   var MAX_ITEMS = 10;

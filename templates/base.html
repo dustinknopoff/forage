@@ -58,6 +58,9 @@
         %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
     {% endif %}
     <script type="text/javascript" src={{ get_url(path="logo.js" , trailing_slash=false)}}></script>
+    <script type="text/javascript" defer src={{ get_url(path="elasticlunr.min.js" , trailing_slash=false)}}></script>
+    <script type="text/javascript" defer src={{ get_url(path="search_index.en.js" , trailing_slash=false)}}></script>
+    <script type="text/javascript" defer src={{ get_url(path="search.js" , trailing_slash=false)}}></script>
     {% block head %}
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
     {% endblock %}
@@ -107,6 +110,52 @@
         </div>
         </div>
     </footer>
+    <dialog id="search">
+        <form method="dialog">
+            <div class="search-container">
+                <input id="search-box" type="search" placeholder="Search...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+            <button value="cancel">Cancel</button>
+        </form>
+    </dialog>
 </body>
+
+<script type="text/javascript" defer>
+    let swipeLimit = 50
+    let startX
+    const dialogElem = document.getElementById("search")
+
+    if (typeof dialogElem.showModal !== "function") {
+        console.log("dialog elem not supported");
+        dialogElem.hidden = true;
+    }
+
+    const endTouch = e => {
+        const finishingTouch = e.changedTouches[0].clientX
+        if (startX < finishingTouch - swipeLimit) {
+            if (!dialogElem.open) {
+                dialogElem.showModal();
+                var $searchInput = document.getElementById("search-box");
+                $searchInput.focus();
+                initSearch();
+            }
+        }
+        document.body.removeEventListener('touchend', endTouch)
+    }
+
+    const startTouch = e => {
+        const { touches } = e
+        if (touches && touches.length === 2) {
+            const touch = touches[0]
+            startX = touch.clientX
+            document.body.addEventListener('touchend', endTouch)
+        }
+    }
+    document.body.addEventListener('touchstart', startTouch)
+</script>
 
 </html>
