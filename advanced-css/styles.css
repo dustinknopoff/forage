@@ -94,6 +94,11 @@ pre {
     margin-top: 0;
     margin-bottom: 1.45rem;
     padding: 1.45rem;
+    z-index: 0;
+}
+
+code {
+    z-index: 0;
 }
 
 code:not([class]) {
