@@ -162,7 +162,7 @@
 
     const startTouch = e => {
         const { touches } = e
-        if (touches && touches.length === 1) {
+        if (touches && touches.length === 2) {
             const touch = touches[0]
             startX = touch.clientX
             document.body.addEventListener('touchend', endTouch)
