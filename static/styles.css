@@ -186,7 +186,6 @@ button[value="cancel"] {
 }
 
 .search-results__items {
-  min-width: 300px;
   color: var(--primary-color);
   background: var(--background-color);
   padding: 0;
