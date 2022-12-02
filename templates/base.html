@@ -124,6 +124,7 @@
             <button value="cancel">Cancel</button>
         </form>
     </dialog>
+    <div id="pointer"></div>
 </body>
 
 <script type="text/javascript" defer>
@@ -173,6 +174,7 @@
 </script>
 <script type="text/javascript" src={{ get_url(path="hammer.js" , trailing_slash=false)}}></script>
 <script>
+    const $pointer = document.getElementById("pointer")
     function debounce(func, wait) {
         var timeout;
 
@@ -189,9 +191,15 @@
     }
 
     const hammertime = new Hammer(document.body);
-    const queue = ["panleft", "pandown", "panright", "pandown", "panleft"]
+    const queue = ["panleft", "pandown", "panright", "pandown", "panleft", "panleft"]
     let index = 0;
+    hammertime.on('panstart', () => {
+        $pointer.style.display = "block";
+    })
     hammertime.on('pan', debounce(function (ev) {
+        console.log(ev, $pointer);
+        $pointer.style.top = ev.center.y - 10 + "px";
+        $pointer.style.left = ev.center.x - 10 + "px";
         if (dialogElem.open) {
             index = 0;
             return;
@@ -205,6 +213,9 @@
             index += 1;
         }
     }, 7));
+    hammertime.on('panend', () => {
+        $pointer.style.display = "none";
+    })
 </script>
 
 </html>
