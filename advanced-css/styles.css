@@ -139,6 +139,8 @@ dialog {
     border: none;
     width: 500px;
     max-width: 80%;
+    color: var(--primary-color);
+    background: var(--background-color);
 }
 
 dialog::backdrop {
@@ -153,6 +155,15 @@ button[value="cancel"] {
     list-style: none;
     padding: 0;
     min-width: 300px;
+    color: var(--primary-color);
+    background: var(--background-color);
+}
+
+dialog ul {
+    margin: 0;
+}
+
+dialog form {
     color: var(--primary-color);
     background: var(--background-color);
 }
