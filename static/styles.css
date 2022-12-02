@@ -166,6 +166,8 @@ header#intro {
 dialog {
   width: 500px;
   max-width: 80%;
+  color: var(--primary-color);
+  background: var(--background-color);
   border: none;
   border-radius: 6px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
@@ -189,6 +191,15 @@ button[value="cancel"] {
   background: var(--background-color);
   padding: 0;
   list-style: none;
+}
+
+dialog ul {
+  margin: 0;
+}
+
+dialog form {
+  color: var(--primary-color);
+  background: var(--background-color);
 }
 
 .wrapper {
