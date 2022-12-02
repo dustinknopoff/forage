@@ -153,6 +153,8 @@ button[value="cancel"] {
     list-style: none;
     padding: 0;
     min-width: 300px;
+    color: var(--primary-color);
+    background: var(--background-color);
 }
 
 .wrapper {
