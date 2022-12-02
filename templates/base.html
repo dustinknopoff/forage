@@ -197,7 +197,6 @@
         $pointer.style.display = "block";
     })
     hammertime.on('pan', debounce(function (ev) {
-        console.log(ev, $pointer);
         $pointer.style.top = ev.center.y - 10 + "px";
         $pointer.style.left = ev.center.x - 10 + "px";
         if (dialogElem.open) {
