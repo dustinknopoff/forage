@@ -192,6 +192,22 @@ button[value="cancel"] {
   list-style: none;
 }
 
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+ul.tags {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  display: flex;
+}
+
+ul.tags a {
+  color: var(--accent-color);
+}
+
 dialog ul {
   margin: 0;
 }
@@ -323,6 +339,10 @@ article a {
 
 article img {
   grid-column: 1 / -1 !important;
+}
+
+.listing {
+  padding: 20px;
 }
 
 footer a {

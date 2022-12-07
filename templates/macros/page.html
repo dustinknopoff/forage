@@ -1,69 +1,66 @@
 {% macro page_info(page) %}
-    <ul class="tags">   
-    {% if page.taxonomies.categories %}
-        {% for cat in page.taxonomies.categories %}
-                <li>
-                    <a href="{{ get_taxonomy_url(kind="categories", name=cat) | safe }}">{{ cat }}</a>
-                </li>
-        {% endfor %}
-    {% endif %}
-    {% if page.taxonomies.tags %}
-        {% for tag in page.taxonomies.tags %}
-            <li>
-            <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag }}</a>
-            </li>
-        {% endfor %}
-    {% endif %}
-    </ul>
+<ul class="tags">
+  {% if page.taxonomies.categories %}
+  {% for cat in page.taxonomies.categories %}
+  <li>
+    <a href="{{ get_taxonomy_url(kind="categories", name=cat) | safe }}">{{ cat }}</a>
+  </li>
+  {% endfor %}
+  {% endif %}
+  {% if page.taxonomies.tags %}
+  {% for tag in page.taxonomies.tags %}
+  <li>
+    <a href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag }}</a>
+  </li>
+  {% endfor %}
+  {% endif %}
+</ul>
 {% endmacro page_info %}
 
 {% macro page_listing(page) %}
-<div class="card">
-    <div class="topline">
-      {{ self::page_info(page=page) }}
-      <a href="{{ page.permalink }}"><h3>{{ page.title }}</h3></a>
-    </div>
-    <a href="{{ page.permalink }}">
-      {% if page.summary %}
-        {{ page.summary | markdown | safe }}
-      {%else %}
-        {{page.content | striptags | safe | truncate(length=180, end="...") | safe }}
-      {% endif %}
-    </a>
+<div class="listing">
+  <a href="{{ page.permalink }}">
+    <h3>{{ page.title }}</h3>
+    {% if page.summary %}
+    {{ page.summary | markdown | safe }}
+    {%else %}
+    {{page.content | striptags | safe | truncate(length=180, end="...") | safe }}
+    {% endif %}
+  </a>
+    {{ self::page_info(page=page) }}
 </div>
 {% endmacro page_listing %}
 
 {% macro page_pagination(paginator) %}
-    <div class="pagination">
-        <div class="left pagination-item {% if not paginator.previous %}disabled{% endif %}">
-            {% if paginator.previous %}
-            <a href="{{ paginator.previous }}">To newer posts</a>
-            {% endif %}
-        </div>
-        <div class="right pagination-item {% if not paginator.next %}disabled{% endif %}">
-            {% if paginator.next %}
-            <a href="{{ paginator.next }}">To older posts</a>
-            {% endif %}
-        </div>
-    </div>
+<div class="pagination">
+  <div class="left pagination-item {% if not paginator.previous %}disabled{% endif %}">
+    {% if paginator.previous %}
+    <a href="{{ paginator.previous }}">To newer posts</a>
+    {% endif %}
+  </div>
+  <div class="right pagination-item {% if not paginator.next %}disabled{% endif %}">
+    {% if paginator.next %}
+    <a href="{{ paginator.next }}">To older posts</a>
+    {% endif %}
+  </div>
+</div>
 {% endmacro page_pagination %}
 
 {% macro series(list, isBefore) %}
 <details>
-<summary>
-    <h5 style="margin: 0; display: inline-block;">{% if isBefore %}Previously {% else %} Next {% endif %}in the series...</h5>
-</summary>
-<ul class="preview-list">
-{% for page in list %}
-  {% if loop.index <= 5 %}
-  {% set page = get_page(path="articles/" ~ page) %}  
-    <li class="card-preview">
+  <summary>
+    <h5 style="margin: 0; display: inline-block;">{% if isBefore %}Previously {% else %} Next {% endif %}in the
+      series...</h5>
+  </summary>
+  <ul class="preview-list">
+    {% for page in list %}
+    {% if loop.index <= 5 %} {% set page=get_page(path="articles/" ~ page) %} <li class="card-preview">
       <a href="{{ page.permalink }}">
         <p>{{ page.title }}</p>
       </a>
-    </li>
-  {% endif %}
-    {% endfor %}
+      </li>
+      {% endif %}
+      {% endfor %}
   </ul>
 </details>
 {% endmacro series %}

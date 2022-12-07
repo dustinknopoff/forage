@@ -158,6 +158,22 @@ button[value="cancel"] {
     background: var(--background-color);
 }
 
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+ul.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+ul.tags a {
+    color: var(--accent-color);
+}
+
 dialog ul {
     margin: 0;
 }
@@ -301,7 +317,9 @@ article img {
     grid-column: 1 / -1 !important;
 }
 
-
+.listing {
+    padding: 20px;
+}
 
 footer a {
     color: var(--accent-color);
