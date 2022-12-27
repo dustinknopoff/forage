@@ -250,12 +250,21 @@ a:hover, a:focus {
 
 .card {
   max-width: 320px;
-  height: 150px;
-  background-image: url("./cardbg.svg");
+  background: var(--background-color);
+  -webkit-filter: drop-shadow(16px 1.5rem 20px #13a7ed);
+  filter: drop-shadow(16px 1.5rem 20px #13a7ed);
+  -webkit-filter: drop-shadow(16px 1.5rem 20px color(display-p3 .301563 .645183 .906344));
+  filter: drop-shadow(16px 1.5rem 20px color(display-p3 .301563 .645183 .906344));
+  filter: drop-shadow(16px 1.5rem 20px lab(64.1533% -17.1705 -45.8544));
+  border-radius: 3rem;
   flex-direction: column;
   justify-content: center;
   margin: 20px;
   display: flex;
+}
+
+.card > * {
+  margin: 20px;
 }
 
 .card .topline {
@@ -367,6 +376,20 @@ ul.preview-list p {
 
 ul.preview-list a {
   line-height: 1.2;
+}
+
+ul.posts {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0;
+}
+
+ul.tags {
+  flex-direction: row;
+  padding: 0;
+  display: flex;
 }
 
 main blockquote {

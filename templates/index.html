@@ -12,10 +12,9 @@
     {% for year, posts in section.pages | group_by(attribute="year") %}
     <div class="animate blur">
       <h2 class="year">{{ year }}</h2>
-      <ul title="Posts in {{year}}">
+      <ul class="posts" title="Posts in {{year}}">
         {% for post in posts | sort(attribute="date") | reverse %}
-        <li>
-          {% if loop.index == 1 %}
+        {% if loop.index == 1 %}
         <li class="card">
           <a href="{{ post.permalink }}">
             <span class="topline">
@@ -24,11 +23,38 @@
             <p>{{post.content | striptags | truncate(length=180, end="...") | safe
               }}</p>
           </a>
+          <ul class="tags">
+            {% for key, value in post.taxonomies %}
+            {% if value %}
+            {% for name in value %}
+            <li class="{{key}}">
+              <a href="/{{key}}/{{name}}">
+                {{name}}
+              </a>
+            </li>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+          </ul>
         </li>
         {% else %}
-        <a href="{{ post.permalink }}">{{ post.title }}</a>
-        {% endif %}
+        <li>
+          <a href="{{ post.permalink }}">{{ post.title }}</a>
+          <ul class="tags">
+            {% for key, value in post.taxonomies %}
+            {% if value %}
+            {% for name in value %}
+            <li class="{{key}}">
+              <a href="/{{key}}/{{name}}">
+                {{name}}
+              </a>
+            </li>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+          </ul>
         </li>
+        {% endif %}
         {% endfor %}
       </ul>
     </div>
