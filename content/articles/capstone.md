@@ -2,7 +2,7 @@
 title: Playcomb
 date: 2021-04-27
 extra:
-  link: https://playcomb.space
+  link: https://playcomb.pages.dev
   linkText: Visit site
 taxonomies:
   categories:
