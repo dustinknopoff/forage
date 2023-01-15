@@ -9,16 +9,16 @@
             <div class="following">
                 <h2>Following</h2>
                 <ul>
-                {% for feed in data.following %}
+                    {% for feed in data.following %}
                     {% set feed_data = load_data(url=feed.url,format="json") %}
                     {% if feed_data %}
-                        <li>
-                            <a href="{{feed_data["url"]}}" class="profile-link" target="_blank">
-                                {{feed_data["name"]}}
-                            </a>
-                        </li>
+                    <li>
+                        <a href="{{feed_data[" url"]}}" class="profile-link" target="_blank">
+                            {{feed_data["name"]}}
+                        </a>
+                    </li>
                     {% endif %}
-                {% endfor %}
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -28,48 +28,50 @@
                 <button id="expand">Toggle All</button>
             </div>
             {% for list in data.lists %}
-                <details class="list">
-                    <summary id="{{list.name | slugify}}"">
-                        <h2 class="list-name">
-                            {{list.name}}
-                        </h2>
-                        <a href="#{{list.name | slugify}}">🔗</a>
-                    </summary>
-                    <div class="books">
-                        {% for book in list.books %}
-                            <div class="book" id="{{list.name ~ "-" ~ book.title | slugify}}">
-                                {% if book.image %}
-                                    <img class="book-image" src="https://cors-anywhere.knopoff.workers.dev/?{{book.image}}" async defer />
-                                {% endif %}
-                                <div>
-                                    {% if book.link %}
-                                        <h3><a href="{{book.link}}">{{book.title}}</a></h3>
-                                    {% else %}
-                                        <h3>{{book.title}}</h3>
-                                    {% endif %}
-                                    {% if book.author %}
-                                    <h4 class="book-author">by&nbsp;{{book.author}}</h4>
-                                    {% endif %}
-                                    {% if book.date_finished %}
-                                        <span class="book-finished">Finished on {{book.date_finished | date(format="%B %m, %Y")}}</span>
-                                    {% endif %}
-                                    {% if book.notes %}
-                                        <p class="notes">{{book.notes | markdown(inline=true) | safe}}</p>
-                                    {% endif %}
-                                </div>
-                            </div>
-                            {% if book.notes %}
-                                <p class="notes mobile">{{book.notes | markdown(inline=true) | safe}}</p>
+            <details class="list">
+                <summary id="{{list.name | slugify}}"">
+                        <h2 class=" list-name">
+                    {{list.name}}
+                    </h2>
+                    <a href="#{{list.name | slugify}}">🔗</a>
+                </summary>
+                <div class="books">
+                    {% for book in list.books %}
+                    <div class="book" id="{{list.name ~ " -" ~ book.title | slugify}}">
+                        {% if book.image %}
+                        <img class="book-image" src="https://cors-anywhere.knopoff.workers.dev/?{{book.image}}"
+                            loading="lazy" />
+                        {% endif %}
+                        <div>
+                            {% if book.link %}
+                            <h3><a href="{{book.link}}">{{book.title}}</a></h3>
+                            {% else %}
+                            <h3>{{book.title}}</h3>
                             {% endif %}
-                        {% endfor %}
+                            {% if book.author %}
+                            <h4 class="book-author">by&nbsp;{{book.author}}</h4>
+                            {% endif %}
+                            {% if book.date_finished %}
+                            <span class="book-finished">Finished on {{book.date_finished | date(format="%B %m,
+                                %Y")}}</span>
+                            {% endif %}
+                            {% if book.notes %}
+                            <p class="notes">{{book.notes | markdown(inline=true) | safe}}</p>
+                            {% endif %}
+                        </div>
                     </div>
-                </details>
+                    {% if book.notes %}
+                    <p class="notes mobile">{{book.notes | markdown(inline=true) | safe}}</p>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </details>
             {% endfor %}
         </div>
     </div>
 </div>
 <script>
-    document.querySelector("#expand").addEventListener("click", function() {
+    document.querySelector("#expand").addEventListener("click", function () {
         Array.from(document.querySelectorAll('details.list')).forEach(elmnt => (elmnt.open = !elmnt.open))
     })
 </script>
