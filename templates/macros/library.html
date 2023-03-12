@@ -13,7 +13,7 @@
                     {% set feed_data = load_data(url=feed.url,format="json") %}
                     {% if feed_data %}
                     <li>
-                        <a href="{{feed_data[" url"]}}" class="profile-link" target="_blank">
+                        <a href="{{feed_data["url"]}}" class="profile-link" target="_blank">
                             {{feed_data["name"]}}
                         </a>
                     </li>
