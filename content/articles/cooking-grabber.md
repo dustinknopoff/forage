@@ -9,7 +9,7 @@ taxonomies:
     - dev
   tags:
     - rust
-    - webassembly
+    - web-assembly
 
 ---
 
