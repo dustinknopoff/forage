@@ -158,11 +158,6 @@ button[value="cancel"] {
     background: var(--background-color);
 }
 
-ul {
-    margin: 0;
-    list-style: none;
-}
-
 ul.tags {
     display: flex;
     flex-wrap: wrap;

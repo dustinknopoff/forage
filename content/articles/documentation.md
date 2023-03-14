@@ -1,15 +1,12 @@
 ---
 title: My Woes as a Reader and Writer of Documentation
-date: 2023-03-12
-draft: true
+date: 2023-03-14
 taxonomies:
   categories:
     - dev
   tags:
     - process
 ---
-
-
 
 Listening to [GoTime Ep: 268](https://changelog.com/gotime/268) has charged up my irritation towards how difficult documentation is in a slew of ways both as a reader and writer.
 
@@ -19,11 +16,11 @@ Listening to [GoTime Ep: 268](https://changelog.com/gotime/268) has charged up m
 
 ### Organization and Search
 
-Two things stand out the first time you look for documentation (besides how fast or slow the page is to load): how it's organized and whether it's easy to search. When documentation reaches a certain threshold "obvious" places to look for things vanish. Some will fall under more than one topic, others end up with part of the process in one area and the other in an equally unobvious place. If the search isn't good, your chances of finding valuable information vanishes and can only be saved by your colleagues bookmarks folder.
+Two things stand out the first time looking for documentation (besides how fast or slow the page is to load): how it's organized and whether it's easy to search. When documentation reaches a certain threshold "obvious" places to look for things vanish. Some will fall under more than one topic, others end up with part of the process in one area and the other in an equally unobvious place. If the search isn't good, your chances of finding valuable information vanishes and can only be saved by your colleagues bookmarks folder.
 
 ### Stale Information
 
-The next thing you'll frustratingly notice is that series of commands you copied or function signature you expected isn't accurate anymore. Related to the previous section, perhaps the correct version is stuck in someone's personal documentation (either public or private) and hasn't bothered to update the one associated with a project (not usually in a intentional manner, they forgot it existed).
+The next thing that will be frustratingly noticed is that the series of commands to copy or a function signature isn't accurate anymore. Related to the previous section, perhaps the correct version is stuck in someone's personal documentation (either public or private) and hasn't bothered to update the one associated with a project (not usually in a intentional manner, they forgot it existed).
 
 This stale information happens at every level of documentation (inline comments, diagrams, RFCs, Tech Specs, runbooks, etc.).
 
@@ -39,11 +36,11 @@ Roughly how it was eloquently put in Go Time episode, The industry has grudgingl
 
 Let's assume everyone starts being with the avid desire to write amazing documentation. 
 
-One of the following eventually breaks your desire:
+One of the following eventually breaks this desire:
 - The deadlines rush in and there's barely enough time get that required 100% code coverage, let alone write documentation. 
 - The existing documentation is so sparse or wrong it's easy to forget to even check in there to even update it
 - The documentation goes out of date so quickly it feels pointless to write it again
-- The style of the documentation written assumes so much knowledge of the existing system, contributing anything implies a level of knowledge you don't have
+- The style of the documentation written assumes so much knowledge of the existing system, contributing anything implies a level of familiarity with the system beyond most developers
 
 ### The _Right_ Documentation
 

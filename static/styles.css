@@ -192,11 +192,6 @@ button[value="cancel"] {
   list-style: none;
 }
 
-ul {
-  margin: 0;
-  list-style: none;
-}
-
 ul.tags {
   flex-wrap: wrap;
   justify-content: space-evenly;
