@@ -1,6 +1,11 @@
 ---
 title: Plaintext Accounting Crib Sheet
 date: 2021-12-25
+taxonomies:
+  categories:
+    - finance
+  tags:
+    - plaintext
 ---
 
 I recently watched, [this video by Colin Dean](https://www.youtube.com/watch?v=FJtaM43PgXQ) which for the first time made plaintext accounting click.

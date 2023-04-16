@@ -14,7 +14,7 @@
       <h2 class="year">{{ year }}</h2>
       <ul class="posts" title="Posts in {{year}}">
         {% for post in posts | sort(attribute="date") | reverse %}
-        {% if loop.index == 1 %}
+         {% if loop.index == 1 %}
         <li class="card">
           <a href="{{ post.permalink }}">
             <span class="topline">
@@ -27,7 +27,7 @@
             {% for key, value in post.taxonomies %}
             {% if value %}
             {% for name in value %}
-            <li class="{{key}}">
+            <li class="{{key}} {{name}}">
               <a href="/{{key}}/{{name}}">
                 {{name}}
               </a>
@@ -44,7 +44,7 @@
             {% for key, value in post.taxonomies %}
             {% if value %}
             {% for name in value %}
-            <li class="{{key}}">
+            <li class="{{key}} {{name}}">
               <a href="/{{key}}/{{name}}">
                 {{name}}
               </a>

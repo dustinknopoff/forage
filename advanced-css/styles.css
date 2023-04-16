@@ -6,6 +6,7 @@
     --secondary-color: oklch(82.31% 0.07 60.89);
     --tertiary-color: oklch(42.33% 0.097 24.05);
     --accent-color: oklch(48% 0.101 236.82);
+    --tidbit-color: oklch(48% 0.101 0);
     --background-color: oklch(100% 3.5594404092893915e-8 106.37411396324424);
     --border-color: oklch(100% 3.5594404092893915e-8 106.37411396324424);
     --title: "iA Writer Quattro S", monospace;
@@ -219,6 +220,10 @@ a:focus {
     background: var(--background-color);
     border-radius: 3rem;
     filter: drop-shadow(16px 1.5rem 20px oklch(69.19% 0.15 238.04));
+}
+
+li.til  a {
+    color: oklch(69.19% 0.15 154.35);
 }
 
 .card>* {
