@@ -7,6 +7,7 @@
     --tertiary-color: oklch(42.33% 0.097 24.05);
     --accent-color: oklch(48% 0.101 236.82);
     --tidbit-color: oklch(48% 0.101 0);
+    --til: oklch(69.19% 0.15 154.35);
     --background-color: oklch(100% 3.5594404092893915e-8 106.37411396324424);
     --border-color: oklch(100% 3.5594404092893915e-8 106.37411396324424);
     --title: "iA Writer Quattro S", monospace;
@@ -122,6 +123,7 @@ a {
     bottom: 20px;
     left: 20px;
     transform: skewX(calc(28deg * var(--scroll, 0))) skewY(calc(-30deg * var(--scroll, 0))) rotateY(calc(180deg * var(--scroll, 0)));
+    z-index: 99999;
 }
 
 header#intro {
@@ -443,9 +445,66 @@ details {
     top: 100vh;
 }
 
+.til-wrapper {
+    display: grid;
+    grid-template-columns: 1fr min(60ch, calc(100% - 64px)) 1fr;
+    grid-column-gap: 32px;
+}
+
+.til-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.til-item {
+    margin: 2rem 0;
+}
+
+.til-item h3 {
+    padding: 4px;
+    border-bottom: 2px solid var(--til);
+    border-top: 2px solid var(--til);
+}
+
+.til-link {
+    font-size: var(--size-500);
+    font-weight: bold;
+    color: var(--til);
+}
+
+.til-link:hover {
+    animation-name: wiggle;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     dialog[open] {
         animation: toggle-modal .3s ease-in-out;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(10deg) scaleX(1);
+    }
+
+    25% {
+        transform: rotate(-10deg) scaleX(1.2);
+    }
+
+    50% {
+        transform: rotate(20deg) scaleX(1.3);
+    }
+
+    75% {
+        transform: rotate(-5deg) scaleX(1.2);
+    }
+
+    100% {
+        transform: rotate(0deg) scaleX(1);
     }
 }
 

@@ -7,6 +7,7 @@
   --tertiary-color: #7a3533;
   --accent-color: #0b658f;
   --tidbit-color: #8a435b;
+  --til: #3ab670;
   --background-color: #fff;
   --border-color: #fff;
   --title: "iA Writer Quattro S", monospace;
@@ -48,6 +49,7 @@
     --tertiary-color: color(display-p3 .446092 .224931 .209527);
     --accent-color: color(display-p3 .174598 .389515 .54615);
     --tidbit-color: color(display-p3 .506413 .277084 .355962);
+    --til: color(display-p3 .378206 .705094 .464763);
     --background-color: color(display-p3 1 1 1);
     --border-color: color(display-p3 1 1 1);
   }
@@ -61,6 +63,7 @@
     --tertiary-color: lab(32.1397% 30.545 16.8077);
     --accent-color: lab(39.6542% -12.5114 -30.5027);
     --tidbit-color: lab(38.4097% 33.1307 .422603);
+    --til: lab(66.1989% -47.6221 25.3941);
     --background-color: lab(100% -.0000298023 .0000119209);
     --border-color: lab(100% -.0000298023 .0000119209);
   }
@@ -151,6 +154,7 @@ a {
   width: 50px;
   -webkit-transform: skewX(calc(28deg * var(--scroll, 0))) skewY(calc(-30deg * var(--scroll, 0))) rotateY(calc(180deg * var(--scroll, 0)));
   transform: skewX(calc(28deg * var(--scroll, 0))) skewY(calc(-30deg * var(--scroll, 0))) rotateY(calc(180deg * var(--scroll, 0)));
+  z-index: 99999;
   position: fixed;
   bottom: 20px;
   left: 20px;
@@ -480,10 +484,103 @@ details {
   top: 100vh;
 }
 
+.til-wrapper {
+  grid-column-gap: 32px;
+  grid-template-columns: 1fr min(60ch, 100% - 64px) 1fr;
+  display: grid;
+}
+
+.til-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.til-item {
+  margin: 2rem 0;
+}
+
+.til-item h3 {
+  border-bottom: 2px solid var(--til);
+  border-top: 2px solid var(--til);
+  padding: 4px;
+}
+
+.til-link {
+  font-size: var(--size-500);
+  color: var(--til);
+  font-weight: bold;
+}
+
+.til-link:hover {
+  -webkit-animation-name: wiggle;
+  animation-name: wiggle;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   dialog[open] {
     -webkit-animation: .3s ease-in-out toggle-modal;
     animation: .3s ease-in-out toggle-modal;
+  }
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(10deg)scaleX(1);
+    transform: rotate(10deg)scaleX(1);
+  }
+
+  25% {
+    -webkit-transform: rotate(-10deg)scaleX(1.2);
+    transform: rotate(-10deg)scaleX(1.2);
+  }
+
+  50% {
+    -webkit-transform: rotate(20deg)scaleX(1.3);
+    transform: rotate(20deg)scaleX(1.3);
+  }
+
+  75% {
+    -webkit-transform: rotate(-5deg)scaleX(1.2);
+    transform: rotate(-5deg)scaleX(1.2);
+  }
+
+  100% {
+    -webkit-transform: rotate(0)scaleX(1);
+    transform: rotate(0)scaleX(1);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(10deg)scaleX(1);
+    transform: rotate(10deg)scaleX(1);
+  }
+
+  25% {
+    -webkit-transform: rotate(-10deg)scaleX(1.2);
+    transform: rotate(-10deg)scaleX(1.2);
+  }
+
+  50% {
+    -webkit-transform: rotate(20deg)scaleX(1.3);
+    transform: rotate(20deg)scaleX(1.3);
+  }
+
+  75% {
+    -webkit-transform: rotate(-5deg)scaleX(1.2);
+    transform: rotate(-5deg)scaleX(1.2);
+  }
+
+  100% {
+    -webkit-transform: rotate(0)scaleX(1);
+    transform: rotate(0)scaleX(1);
   }
 }
 

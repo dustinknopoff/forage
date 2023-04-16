@@ -65,10 +65,6 @@
 </head>
 
 <body>
-    <div class="drag-handlers">
-        <div class="block1"></div>
-        <div class="block2"></div>
-    </div>
     <main title="content">
         {% block content %}
         {% endblock %}
@@ -126,7 +122,7 @@
     </dialog>
     <div id="pointer"></div>
 </body>
-
+{#}
 <script type="text/javascript" defer>
     let swipeThreshold = 50
     let startX
@@ -216,5 +212,6 @@
         $pointer.style.display = "none";
     })
 </script>
+#}
 
 </html>
