@@ -515,8 +515,8 @@ details {
 .til-link:hover {
   -webkit-animation-name: wiggle;
   animation-name: wiggle;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;

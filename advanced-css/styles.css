@@ -475,7 +475,7 @@ details {
 
 .til-link:hover {
     animation-name: wiggle;
-    animation-duration: 1s;
+    animation-duration: 0.75s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
 }

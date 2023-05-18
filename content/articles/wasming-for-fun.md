@@ -28,7 +28,7 @@ wasm-bindgen = "0.2"
 
 Threw a `#[wasm_bindgen]` on `slugify()` function and ran `wasm-pack build --target web` which provides a wonderfully descriptive error
 
-```shell
+```bash
 error: can't #[wasm_bindgen] functions with lifetime or type parameters
   --> src/lib.rs:42:15
    |
