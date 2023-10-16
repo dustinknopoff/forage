@@ -321,31 +321,37 @@ article {
 }
 
 article * {
-  line-height: calc(4px + 2ex);
+  line-height: 1.5rlh;
   font-size: var(--size-400);
 }
 
 article h1 {
+  line-height: 3rlh;
   font-size: var(--size-900);
 }
 
 article h2 {
+  line-height: 2.5rlh;
   font-size: var(--size-800);
 }
 
 article h3, article h3 > * {
+  line-height: 2.25rlh;
   font-size: var(--size-700);
 }
 
 article h4 {
+  line-height: 2rlh;
   font-size: var(--size-600);
 }
 
 article h5 {
+  line-height: 1.75rlh;
   font-size: var(--size-500);
 }
 
 article h6, article p {
+  line-height: 1.5rlh;
   font-size: var(--size-400);
 }
 
