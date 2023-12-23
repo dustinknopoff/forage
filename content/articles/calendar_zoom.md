@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/calendar
 taxonomies:
   categories:
-    - dev
+    - showcase
   tags:
+    - dev
     - swift
 
 ---

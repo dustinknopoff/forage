@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/TeaCode-Vim-Extension
 taxonomies:
   categories:
-    - dev
+    - projects
   tags:
+    - dev
     - shell
 
 ---

@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/py-explore/tree/master/save-emails
 taxonomies:
   categories:
-    - dev
+    - showcase
   tags:
+    - dev
     - shell
 
 ---

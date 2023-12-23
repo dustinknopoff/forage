@@ -6,8 +6,9 @@ extra:
   linkText: View Full Prototype
 taxonomies:
   categories:
+    - showcase
+  tags:
     - design
-  tags: []
 
 ---
 

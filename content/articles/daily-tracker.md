@@ -5,8 +5,9 @@ extra:
   link: https://gist.github.com/dustinknopoff/e63363836aedf54ffc50c71c0b57c73e
 taxonomies:
   categories:
-    - dev
+    - showcase
   tags:
+    - dev
     - python
 
 ---

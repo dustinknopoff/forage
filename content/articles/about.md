@@ -1,7 +1,9 @@
 ---
 date: 2022-10-01
 title: About Me
-
+taxonomies:
+  categories:
+    - blog
 ---
 
 :wave: I'm Dustin, a fullstack developer originally from Connecticut and currently based in London, UK working for Yelp.

@@ -5,60 +5,41 @@
   <h1>:wave: I’m Dustin</h1>
   <h2>rustacean, martial artist, and cook</h2>
   <a class="til-link" href="/til">TiL</a>
+  <nav>
+    <ul>
+      <li><a href="/categories/projects">projects</a></li>
+      <li><a href="/categories/blog">blog</a></li>
+      <li><a href="/categories/showcase">showcase</a></li>
+      <li><a href="/til">TiL</a></li>
+    </ul>
+  </nav>
 </header>
 <section class="posts wrapper" title="Posts">
   <div>
     {% set section = get_section(path="articles/_index.md") %}
-    {% for year, posts in section.pages | group_by(attribute="year") %}
     <div class="animate blur">
-      <h2 class="year">{{ year }}</h2>
-      <ul class="posts" title="Posts in {{year}}">
-        {% for post in posts | sort(attribute="date") | reverse %}
-         {% if loop.index == 1 %}
-        <li class="card">
-          <a href="{{ post.permalink }}">
-            <span class="topline">
-              {{ post.title }}
-            </span>
-            <p>{{post.content | striptags | truncate(length=180, end="...") | safe
-              }}</p>
-          </a>
-          <ul class="tags">
-            {% for key, value in post.taxonomies %}
-            {% if value %}
-            {% for name in value %}
-            <li class="{{key}} {{name}}">
-              <a href="/{{key}}/{{name}}">
-                {{name}}
-              </a>
-            </li>
-            {% endfor %}
-            {% endif %}
-            {% endfor %}
-          </ul>
-        </li>
-        {% else %}
-        <li>
-          <a href="{{ post.permalink }}">{{ post.title }}</a>
-          <ul class="tags">
-            {% for key, value in post.taxonomies %}
-            {% if value %}
-            {% for name in value %}
-            <li class="{{key}} {{name}}">
-              <a href="/{{key}}/{{name}}">
-                {{name}}
-              </a>
-            </li>
-            {% endfor %}
-            {% endif %}
-            {% endfor %}
-          </ul>
-        </li>
-        {% endif %}
+      <h2>Latest</h2>
+      <ul class="posts">
+        {% for post in section.pages | sort(attribute="date") | reverse | slice(end=5) %}
+          <li class="preview">
+            <a href="{{ post.permalink }}">{{ post.title }}</a>
+            <ul class="tags">
+              {% for key, value in post.taxonomies %}
+                {% if value and key == "tags" %}
+                {% for name in value %}
+                  <li class="{{key}} {{name}}">
+                    <a href="/{{key}}/{{name}}">
+                      {{name}}
+                    </a>
+                  </li>
+                {% endfor %}
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </li>
         {% endfor %}
       </ul>
     </div>
-    {% endfor %}
   </div>
 </section>
 {% endblock content %}

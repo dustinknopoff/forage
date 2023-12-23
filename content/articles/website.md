@@ -7,8 +7,9 @@ extra:
 #     - forage.md
 taxonomies:
   categories:
+    - projects
+  tags:
     - design
-  tags: []
 
 ---
 

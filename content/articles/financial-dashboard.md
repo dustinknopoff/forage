@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/financial-dashboard
 taxonomies:
   categories:
-    - finance
+    - showcase
   tags:
+    - finance
     - shell
 ---
 

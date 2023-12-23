@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/moneybuddy
 taxonomies:
   categories:
+    - showcase
+  tags:
     - design
-  tags: []
 
 ---
 

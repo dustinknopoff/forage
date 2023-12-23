@@ -3,8 +3,9 @@ date: 2023-06-25
 title: How to Create a Tag Cloud (without JavaScript)
 taxonomies:
   categories:
-    - dev
+    - showcase
   tags:
+    - dev
     - web
 ---
 With just CSS, HTML, and a generator.

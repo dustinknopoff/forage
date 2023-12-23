@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/audit-parser
 taxonomies:
   categories:
-    - dev
+    - showcase
   tags:
+    - dev
     - rust
 
 ---

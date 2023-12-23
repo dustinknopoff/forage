@@ -6,9 +6,10 @@ extra:
   linkText: Check it out
 taxonomies:
   categories:
-    - dev
-    - design
+    - projects
   tags:
+    - design
+    - dev
     - web
 
 ---

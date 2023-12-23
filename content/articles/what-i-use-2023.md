@@ -3,7 +3,7 @@ title: What I Use 2023
 date: 2023-12-15
 taxonomies:
   categories:
-    - about
+    - blog
 ---
 
 My Default Apps

@@ -234,6 +234,20 @@ a:focus {
     filter: drop-shadow(16px 1.5rem 20px oklch(69.19% 0.15 238.04));
 }
 
+.preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 16px;
+}
+
 li.til  a {
     color: oklch(69.19% 0.15 154.35);
 }

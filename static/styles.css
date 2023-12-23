@@ -258,6 +258,20 @@ a:hover, a:focus {
   display: flex;
 }
 
+.preview {
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  display: flex;
+}
+
+nav > ul {
+  justify-content: space-evenly;
+  gap: 16px;
+  list-style: none;
+  display: flex;
+}
+
 li.til a {
   color: #3ab670;
   color: lab(66.1989% -47.6221 25.3941);

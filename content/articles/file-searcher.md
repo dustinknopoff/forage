@@ -5,8 +5,9 @@ extra:
   link: https://gist.github.com/dustinknopoff/d01011beaf8b4248e5f39abd2396d040
 taxonomies:
   categories:
-    - dev
+    - showcase
   tags:
+    - dev
     - shell
 
 ---

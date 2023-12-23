@@ -6,8 +6,9 @@ extra:
   linkText: Visit site
 taxonomies:
   categories:
+    - showcase
+  tags:
     - design
-  tags: []
 
 ---
 

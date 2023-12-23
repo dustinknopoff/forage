@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/raster-md
 taxonomies:
   categories:
-    - dev
+    - projects
   tags:
+    - dev
     - rust
 
 ---

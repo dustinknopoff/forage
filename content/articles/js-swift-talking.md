@@ -7,8 +7,9 @@ extra:
     - neuaudit.md
 taxonomies:
   categories:
-    - dev
+     - showcase
   tags:
+    - dev
     - swift
 
 ---

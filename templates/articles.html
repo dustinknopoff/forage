@@ -5,10 +5,14 @@
   <li class="card">
     <div class="topline">
       <ul class="tags">
-        {% for key,value in post.taxonomies %} {% for item in value %} {% set
-        url = "/" ~ key ~ "/" ~ item %}
-        <li><a href="{{ get_url(path=url) }}">{{item}}</a></li>
-        {% endfor %} {% endfor %}
+        {% for key,value in post.taxonomies %}
+          {% if key == "tags" %}
+            {% for item in value %} 
+              {% set url = "/" ~ key ~ "/" ~ item %}
+              <li><a href="{{ get_url(path=url) }}">{{item}}</a></li>
+            {% endfor %} 
+          {% endif %}
+        {% endfor %}
       </ul>
       <a href="{{ post.permalink }}" class="card-link"
         ><h3>{{ post.title }}</h3></a

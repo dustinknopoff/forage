@@ -1,12 +1,5 @@
 {% macro page_info(page) %}
 <ul class="tags">
-  {% if page.taxonomies.categories %}
-  {% for cat in page.taxonomies.categories %}
-  <li>
-    <a href="{{ get_taxonomy_url(kind="categories", name=cat) | safe }}">{{ cat }}</a>
-  </li>
-  {% endfor %}
-  {% endif %}
   {% if page.taxonomies.tags %}
   {% for tag in page.taxonomies.tags %}
   <li>

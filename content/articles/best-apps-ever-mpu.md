@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/py-explore/blob/master/bestappsever-talk.py
 taxonomies:
   categories:
-    - dev
+    - showcase
   tags:
+    - dev
     - python
 
 ---

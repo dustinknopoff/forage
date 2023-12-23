@@ -6,8 +6,9 @@ extra:
   discussion: https://github.com/dustinknopoff/forage/discussions/2
 taxonomies:
   categories:
-    - dev
+    - projects
   tags:
+    - dev
     - rust
     - web-assembly
 

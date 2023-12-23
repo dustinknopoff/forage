@@ -5,8 +5,10 @@ extra:
   link: https://gist.github.com/dustinknopoff/0913e25d059f111f57045c904de25980
 taxonomies:
   categories:
+    - showcase
+  tags:
     - dev
-  tags: [deno]
+    - deno
 ---
 
 I have a private site I built using Zola for sharing recipes with my family. We currently add them to a shared iCloud drive and I have a script which runs on occasion to trigger a rebuild the site.

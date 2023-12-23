@@ -8,10 +8,10 @@ extra:
     - bashdoc2.md
 taxonomies:
   categories:
-    - dev
+    - showcase
   tags:
+    - dev
     - rust
-
 ---
 
 > Part 3 of the unintended Bashdoc series.

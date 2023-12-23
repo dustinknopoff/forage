@@ -3,8 +3,9 @@ title: My Woes as a Reader and Writer of Documentation
 date: 2023-03-14
 taxonomies:
   categories:
-    - dev
+    - blog
   tags:
+    - dev
     - process
 ---
 

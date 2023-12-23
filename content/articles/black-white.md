@@ -6,8 +6,9 @@ extra:
   linkText: Download
 taxonomies:
   categories:
+    - showcase
+  tags: 
     - design
-  tags: []
 
 ---
 

@@ -6,8 +6,9 @@ extra:
   linkText: View Full PDF
 taxonomies:
   categories:
+    - showcase
+  tags:
     - design
-  tags: []
 
 ---
 

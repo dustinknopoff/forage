@@ -5,7 +5,7 @@ extra:
   link: ""
   linkText: ""
 taxonomies:
-  categories: []
+  categories: [showcase]
   tags: []
 
 ---

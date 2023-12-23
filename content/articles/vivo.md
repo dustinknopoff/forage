@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/py-explore/blob/master/vivo.py
 taxonomies:
   categories:
-    - dev
+    - projects
   tags:
+    - dev
     - python
 
 ---

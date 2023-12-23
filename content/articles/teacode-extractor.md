@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/teacodebundles
 taxonomies:
   categories:
-    - dev
+    - projects
   tags:
+    - dev
     - python
 
 ---

@@ -5,8 +5,9 @@ extra:
   link: https://github.com/Stebalien/slug-rs/pull/6/files
 taxonomies:
   categories:
-    - dev
+    - projects
   tags:
+    - dev
     - rust
     - web-assembly
 ---

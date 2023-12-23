@@ -5,8 +5,9 @@ extra:
   link: https://github.com/dustinknopoff/rust-minishell
 taxonomies:
   categories:
-    - dev
+    - projects
   tags:
+    - dev
     - rust
 
 ---
