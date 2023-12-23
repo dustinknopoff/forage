@@ -1,7 +1,6 @@
 ---
 title: Type Investigator
 date: 2023-12-22
-draft: true
 extra:
   link: https://type-investigator.knopoff.dev
   linkText: Check it out
@@ -28,3 +27,15 @@ This is achieved by:
 3. Stop once we're at the available pixel width or over
 
 We then average the result of the 100 sentences to hopefully normalize the result
+
+## What "asking the font what width to render" means
+
+![](https://res.cloudinary.com/dcloudinary/image/upload/f_auto,q_auto/kreqo45czqhxs69gnybr)
+
+![](https://res.cloudinary.com/dcloudinary/image/upload/f_auto,q_auto/zao1n1isyqh9odhuuj7a)
+
+Excluding some complexities of different fonts, kerning, special cases, etc. `getAdvanceWidth` essentially takes a piece of text and converts each character into a glyph (like above). The `advanceWidth` is encoded for each glyph in the ttf file.
+
+![](https://res.cloudinary.com/dcloudinary/image/upload/f_auto,q_auto/blfauetb3d4ephd0goy8)
+
+That is multiplied by `(1 / fontSize) * unitsPerEm` to scale the advanceWidth to the font size we're evaluating. It then sums this for all glyphs in the text.

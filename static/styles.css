@@ -130,7 +130,7 @@ code {
 }
 
 code:not([class]) {
-  background: var(--border-color);
+  background: var(--secondary-color);
   border-radius: 3px;
   padding: 2px;
 }

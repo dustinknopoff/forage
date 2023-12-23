@@ -115,7 +115,7 @@ code {
 }
 
 code:not([class]) {
-    background: var(--border-color);
+    background: var(--secondary-color);
     padding: 2px;
     border-radius: 3px;
 }
