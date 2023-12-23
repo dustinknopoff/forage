@@ -47,6 +47,15 @@
 
 }
 
+.footnote-definition {
+    word-break: break-all;
+    
+    p, sup {
+        line-height: normal;
+        display: inline-block;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: oklch(29.05% 0 0);

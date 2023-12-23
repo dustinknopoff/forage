@@ -1,7 +1,6 @@
 ---
 title: Financial Dashboard
 date: 2021-12-31
-draft: true
 extra:
   link: https://github.com/dustinknopoff/financial-dashboard
 taxonomies:
@@ -23,7 +22,7 @@ Eventually though, I couldn't stop thinking about it and attempted it myself.
 
 > Using a sample journal
 
-```
+```ledger
 account Assets       ; type:A, things I own
 account Liabilities  ; type:L, things I owe
 account Equity       ; type:E, net worth or "total investment"; equal to A - L
@@ -54,7 +53,7 @@ account Expenses     ; type:X, outflow categories; part of E, separated for repo
 
 There are 4 queries to hledger powering this dash.
 
-```
+```bash
 hledger bal ^Income -O csv -M -b lastquarter -C -U -T -X USD
 ```
 
@@ -69,13 +68,13 @@ Broken down:
 
 Outputs:
 
-```
+```csv
 "account","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","total"
 "Income","0","0","0","0","0","-3000.00 USD","-3000.00 USD"
 "total","0","0","0","0","0","-3000.00 USD","-3000.00 USD"
 ```
 
-```
+```bash
 hledger bal ^Expenses -O csv -M -b lastquarter -C -U -T -X USD
 ```
 
@@ -83,7 +82,7 @@ Exactly the same but for accounts starting with `Expenses`
 
 Outputs:
 
-```
+```csv
 "account","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","total"
 "Expenses:1","0","0","0","0","0","16.50 USD","16.50 USD"
 "Expenses:2","0","0","0","0","0","30.00 USD","30.00 USD"
@@ -91,7 +90,7 @@ Outputs:
 "total","0","0","0","0","0","396.50 USD","396.50 USD"
 ```
 
-```
+```bash
 hledger bal ^Expenses  --begin thismonth -O csv -X USD
 ```
 
@@ -99,7 +98,7 @@ A simplification of the previous query and only for the current month.
 
 Outputs:
 
-```
+```csv
 "account","balance"
 "Expenses:1","16.50 USD"
 "Expenses:2","30.00 USD"
@@ -107,7 +106,7 @@ Outputs:
 "total","396.50 USD"
 ```
 
-```
+```bash
 hledger bal Liabilities --format '%(total)' -X USD
 ```
 
@@ -115,7 +114,7 @@ Total amount of liabilities
 
 Outputs:
 
-```
+```bash
 --------------------
 0
 ```
@@ -128,7 +127,7 @@ The first graph, a step graph, shows the savings rate for each month.
 
 Each month's savings rate is calculated as:
 
-```
+```math
 (income - expenses) / income
 ```
 

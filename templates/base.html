@@ -56,6 +56,7 @@
         %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
     {% endif %}
     <script type="text/javascript" async defer src={{ get_url(path="logo.js" , trailing_slash=false)}}></script>
+    <script type="text/javascript" async defer src={{ get_url(path="footnoteFix.js" , trailing_slash=false)}}></script>
     <script type="text/javascript" async defer src={{ get_url(path="elasticlunr.min.js" , trailing_slash=false)}}></script>
     <script type="text/javascript" async defer src={{ get_url(path="search_index.en.js" , trailing_slash=false)}}></script>
     <script type="text/javascript" async defer src={{ get_url(path="search.js" , trailing_slash=false)}}></script>
@@ -122,96 +123,5 @@
     </dialog>
     <div id="pointer"></div>
 </body>
-{#}
-<script type="text/javascript" defer>
-    let swipeThreshold = 50
-    let startX
-    const root = document.documentElement
-    const dialogElem = document.getElementById("search")
-
-    if (typeof dialogElem.showModal !== "function") {
-        console.log("dialog elem not supported");
-        dialogElem.hidden = true;
-    }
-
-    const endTouch = e => {
-        const finishingTouch = e.changedTouches[0].clientX
-        if (startX < finishingTouch - swipeThreshold) {
-            if (!dialogElem.open) {
-                dialogElem.showModal();
-                var $searchInput = document.getElementById("search-box");
-                $searchInput.focus();
-                initSearch();
-            }
-        }
-        root.style.setProperty('--drag-opacity', `0.1`)
-        document.body.removeEventListener('touchend', endTouch)
-        document.body.removeEventListener('touchmove', moveTouch)
-    }
-
-    const moveTouch = e => {
-        const progressX = startX - e.touches[0].clientX
-        const translation = progressX > 0
-            ? parseInt(-Math.abs(progressX))
-            : parseInt(Math.abs(progressX))
-        root.style.setProperty('--drag-opacity', `${translation / 100}`)
-    }
-
-    const startTouch = e => {
-        const { touches } = e
-        if (touches && touches.length === 2) {
-            const touch = touches[0]
-            startX = touch.clientX
-            document.body.addEventListener('touchend', endTouch)
-            document.body.addEventListener('touchmove', moveTouch)
-        }
-    }
-    document.body.addEventListener('touchstart', startTouch)
-</script>
-<script type="text/javascript" src={{ get_url(path="hammer.js" , trailing_slash=false)}}></script>
-<script>
-    const $pointer = document.getElementById("pointer")
-    function debounce(func, wait) {
-        var timeout;
-
-        return function () {
-            var context = this;
-            var args = arguments;
-            clearTimeout(timeout);
-
-            timeout = setTimeout(function () {
-                timeout = null;
-                func.apply(context, args);
-            }, wait);
-        };
-    }
-
-    const hammertime = new Hammer(document.body);
-    const queue = ["panleft", "pandown", "panright", "pandown", "panleft", "panleft"]
-    let index = 0;
-    hammertime.on('panstart', () => {
-        $pointer.style.display = "block";
-    })
-    hammertime.on('pan', debounce(function (ev) {
-        $pointer.style.top = ev.center.y - 10 + "px";
-        $pointer.style.left = ev.center.x - 10 + "px";
-        if (dialogElem.open) {
-            index = 0;
-            return;
-        }
-        if (index === 4) {
-            dialogElem.showModal();
-            var $searchInput = document.getElementById("search-box");
-            $searchInput.focus();
-            initSearch();
-        } else if (ev.additionalEvent === queue[index]) {
-            index += 1;
-        }
-    }, 7));
-    hammertime.on('panend', () => {
-        $pointer.style.display = "none";
-    })
-</script>
-#}
 <script defer data-domain="dustinknopoff.dev" src="https://analytics.knopoff.dev/js/script.js"></script>
 </html>

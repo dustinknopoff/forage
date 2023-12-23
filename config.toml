@@ -11,7 +11,7 @@ feed_filename = "rss.xml"
 generate_feed = true
 
 taxonomies = [{name = "tags", rss = true}, {name = "categories", rss = true}]
-
+author = "Dustin Knopoff"
 description = "rustacean, cook, and martial arts enthusiast"
 title = "Dustin Knopoff"
 
