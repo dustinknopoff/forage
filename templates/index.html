@@ -1,7 +1,7 @@
 {% import "macros/page.html" as page_macros %}
 {% extends "base.html" %}
 {%block content%}
-<header id="intro" title="introduction">
+<header id="intro">
   <h1>:wave: I’m Dustin</h1>
   <h2>rustacean, martial artist, and cook</h2>
   <a class="til-link" href="/til">TiL</a>
@@ -14,7 +14,7 @@
     </ul>
   </nav>
 </header>
-<section class="posts wrapper" title="Posts">
+<section class="posts wrapper">
   <div>
     {% set section = get_section(path="articles/_index.md") %}
     <div class="animate blur">

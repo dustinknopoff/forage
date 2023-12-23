@@ -5,7 +5,7 @@
 {% block description %} {{page.content | striptags | truncate(length=180, end="...") | safe}} {% endblock description %}
 
 {% block content %}
-<article class="wrapper" title="{{page.title}}">
+<article class="wrapper">
   <div class="content animate">
     <h1 class="title">{{ page.title }}</h1>
     <div class="subtitle"><strong>{{ page.date }}</strong></div>
@@ -30,21 +30,11 @@
       or
       <a href="{{page.extra.discussion}}" target="_blank" rel="noopener noreferrer nofollow">Join the discussion</a>
       {% endif %}
+        <div title="Give kudos to the author" hx-get="https://kudos.knopoff.dev/" hx-trigger="load" hx-swap="outerHTML"></div>
     </p>
   </div>
 </article>
 
-<script src="https://unpkg.com/shiki"></script>
-<script>
-  shiki
-    .getHighlighter({
-      theme: 'nord'
-    })
-    .then(highlighter => {
-      const code = highlighter.codeToHtml(`console.log('shiki');`, { lang: 'js' })
-      document.getElementById('output').innerHTML = code
-    })
-</script>
 
 
 {% endblock content %}

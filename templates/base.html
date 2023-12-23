@@ -60,13 +60,14 @@
     <script type="text/javascript" async defer src={{ get_url(path="elasticlunr.min.js" , trailing_slash=false)}}></script>
     <script type="text/javascript" async defer src={{ get_url(path="search_index.en.js" , trailing_slash=false)}}></script>
     <script type="text/javascript" async defer src={{ get_url(path="search.js" , trailing_slash=false)}}></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
     {% block head %}
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
     {% endblock %}
 </head>
 
 <body>
-    <main title="content">
+    <main>
         {% block content %}
         {% endblock %}
         <a href="/" title="Home">
@@ -124,4 +125,9 @@
     <div id="pointer"></div>
 </body>
 <script defer data-domain="dustinknopoff.dev" src="https://analytics.knopoff.dev/js/script.js"></script>
+<script>
+     document.body.addEventListener('htmx:configRequest', function (evt) {
+        evt.detail.parameters['path'] = window.location.pathname
+    });
+</script>
 </html>
