@@ -65,7 +65,7 @@ Even after all of that, the output is somewhat of a mess and doesn’t care whet
 
 Output:
 
-```
+```shell
 [('favorite', 47), ('1password', 40), ('really', 31), ('alfred', 30), ('drafts', 30), ('omnifocus', 27), ('things', 24), ('windows', 20), ('without', 19), ('workflow',19), ('always', 19), ('probably', 17), ('evernote', 16), ('second', 16), ('keyboard', 15), ('onenote', 15), ('program', 15), ('powerful', 15), ('overcast', 14), ('filemaker', 14), ('computer', 13), ('favourite', 13), ('system', 13), ('useful', 13), ('software', 12), ('textexpander', 12), ('devonthink', 12), ('writing', 11), ('there’s', 11), ('features', 11), ('that’s', 10), ('better', 10), ('maestro', 10), ('machine', 10), ('remember', 10), ('everything', 10), ('doesn’t', 10), ('however', 9), ('screen', 9), ('changed', 9), ('environment', 9), ('ulysses', 9), ('scrivener', 9), ('simple', 9), ('around', 9), ('terminal', 9), etc.
 ```
 
