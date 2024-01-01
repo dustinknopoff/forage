@@ -509,6 +509,13 @@ details {
   margin: 2rem 0;
 }
 
+.til-item a {
+  background: var(--darkened-primary);
+  border-radius: 4px;
+  padding: 2px;
+  text-decoration: underline;
+}
+
 .til-item h3 {
   border-bottom: 2px solid var(--til);
   border-top: 2px solid var(--til);
