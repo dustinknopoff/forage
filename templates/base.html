@@ -83,20 +83,22 @@
         </a>
     </main>
     <footer>
-        <span>Copyright {{ now() | date(format="%Y") }}</span>
+        <span>Copyright {{ now() | date(format="%Y") }}
+            <a href="https://dustinknopoff.dev" rel="me" class="h-card">Dustin Knopoff</a>
+        </span>
         <div class="links">
             {% if config.extra.forage_email %}
-            <a onClick="{{config.extra.forage_email}}" title="Send me an email!">
+            <a onClick="{{config.extra.forage_email}}" title="Send me an email!" rel="me">
                 {{icons::mail_icon()}}
             </a>
             {% endif %}
             {% if config.extra.forage_github %}
-            <a href="{{config.extra.forage_github}}" rel="noopener noreferrer nofollow" target="_blank" title="Github">
+            <a href="{{config.extra.forage_github}}" rel="noopener noreferrer nofollow me" target="_blank" title="Github">
                 {{icons::github_icon()}}
             </a>
             {% endif %}
             {% if config.extra.forage_linkedin %}
-            <a href="{{config.extra.forage_linkedin}}" rel="noopener noreferrer nofollow" target="_blank"
+            <a href="{{config.extra.forage_linkedin}}" rel="noopener noreferrer nofollow me" target="_blank"
                 title="LinkedIn">
                 {{icons::linkedin_icon()}}
             </a>
