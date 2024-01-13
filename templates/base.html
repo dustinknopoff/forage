@@ -5,8 +5,8 @@
 
 <head>
     <title>{%block title %}{{config.title}}{%endblock title%}</title>
-    <link rel="stylesheet" type="text/css" href={{ get_url(path="styles.css" , trailing_slash=false)}} />
-    <link rel="stylesheet" type="text/css" href={{ get_url(path="animations.css" , trailing_slash=false)}} />
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/animations.css" />
     <meta charset="utf-8" />
     <meta name="color-scheme" content="light dark">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -55,12 +55,12 @@
     <link rel="alternate" type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else
         %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
     {% endif %}
-    <script type="text/javascript" async defer src={{ get_url(path="logo.js" , trailing_slash=false)}}></script>
-    <script type="text/javascript" async defer src={{ get_url(path="footnoteFix.js" , trailing_slash=false)}}></script>
-    <script type="text/javascript" async defer src={{ get_url(path="elasticlunr.min.js" , trailing_slash=false)}}></script>
-    <script type="text/javascript" async defer src={{ get_url(path="search_index.en.js" , trailing_slash=false)}}></script>
-    <script type="text/javascript" async defer src={{ get_url(path="search.js" , trailing_slash=false)}}></script>
-    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script type="text/javascript" async defer src="/logo.js"></script>
+    <script type="text/javascript" async defer src="/footnoteFix.js"></script>
+    <script type="text/javascript" async defer src="/elasticlunr.min.js"></script>
+    <script type="text/javascript" async defer src="/search_index.en.js"></script>
+    <script type="text/javascript" async defer src="/search.js"></script>
+    <script type="text/javascript" src="/htmx.min.js"></script>
     {% block head %}
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
     {% endblock %}
