@@ -10,34 +10,20 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ config.extra.forage_author }}">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    </link>
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    </link>
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    </link>
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    </link>
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    </link>
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    </link>
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    </link>
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    </link>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    </link>
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-    </link>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    </link>
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    </link>
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    </link>
-    {% if config.extra.forage_microblog %}
-    <link href="https://micro.blog/{{config.extra.forage_microblog}}" rel="me" />{% endif %}
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://dustinknopoff.dev/favorite-color">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dustin Knopoff">
+    <meta property="og:description" content="dustin's favorite color">
+    <meta property="og:image" content="https://dustinknopoff.dev/swatch.png">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="dustinknopoff.dev">
+    <meta property="twitter:url" content="https://dustinknopoff.dev/favorite-color">
+    <meta name="twitter:title" content="Dustin Knopoff">
+    <meta name="twitter:description" content="dustin's favorite color">
+    <meta name="twitter:image" content="https://dustinknopoff.dev/swatch.png">
     <link rel="manifest" href="/manifest.json">
     </link>
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -49,19 +35,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer-when-downgrade">
-    {% if config.generate_feed %}
-    <link rel="alternate" type={% if config.feed_filename=="atom.xml" %}"application/atom+xml"{% else
-        %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
-    {% endif %}
-    <script type="text/javascript" async defer src="/logo.js"></script>
-    <script type="text/javascript" async defer src="/footnoteFix.js"></script>
-    <script type="text/javascript" async defer src="/elasticlunr.min.js"></script>
-    <script type="text/javascript" async defer src="/search_index.en.js"></script>
-    <script type="text/javascript" async defer src="/search.js"></script>
-    <script type="text/javascript" src="/htmx.min.js"></script>
-    {% block head %}
-    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
-    {% endblock %}
+    <meta name="description" content="dustin's favorite color">
 </head>
 
 <body>
