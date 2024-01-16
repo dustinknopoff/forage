@@ -551,7 +551,7 @@ details {
 
 #page-swatch {
     background: var(--accent-color);
-    height: 100dvh;
+    height: 100vh;
     width: 100dvw;
     font-family: var(--content);
     font-weight: 800;
