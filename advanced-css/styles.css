@@ -551,7 +551,7 @@ details {
 
 #page-swatch {
     background: var(--accent-color);
-    height: 100vh;
+    height: 100dvh;
     width: 100dvw;
     font-family: var(--content);
     font-weight: 800;
@@ -560,4 +560,8 @@ details {
     align-items: flex-end;
     text-align: center;
     font-size: var(--size-600);
+
+    > div {
+        margin-bottom: 2rem;
+    }
 }
