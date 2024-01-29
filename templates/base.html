@@ -38,8 +38,8 @@
     </link>
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     </link>
-    {% if config.extra.forage_microblog %}
-    <link href="https://micro.blog/{{config.extra.forage_microblog}}" rel="me" />{% endif %}
+    <link href="https://micro.blog/dustinknopoff" rel="me" />
+    <link href="https://github.com/dustinknopoff" rel="me" />
     <link rel="manifest" href="/manifest.json">
     </link>
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -126,7 +126,8 @@
     </dialog>
     <div id="pointer"></div>
 </body>
-<script defer data-domain="dustinknopoff.dev" src="https://analytics.knopoff.dev/js/script.tagged-events.js"></script>
+<script async src="https://analytics.knopoff.dev/script.js"
+    data-website-id="de5f6d7f-8d61-49a8-acf1-fe827b28b419"></script>
 <script>
      document.body.addEventListener('htmx:configRequest', function (evt) {
         evt.detail.parameters['path'] = window.location.pathname
