@@ -1,0 +1,321 @@
+{
+    "name": "Dustin's Library",
+    "url": "https://dustinknopoff.dev/library",
+    "bio": "things I've consumed which I keep recommending",
+    "last_updated": "2024-02-18",
+    "lists": [
+        {
+            "name": "Podcasts - Not Tech",
+            "url": "https://dustinknopoff.dev/library/#podcasts-not-tech",
+            "books": [
+                {
+                    "title": "Acquired",
+                    "image": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts112/v4/ac/fc/55/acfc5550-a612-84c9-2455-4f0ac33c5b79/mza_12775081575377677092.png/268x0w.png",
+                    "author": "Ben Gilbert and David Rosenthal",
+                    "link": "https://acquired.fm",
+                    "notes": "An absolute fascination of storytelling sprinkled with tech and business research"
+                },
+                {
+                    "title": "Design Details",
+                    "author": "Brian Lovin and Marshall Bock",
+                    "image": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts123/v4/af/0b/ca/af0bca59-705f-89f5-81d9-fa5772f4059c/mza_2967863360308179642.jpg/626x0w.webp",
+                    "link": "https://designdetails.fm/"
+                },
+                {
+                    "title": "Metamuse",
+                    "author": "Adam Wiggins and Mark McGranaghan",
+                    "image": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts115/v4/c5/27/ec/c527ec5c-79b5-071c-7715-2ea21340e1e3/mza_12670976750011992716.png/626x0w.webp",
+                    "link": "https://museapp.com/",
+                    "notes": "The variety of topics is engaging and the goal of improving thought just tickles the brain."
+                },
+                {
+                    "title": "Song Exploder",
+                    "author": "Hrishikesh Hirway",
+                    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/32/95/23/329523c9-6f91-5e7b-a33b-698f3cd83f1f/mza_7961570172365429932.png/626x0w.webp",
+                    "link": "https://songexploder.net/"
+                },
+                {
+                    "title": "Dan Carlin's Hardcore History",
+                    "author": "Dan Carlin",
+                    "image": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts115/v4/49/b7/eb/49b7eb32-8f08-6fac-aadb-2f002131fe5f/mza_15196161972010256532.jpg/626x0w.webp",
+                    "link": "https://dancarlin.com/"
+                },
+                {
+                    "title": "Bodega Boys",
+                    "author": "Desus and Mero",
+                    "image": "https://i1.sndcdn.com/avatars-000640749609-23bmyn-t500x500.jpg",
+                    "link": "https://soundcloud.com/bodega-sushi"
+                },
+                {
+                    "title": "The Peter Attia Drive",
+                    "image": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts115/v4/40/b0/a6/40b0a65f-933a-5a93-2c23-71f246945bc7/mza_6104269605032296035.png/626x0w.webp",
+                    "author": "Peter Attia, MD",
+                    "link": "https://peterattiamd.com"
+                },
+                {
+                    "title": "Artholes",
+                    "image": "https://img1.wsimg.com/isteam/ip/293b3c05-7ef6-4fac-a998-17e96f5d249f/ef21a036-2854-4833-952b-a28c8865f5ce.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:1000,cg:true",
+                    "author": "Michael Anthony",
+                    "link": "https://artholespodcast.com/"
+                },
+                {
+                    "title": "Confliced",
+                    "image": "https://images.squarespace-cdn.com/content/v1/5a4c0600010027562ffa064e/1535723961490-VZRKQMHU4NDH2XAIB905/Message-Heard-Logo-white.png?format=1500w",
+                    "author": "Aimen Dean and Thomas Small",
+                    "link": "https://messageheard.com/podcasts/conflicted",
+                    "notes": "The best (and from what I can tell balanced) source of information on the history and current status of the Middle East"
+                }
+            ]
+        },
+        {
+            "name": "Podcasts - Tech",
+            "url": "https://dustinknopoff.dev/library/#podcasts-tech",
+            "books": [
+                {
+                    "title": "Changelog Master Feed",
+                    "image": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts126/v4/58/3a/e7/583ae751-ad59-d364-c95a-6e54c4ead563/mza_17180086510982144662.png/626x0w.webp",
+                    "author": "Changelog Media",
+                    "link": "https://changelog.com"
+                },
+                {
+                    "title": "Syntax",
+                    "image": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts113/v4/9f/af/3f/9faf3fc9-98b8-4763-382e-dcccea5fa5c9/mza_3415071783848980264.png/626x0w.webp",
+                    "author": "Wes Bos & Scott Tolinski",
+                    "link": "https://syntax.fm"
+                },
+                {
+                    "title": "Darknet Diaries",
+                    "author": "Jack Rhysider",
+                    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/d9/e6/9c/d9e69cfc-4b65-c879-75d6-6624246f0ded/mza_12966154832216548918.jpg/626x0w.webp",
+                    "link": "https://darknetdiaries.com/"
+                },
+                {
+                    "title": "Eric Normand Podcast",
+                    "author": "Eric Normand",
+                    "image": "https://is4-ssl.mzstatic.com/image/thumb/Podcasts115/v4/b9/67/d1/b967d14f-03ff-11c2-0893-4187f040f27b/mza_13082914246019186982.jpg/626x0w.webp",
+                    "link": "https://ericnormand.me/"
+                },
+                {
+                    "title": "Sourcegraph Podcast",
+                    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/e3/f0/89/e3f089b5-0a8f-89ee-434b-57016fd0463f/mza_8135311164929345754.jpg/626x0w.webp",
+                    "author": "Beyang and Quinn",
+                    "link": "https://about.sourcegraph.com/podcast"
+                }
+            ]
+        },
+        {
+            "name": "Books",
+            "url": "https://dustinknopoff.dev/library/#books",
+            "books": [
+                {
+                    "title": "River God",
+                    "image": "https://covers.openlibrary.org/b/id/4992221-M.jpg",
+                    "author": "Wilbur Smith",
+                    "link": "https://openlibrary.org/books/OL9598667M/River_God",
+                    "notes": "An _Epic_ historical fiction that you just want to reread the moment you finish."
+                },
+                {
+                    "title": "The Alchemist",
+                    "image": "https://covers.openlibrary.org/b/id/8756737-M.jpg",
+                    "author": "Paulo Coehlo",
+                    "link": "https://openlibrary.org/works/OL796465W/O_Alquimista?edition=ia%3Athealchemist_201908",
+                    "notes": "One of the first books my father ever recommended. It's a quick read but leaves you pondering."
+                },
+                {
+                    "title": "Dune",
+                    "image": "https://covers.openlibrary.org/b/id/9719751-M.jpg",
+                    "author": "Frank Herbert",
+                    "link": "https://openlibrary.org/books/OL22275832M/Dune"
+                },
+                {
+                    "title": "The Kill Artist",
+                    "image": "https://covers.openlibrary.org/b/id/289905-M.jpg",
+                    "author": "Daniel Silva",
+                    "link": "https://openlibrary.org/books/OL7563088M/The_Kill_Artist",
+                    "notes": "The whole series is fantastic. Probably my favorite spy thriller"
+                },
+                {
+                    "title": "Grokking Simplicity",
+                    "image": "https://covers.openlibrary.org/b/id/11240006-M.jpg",
+                    "author": "Eric Normand",
+                    "link": "https://openlibrary.org/works/OL24583225W/Grokking_Simplicity",
+                    "notes": "If you're gonna read a software development book, this is the one I recommend"
+                }
+            ]
+        },
+        {
+            "name": "Movies",
+            "url": "https://dustinknopoff.dev/library/#movies",
+            "books": [
+                {
+                    "title": "The Man From Earth",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/V086R82gNgWrotaXZFO4JhdgB1.jpg",
+                    "link": "https://www.themoviedb.org/movie/13363-the-man-from-earth"
+                },
+                {
+                    "title": "The Last Samurai",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/lsasOSgYI85EHygtT5SvcxtZVYT.jpg",
+                    "link": "https://www.themoviedb.org/movie/616-the-last-samurai"
+                }
+            ]
+        },
+        {
+            "name": "TV Shows",
+            "url": "https://dustinknopoff.dev/library/#tv-shows",
+            "books": [
+                {
+                    "title": "Psych",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/fDI15gTVbtW5Sbv5QenqecRxWKJ.jpg",
+                    "link": "https://www.themoviedb.org/tv/1447-psych",
+                    "notes": "I've heard it both ways."
+                },
+                {
+                    "title": "Lie To Me",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/euhgvAtvBx4CElItl5qwEgWxpdh.jpg",
+                    "link": "https://www.themoviedb.org/tv/8358-lie-to-me"
+                },
+                {
+                    "title": "Avatar: The Last Airbender",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/cHFZA8Tlv03nKTGXhLOYOLtqoSm.jpg",
+                    "link": "https://www.themoviedb.org/tv/246-avatar-the-last-airbender",
+                    "notes": "A childhood definer"
+                },
+                {
+                    "title": "Chuck",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/ejV52ysoiVdXUJBOiNI9KTM36el.jpg",
+                    "link": "https://www.themoviedb.org/tv/1404-chuck",
+                    "notes": "Just good fun."
+                },
+                {
+                    "title": "The Great Pottery Throw Down",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/89RRcMbTgELBRmFCD1B9n4wPv39.jpg",
+                    "link": "https://www.themoviedb.org/tv/77631-the-great-pottery-throw-down"
+                },
+                {
+                    "title": "Sherlock",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg",
+                    "link": "https://www.themoviedb.org/tv/19885-sherlock",
+                    "notes": "I've never wanted a mind palace as much as when watching this show. It's more like a 12 part movie series than a TV show."
+                },
+                {
+                    "title": "It's Okay to Not Be Okay",
+                    "image": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/6CvvTWcw9vSf5Zpgeot2ppE0P2D.jpg",
+                    "link": "https://www.themoviedb.org/tv/96462",
+                    "date_finished": "2022-10-01",
+                    "notes": "Just amazing. Made me cry 3 times which is extremely rare. Oh Jeung-Se's performance was breathtaking"
+                },
+                {
+                    "title": "The Baker and the Beauty",
+                    "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/AcnUsMc1rbP12fRTTX0noCdN5FT.jpg",
+                    "link": "https://www.themoviedb.org/tv/63395-she-s-with-me",
+                    "notes": "Super funny if you're familiar with Jewish and/or Israeli culture"
+                },
+                {
+                    "title": "Death's Game",
+                    "image": "https://www.themoviedb.org/t/p/w440_and_h660_face/fS4i7HHi1NNksTdAT8Vrvz9O161.jpg",
+                    "link": "https://www.themoviedb.org/tv/218230",
+                    "date_finished": "2024-01-08",
+                    "notes": "I was unsure for the first half, but the last 3 episodes solidified this into a fantastic series."
+                }
+            ]
+        },
+        {
+            "name": "YouTube",
+            "url": "https://dustinknopoff.dev/library/#youtube",
+            "books": [
+                {
+                    "title": "Storror",
+                    "image": "https://yt3.ggpht.com/ytc/AMLnZu8orTnEHbbHo7P_uEClzTQvtySoZHhr3KqAcvPoZQ=s176-c-k-c0x00ffffff-no-rj",
+                    "link": "https://www.youtube.com/c/STORROR",
+                    "notes": "Best parkour channel on the internet"
+                },
+                {
+                    "title": "Steezy",
+                    "image": "https://yt3.ggpht.com/ytc/AMLnZu93xW3LrwaRjhDPcGb1yCsrVteTa_0YcY4I-poRwg=s176-c-k-c0x00ffffff-no-rj",
+                    "link": "https://www.youtube.com/c/steezystudio",
+                    "notes": "The 3 Choreographers, 1 Song series is fantastic"
+                },
+                {
+                    "title": "Jon Gjenset",
+                    "image": "https://yt3.ggpht.com/ytc/AMLnZu-c1jJCzAsfE1qp1nXNUUqU2sH6UvkNEfYKNMwfDQ=s176-c-k-c0x00ffffff-no-rj",
+                    "link": "https://www.youtube.com/c/JonGjengset"
+                },
+                {
+                    "title": "Chef Wang 美食作家王刚",
+                    "image": "https://yt3.ggpht.com/ytc/AMLnZu_L5MZ6pK-ipk-yIYtOdnjHm4UP0FicgfKvCQdw=s176-c-k-c0x00ffffff-no-rj",
+                    "link": "https://www.youtube.com/channel/UCg0m_Ah8P_MQbnn77-vYnYw",
+                    "notes": "Incredibly satisfying cooking"
+                },
+                {
+                    "title": "Harry Mack",
+                    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqPh9rFsR6yiLKL78gH3FK-YroEI3wkGWTfCTZgvsw=s176-c-k-c0x00ffffff-no-rj-mo",
+                    "link": "https://www.youtube.com/@HarryMack",
+                    "notes": "Freestyle rapping like you've never seen"
+                }
+            ]
+        },
+        {
+            "name": "Music - Artists",
+            "url": "https://dustinknopoff.dev/library/#music-artists",
+            "books": [
+                {
+                    "title": "Lake Street Dive",
+                    "image": "https://i.scdn.co/image/ab6761610000f178990c13fc50180f1c22a4ffe6",
+                    "link": "https://www.lakestreetdive.com/"
+                },
+                {
+                    "title": "Dermot Kennedy",
+                    "image": "https://i.scdn.co/image/ab67616d0000b273c9fec49c8930fb10e4756dfe",
+                    "link": "https://open.spotify.com/artist/5KNNVgR6LBIABRIomyCwKJ?si=Ahe0kMpfQpKeE7EqlKOAeQ"
+                }
+            ]
+        },
+        {
+            "name": "Music - Albums",
+            "url": "https://dustinknopoff.dev/library/#music-albums",
+            "books": [
+                {
+                    "title": "El Madrileño",
+                    "image": "https://i.scdn.co/image/ab67616d0000b273a408c78e231f716383a58eb3",
+                    "author": "C. Tangana",
+                    "link": "https://www.instagram.com/c.tangana/"
+                }
+            ]
+        },
+        {
+            "name": "Font Families",
+            "url": "https://dustinknopoff.dev/library/#font-families",
+            "books": [
+                {
+                    "title": "Univers",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Univers_sample_2015.png/1920px-Univers_sample_2015.png",
+                    "author": "Adrien Frutiger",
+                    "link": "https://en.wikipedia.org/wiki/Univers"
+                },
+                {
+                    "title": "San Francisco",
+                    "image": "https://typographica.org/wp-content/uploads/2016/02/SF_Typographica_01.png",
+                    "author": "Apple, Inc.",
+                    "link": "https://developer.apple.com/fonts/"
+                },
+                {
+                    "title": "iA Writer Duospace",
+                    "image": "https://ia.net/wp-content/uploads/2017/11/iA-Writer-Duospace-Big.png",
+                    "author": "Information Architects",
+                    "link": "https://github.com/iaolo/iA-Fonts",
+                    "notes": "The best type for writing"
+                }
+            ]
+        }
+    ],
+    "following": [
+        {
+            "url": "https://www.dustinsenos.com/library.json",
+            "name": "Dustin Senos"
+        },
+        {
+            "url": "https://tomcritchlow.com/library.json",
+            "name": "Tom Critchlow"
+        }
+    ]
+}
