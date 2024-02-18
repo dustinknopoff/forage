@@ -2,7 +2,7 @@
     "name": "Dustin's Library",
     "url": "https://dustinknopoff.dev/library",
     "bio": "things I've consumed which I keep recommending",
-    "last_updated": "2024-01-08",
+    "last_updated": "2024-02-18",
     "lists": [
         {
             "name": "Podcasts - Not Tech",
@@ -57,6 +57,13 @@
                     "image": "https://img1.wsimg.com/isteam/ip/293b3c05-7ef6-4fac-a998-17e96f5d249f/ef21a036-2854-4833-952b-a28c8865f5ce.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:1000,cg:true",
                     "author": "Michael Anthony",
                     "link": "https://artholespodcast.com/"
+                },
+                {
+                    "title": "Confliced",
+                    "image": "https://images.squarespace-cdn.com/content/v1/5a4c0600010027562ffa064e/1535723961490-VZRKQMHU4NDH2XAIB905/Message-Heard-Logo-white.png?format=1500w",
+                    "author": "Aimen Dean and Thomas Small",
+                    "link": "https://messageheard.com/podcasts/conflicted",
+                    "notes": "The best (and from what I can tell balanced) source of information on the history and current status of the Middle East"
                 }
             ]
         },
